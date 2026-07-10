@@ -75,17 +75,20 @@ Les elements techniques comme Codex, ChatGPT, les fichiers Markdown, les prompts
 
 ### HO-001 — Format exact des updates Holodeck
 
-Le format final des fichiers `Holodeck_Update_XXX.md` reste a stabiliser.
+Le format initial des fichiers `Holodeck_Update_XXX.md` et des comptes rendus de session est maintenant defini par templates.
+
+Statut : partiellement stabilise.
+
+Le format doit encore etre teste sur une vraie seance Holodeck avant d'etre considere final.
 
 Objectif :
 - etre assez structure pour Codex;
 - rester lisible pour le directeur creatif;
 - eviter les doublons;
-- distinguer decisions, souvenirs, notes de residents et points a clarifier.
+- distinguer decisions, souvenirs, notes de membres de l'atelier et points a clarifier.
 
 ## Points a clarifier
 
-- Definir le format standard des comptes rendus de session.
-- Definir le format standard des fichiers pending update.
 - Determiner quand un souvenir merite d'etre ajoute a Souvenirs.md.
 - Determiner quand une evolution de resident est assez importante pour modifier sa fiche.
+- Tester le format des templates sur une vraie seance Holodeck.
