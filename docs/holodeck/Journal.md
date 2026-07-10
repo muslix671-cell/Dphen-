@@ -87,6 +87,16 @@ Objectif :
 - eviter les doublons;
 - distinguer decisions, souvenirs, notes de membres de l'atelier et points a clarifier.
 
+## Precedents de discussion
+
+### P-001 — Test du pipeline documentaire
+
+Le pipeline documentaire Holodeck -> Codex -> diff -> commit a ete teste avec l'update `HU-002`.
+
+Statut : test effectue.
+
+Ce precedent ne cree aucune decision DPhen, aucun canon, aucun souvenir et aucune evolution de membre de l'atelier.
+
 ## Points a clarifier
 
 - Determiner quand un souvenir merite d'etre ajoute a Souvenirs.md.
