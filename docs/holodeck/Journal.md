@@ -61,7 +61,15 @@ Codex ne doit pas inventer de decisions, de souvenirs, de canon ou de developpem
 
 Le directeur creatif revise le diff avant commit.
 
-### H-007 — Separation meta / diegetique
+### H-007 — Les idees du directeur creatif restent contestables
+
+L'opinion du directeur creatif peut etre contestee par les membres de l'atelier tant qu'il n'a pas tranche explicitement par decision de direction ou veto.
+
+Raison principale : eviter que les idees soient acceptees trop vite simplement parce qu'elles viennent du createur de DPhen.
+
+Impact sur DPhen : documentation / fonctionnement Holodeck.
+
+### H-008 — Les membres de l'atelier ne connaissent pas la couche meta
 
 Le terme Holodeck appartient a la couche meta du projet.
 
@@ -87,6 +95,42 @@ Objectif :
 - eviter les doublons;
 - distinguer decisions, souvenirs, notes de membres de l'atelier et points a clarifier.
 
+### HO-002 — Feuille comme tableau de bord decisionnel
+
+- Statut : ouvert
+- Hypothese : La feuille de personnage DPhen pourrait etre concue comme un tableau de bord decisionnel plutot que comme une fiche d'identite traditionnelle.
+- Arguments favorables : Les informations les plus importantes semblent etre celles qui indiquent ce que le personnage peut encore risquer : HP, armure, bouclier, posture, MTH, corruption, blessures, etats et ressources d'action.
+- Arguments critiques : Il faut eviter de rendre la feuille trop abstraite ou trop lourde. Les joueurs doivent encore retrouver rapidement les informations classiques.
+- Information manquante : Structure exacte de la feuille, priorite visuelle finale, format imprimable ou numerique.
+- Prochaine action : Produire des prototypes de feuille et les critiquer.
+
+### HO-003 — Bloc Etat
+
+- Statut : ouvert
+- Hypothese : La feuille pourrait contenir un bloc central d'etat regroupant les informations qui changent la maniere de jouer le personnage.
+- Arguments favorables : Le joueur reprend plus vite la partie s'il voit immediatement dans quel etat se trouve son personnage.
+- Arguments critiques : Le terme "etat" peut etre trop abstrait. Certains joueurs chercheront directement HP, armure, magie, posture ou techniques.
+- Information manquante : Nom final du bloc et organisation interne.
+- Prochaine action : Tester plusieurs organisations visuelles.
+
+### HO-004 — Ressources comme capacite a prendre des risques
+
+- Statut : ouvert
+- Hypothese : Les ressources de DPhen mesurent surtout la capacite restante du personnage a prendre des risques.
+- Arguments favorables : Cette lecture relie HP, armure, MTH, corruption et posture a la prise de decision.
+- Arguments critiques : Il faut verifier que cette lecture correspond bien aux mecaniques documentees et ne force pas une interpretation trop generale.
+- Information manquante : Prototype de feuille et test de lecture en contexte de reprise de session.
+- Prochaine action : Utiliser cette hypothese dans le prochain atelier sur la feuille.
+
+### HO-005 — Feuille de groupe ou d'expedition
+
+- Statut : ouvert
+- Hypothese : DPhen pourrait beneficier d'une feuille de groupe, d'expedition ou de campagne en plus des fiches individuelles.
+- Arguments favorables : Plusieurs ressources individuelles ont des consequences collectives.
+- Arguments critiques : Une seconde feuille peut etre une vraie solution ou seulement un pansement ergonomique.
+- Information manquante : Ce qui devrait appartenir a la fiche individuelle versus la fiche de groupe.
+- Prochaine action : Evaluer apres les premiers prototypes de feuille individuelle.
+
 ## Precedents de discussion
 
 ### P-001 — Test du pipeline documentaire
@@ -102,3 +146,7 @@ Ce precedent ne cree aucune decision DPhen, aucun canon, aucun souvenir et aucun
 - Determiner quand un souvenir merite d'etre ajoute a Souvenirs.md.
 - Determiner quand une evolution de resident est assez importante pour modifier sa fiche.
 - Tester le format des templates sur une vraie seance Holodeck.
+- Determiner si le terme "Etat" est le bon nom pour le bloc central de la feuille.
+- Determiner quelles informations doivent etre visibles en premier apres deux semaines sans jouer.
+- Determiner si la feuille de groupe est necessaire ou seulement utile.
+- Determiner comment representer MTH et corruption sans separer artificiellement deux mecaniques liees par le lore.

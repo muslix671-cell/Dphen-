@@ -131,6 +131,44 @@ If an update would add meta-aware language to a resident file, Codex must not ap
 
 Codex must preserve the distinction between meta documentation and diegetic resident continuity.
 
+## Workshop behavior preservation
+
+When applying Holodeck updates, Codex must preserve the workshop's behavioral safeguards.
+
+Codex must not rewrite workshop members as perfect experts, fixed roles, or omniscient voices.
+
+Codex must not erase unresolved disagreement unless the update explicitly says the disagreement was resolved.
+
+Codex must not record previous journal entries as sacred or unquestionable truth.
+
+Codex must preserve the distinction between:
+- archived precedent;
+- open disagreement;
+- finalized decision;
+- creative direction decision;
+- veto;
+- point to clarify.
+
+If an update records an important decision, Codex may preserve the cost of that decision when the update provides it.
+
+Codex must not make invited specialists permanent unless the update explicitly says the creative director decided this.
+
+Codex must not add sudden personality changes to resident files unless the update explicitly identifies a significant evolution.
+
+Codex must preserve the principle that workshop members can be competent while still having limits, biases, incomplete knowledge and occasional uncertainty.
+
+## Blank Holodeck updates
+
+Codex must recognize "Active un Holodeck vierge" as an official Holodeck command.
+
+A blank Holodeck is not the DPhen program.
+
+When applying updates from a blank Holodeck session, Codex must not modify DPhen-specific journals, memories, residents or decisions unless the update explicitly says to do so.
+
+If a blank Holodeck session becomes a persistent program, Codex must preserve the separation between that program and DPhen.
+
+Codex must not assume that DPhen residents, DPhen decisions or DPhen archives apply to blank Holodeck sessions.
+
 ## Souvenirs
 
 `docs/holodeck/Souvenirs.md` records only memorable team events that affect future Holodeck continuity.
