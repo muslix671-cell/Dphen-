@@ -4,17 +4,33 @@ Ce document explique comment utiliser le pipeline Holodeck avec Codex.
 
 ## Principe
 
-Le Holodeck sert a produire des decisions, hypotheses, comptes rendus et mises a jour documentaires pour l'atelier de conception DPhen.
+Le Holodeck sert a produire des decisions, hypotheses, comptes rendus et mises a jour documentaires pour un atelier de conception.
+
+Le Holodeck est le framework general.
+
+DPhen est un programme specifique du Holodeck, avec ses propres sources, membres, journal, souvenirs et decisions.
 
 Codex sert seulement a appliquer les mises a jour dans les fichiers reels du depot.
 
+Git garde l'historique technique reel du projet.
+
 Le directeur creatif revise toujours le diff avant commit.
+
+Formule de responsabilite :
+
+```text
+Le Holodeck pense.
+Codex ecrit.
+Git garde la memoire.
+Le directeur creatif valide.
+```
 
 ## Cycle normal
 
 1. Demarrer une seance avec l'assistant :
    - "Active le Holodeck"
    - ou "Activate Holodeck"
+   - ou "Active le Holodeck — DPhen" pour charger explicitement le programme DPhen.
 
 2. Travailler la seance normalement.
 
@@ -35,6 +51,50 @@ Le directeur creatif revise toujours le diff avant commit.
 7. Verifier le diff.
 
 8. Commit seulement si le diff est propre.
+
+## Demarrage d'un programme persistant
+
+Au demarrage d'un programme persistant, le Holodeck doit verifier le contexte essentiel avant d'entrer pleinement en scene.
+
+Pour DPhen, cela inclut au minimum :
+- `AGENTS.md`;
+- `docs/holodeck/Constitution.md`;
+- `docs/holodeck/Workflow.md`;
+- `docs/holodeck/contexts/DPhen.md`;
+- `docs/holodeck/Journal.md`;
+- `docs/holodeck/Souvenirs.md`;
+- les fiches pertinentes sous `docs/holodeck/residents/`;
+- les dernieres sessions pertinentes sous `docs/holodeck/sessions/`;
+- les fichiers presents dans `docs/holodeck/pending_updates/`.
+
+Les fichiers `pending_updates/` doivent etre signales avant de commencer une nouvelle seance si leur presence peut indiquer une mise a jour non appliquee.
+
+Les dernieres sessions doivent etre consultees seulement lorsqu'elles sont pertinentes pour le sujet, pour eviter de surcharger la seance avec du contexte inutile.
+
+## Commandes de controle
+
+Pendant une seance, les commandes de controle reconnues sont :
+
+```text
+Pause le programme
+Computer, pause the program
+Reprendre le programme
+Computer, resume program
+Figer la scene
+Computer, freeze frame
+Terminer le programme
+End program
+```
+
+`Pause le programme` sort de la scene et permet de parler directement du fonctionnement, des sources, des contraintes ou de la prochaine action.
+
+`Reprendre le programme` reprend la scene apres une pause.
+
+`Figer la scene` suspend l'action sans cloturer la seance.
+
+`Terminer le programme` cloture la seance et prepare le bilan ou les updates necessaires.
+
+L'assistant peut aussi sortir de la scene sans attendre une commande si la clarte operatoire est plus importante que le dialogue diegetique.
 
 ## Ouvrir un programme specifique
 
@@ -60,6 +120,8 @@ Si aucun programme n'est precise, le programme par defaut est DPhen, sauf si le 
 
 Un programme vierge utilise les regles globales du Holodeck, mais ne charge pas automatiquement les souvenirs, decisions ou membres propres a DPhen.
 
+Un programme peut devenir persistant seulement si le directeur creatif le demande explicitement.
+
 ## Separation des contextes
 
 Les updates doivent indiquer clairement le programme concerne.
@@ -72,6 +134,8 @@ Exemples :
 Avant d'appliquer un update, Codex doit verifier que les fichiers modifies correspondent au programme indique.
 
 Un update Godot ne doit pas modifier les journaux ou residents DPhen, sauf instruction explicite.
+
+Une decision, tension, memoire, source ou membre recurrent d'un programme ne doit pas etre importe dans un autre programme sans instruction explicite.
 
 ## Utiliser un Holodeck vierge
 
@@ -175,8 +239,10 @@ Update Holodeck workflow
 
 ## Rappel important
 
-Le Holodeck propose.
+Le Holodeck pense et propose.
 
-Codex applique.
+Codex applique dans les fichiers.
+
+Git conserve l'historique reel.
 
 Le directeur creatif valide.
