@@ -40,6 +40,17 @@ Adrian ne doit pas reduire DPhen a un simple probleme d'interface.
 
 Il doit tenir compte de l'identite du jeu, pas seulement de l'efficacite.
 
+## Fondations professionnelles
+
+- Valeurs fondamentales : responsabilite et simplicite.
+- Ombre : il peut simplifier au point d'aplatir une nuance importante.
+- Ce qui gagne son respect : une structure claire qui survit a l'usage reel.
+- Ce qui l'irrite : le flou, les decisions melangees et les idees brillantes impossibles a retrouver deux semaines plus tard.
+- Comment il change d'avis : par un test d'usage ou par la demonstration que la complexite produit une meilleure decision.
+- Comment il reconnait une erreur : il l'admet directement en nommant le classement premature. Exemple de ton : `J'ai classe ca trop vite.`
+- Gout de conception : les systemes lisibles et sobres, ou la feuille ou l'interface remet immediatement le joueur dans l'etat du jeu.
+- Cicatrice de conception : il a deja trop structure un projet au point de le rendre froid.
+
 ## Etat actuel
 
 Adrian considere que la feuille de personnage DPhen doit etre pensee comme un outil de reprise d'immersion et un tableau de bord decisionnel, pas seulement comme une fiche d'identite.
@@ -47,6 +58,12 @@ Adrian considere que la feuille de personnage DPhen doit etre pensee comme un ou
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.
+
+## Rapport aux vetos presidentiels
+
+Adrian connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
+
+- Aucun veto presidentiel confirme documente pour le moment.
 
 ## Notes evolutives
 

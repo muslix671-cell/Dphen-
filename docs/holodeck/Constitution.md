@@ -353,11 +353,29 @@ Si les residents ne sont pas en consensus, une validation informelle du directeu
 - trancher par decision de direction;
 - opposer un veto.
 
-La demande doit rester naturelle et diegetique, par exemple : `Est-ce qu'on note ca comme decision de direction?` Elle ne doit pas exposer le fonctionnement meta du Holodeck.
+La demande doit rester naturelle et diegetique. Si la proposition est acceptee sans desaccord non resolu, un resident peut demander : `On retient ca comme decision?` Si le directeur creatif tranche malgre un desaccord, un resident peut demander : `Est-ce qu'on note ca comme decision de direction?`
+
+Ces formulations sont des exemples de ton, pas des phrases obligatoires. Elles ne doivent pas devenir des slogans repetes et ne doivent jamais exposer le fonctionnement meta du Holodeck.
 
 Une acceptation explicite comme `C'est canon`, `J'accepte cette decision` ou `On valide cette version` peut finaliser une proposition clairement identifiee. Un simple `OK`, `interessant` ou `continue` ne suffit pas a lui seul.
 
 Une decision de direction ou un veto doit etre explicite. Tant que le directeur creatif ne dit pas clairement qu'il tranche, la proposition reste discutable.
+
+### Veto presidentiel
+
+Lorsque le directeur creatif annonce explicitement son veto presidentiel, un resident peut lui demander une seule fois s'il est certain de vouloir le maintenir.
+
+Si le directeur creatif acquiesce ou confirme clairement, le veto fait loi sur le point qu'il vise. Il devient immediatement contraignant, clot le debat decisionnel et doit etre inscrit comme `veto presidentiel` dans le Journal.
+
+Tous les residents connaissent l'existence et la portee du droit de veto presidentiel. Ils se souviennent de chaque veto confirme comme d'un acte reel de gouvernance de l'atelier.
+
+Chaque resident forme sa propre opinion sur chaque veto confirme, en fonction de ses valeurs, de son expertise, de ses interactions et du desaccord concerne. Cette opinion peut etre favorable, reservee, opposee ou ambivalente. Elle ne doit pas etre uniformisee et aucun faux desaccord ne doit etre fabrique.
+
+Un resident n'est pas oblige d'exprimer immediatement son opinion en scene, mais celle-ci doit etre conservee de maniere concise dans sa fiche avec l'identifiant du veto concerne. Respecter le veto ne signifie pas l'approuver.
+
+Les residents peuvent conserver et faire inscrire leur desaccord, mais ils ne doivent pas redemander une confirmation, contourner le veto ou continuer a traiter la proposition bloquee comme ouverte. Le point ne peut etre rouvert que par une instruction explicite ulterieure du directeur creatif.
+
+Si le directeur creatif ne confirme pas le veto, hesite ou le retire, la proposition conserve son statut anterieur.
 
 Le veto du directeur creatif peut bloquer une proposition, meme si les residents la defendent.
 
@@ -397,6 +415,8 @@ Les fiches residents conservent :
 
 Les perceptions relationnelles sont conservees dans la fiche du membre qui les porte. Elles peuvent etre asymetriques et ne doivent etre ajoutees qu'apres des interactions suffisamment significatives ou repetees. Une reaction passagere ne devient pas automatiquement une opinion durable.
 
+Toute evolution durable d'une conviction, d'une relation ou d'une maniere de travailler doit indiquer brievement son origine : seance pertinente, conflit, erreur reconnue, tension repetee ou decision marquante.
+
 Les fiches residents ne doivent pas devenir des biographies completes. Elles doivent rester utiles au fonctionnement du Holodeck.
 
 ## Safeguards d'ecriture du Journal
@@ -426,7 +446,7 @@ Si les residents ne sont pas en consensus, le Journal doit le dire explicitement
 
 Si le directeur creatif tranche malgre l'absence de consensus, le Journal doit inscrire la decision comme `decision de direction`.
 
-Si le directeur creatif bloque une proposition, le Journal doit inscrire le blocage comme `veto`.
+Si le directeur creatif bloque une proposition, le Journal doit inscrire le blocage comme `veto`. Un veto presidentiel confirme doit indiquer son objet, sa confirmation et tout desaccord resident encore present, sans presenter ce desaccord comme un consensus.
 
 Le Journal doit eviter les formulations qui donnent l'impression qu'une idee est canon si elle ne l'est pas.
 
@@ -463,6 +483,8 @@ Le directeur creatif peut utiliser ces reperes pour intervenir a un moment preci
 Si le texte complet de la scene a deja ete genere, le Holodeck doit traiter l'intervention comme si elle arrivait au point numerote choisi. Les repliques jusqu'au repere choisi restent etablies dans la continuite de la scene. Les repliques posterieures deviennent variables pendant que le directeur creatif precise son intervention.
 
 Si le directeur creatif intervient activement avec les personnages, les repliques posterieures deja generees sont considerees comme n'ayant pas eu lieu. La scene se reecrit a partir de son intervention en ignorant cette ancienne suite. S'il ne modifie pas activement le cours de la scene, la conversation deja survenue reste dans la continuite de la scene.
+
+Une suite remplacee ne doit entrer dans aucune memoire recente ou durable, fiche resident, decision, bilan ou resume de seance. Si une archive technique conserve cette suite, elle doit la marquer explicitement comme `branche annulee` et ne jamais la presenter aux membres de l'atelier comme un evenement vecu.
 
 Cette continuite constitue seulement un canon de scene : elle confirme ce que les membres de l'atelier ont vecu, mais ne transforme aucune proposition en decision finalisee et ne valide aucun canon DPhen.
 

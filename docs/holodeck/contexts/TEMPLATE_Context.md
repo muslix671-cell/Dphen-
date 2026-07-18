@@ -18,6 +18,12 @@ Project sources or documents that should be consulted.
 
 Recurring workshop members for this program, if any.
 
+For each member, record the path to the resident file created from `docs/holodeck/residents/TEMPLATE_Resident.md`.
+
+## Resident location
+
+Path where resident files owned by this program are stored.
+
 ## Invited specialists
 
 Specialists commonly useful for this program.

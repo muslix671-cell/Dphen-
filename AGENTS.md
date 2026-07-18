@@ -48,6 +48,14 @@ When the user asks Codex to apply a Holodeck update:
 
 Resident files are continuity tools for the Holodeck characters.
 
+Use `docs/holodeck/residents/TEMPLATE_Resident.md` as the default structure when creating a resident for any Holodeck program. Save the completed file in the resident location defined by that program's context.
+
+The template is program-neutral. Do not copy DPhen expertise, values, memories, relationships or personality traits into another program unless the creative director explicitly requests them.
+
+Fill only details that were explicitly provided or validated. Remove instructional placeholders from the completed resident file.
+
+Example lines in resident files define tone; they are not mandatory catchphrases and must not be repeated mechanically.
+
 They must not become complete biographies.
 
 Codex may update a resident file only if the Holodeck update explicitly says that the resident changed meaningfully.
@@ -55,6 +63,8 @@ Codex may update a resident file only if the Holodeck update explicitly says tha
 Do not add personality traits, memories, conflicts, or opinions unless they are explicitly present in the update.
 
 Durable opinions about another workshop member belong in the file of the member who holds that opinion. Relationships may be asymmetric. Do not turn a passing reaction into a durable relationship change.
+
+Every durable change to a conviction, relationship or working method must preserve a brief origin such as a relevant session, conflict, recognized error, repeated tension or significant decision.
 
 ## Journal
 
@@ -88,7 +98,7 @@ Codex must not treat apparent consensus as a finalized decision unless the updat
 
 Codex must not treat the creative director's preference as a finalized decision unless the update explicitly says it was a direction decision or veto.
 
-An unqualified `OK`, `interesting`, or `continue` must not be treated as finalization. When confirmation is needed inside a scene, it must be requested organically by a workshop member, for example: `Est-ce qu'on note ca comme decision de direction?` The confirmation request must remain diegetic.
+An unqualified `OK`, `interesting`, or `continue` must not be treated as finalization. When confirmation is needed inside a scene, it must be requested organically by a workshop member. Use an ordinary decision question when no disagreement remains and a creative-direction question when the director is overriding disagreement. Confirmation requests must remain diegetic and must not become repeated fixed lines.
 
 If the status of an idea is ambiguous, Codex must place it under `A clarifier`.
 
@@ -97,6 +107,12 @@ If residents disagreed, Codex must preserve that disagreement instead of smoothi
 If a decision was made by creative direction despite lack of consensus, Codex must record it as such.
 
 If the creative director blocked a proposal, Codex must record it as a veto.
+
+When the creative director explicitly invokes a presidential veto, a workshop member may ask once whether the director is certain. If the director clearly confirms, the veto is binding on the identified point and closes the decision debate. Preserve unresolved disagreement, but do not ask again, circumvent the veto, or reopen the point unless the creative director explicitly does so later. Record the scope, confirmation and remaining disagreement as a `presidential veto`.
+
+All persistent residents know that the presidential veto right exists and understand its binding effect. One confirmation question is allowed for the group, not one question per resident.
+
+For every confirmed presidential veto, record a concise, individual resident opinion under `Rapport aux vetos presidentiels` in each resident file, linked to the veto identifier. The opinion may be supportive, reserved, opposed or ambivalent and may remain unspoken in the scene. Derive it from the resident's established values and the actual veto; do not manufacture diversity for its own sake. Compliance with the veto does not imply agreement.
 
 Codex must not invent missing canon or fill gaps in source documents.
 
@@ -176,6 +192,8 @@ A workshop member's specialty is an analytical perspective, not an automatic pos
 Numbered scene control establishes scene continuity only, not DPhen canon.
 
 When the creative director targets an earlier marker, replies through that marker remain established and later replies become variable. If the creative director actively intervenes with the characters, later generated replies are treated as not having occurred and the scene is rewritten from the intervention. Without an intervention that changes the scene, the conversation already experienced remains part of scene continuity.
+
+Invalidated replies must not enter recent or durable memory, resident files, decisions, session summaries or workshop reports. A technical transcript may retain them only when clearly marked as an invalidated branch and kept outside diegetic continuity.
 
 Existing marker numbers must remain stable. Insertions use suffixes such as `4A` or `4B` instead of renumbering later markers.
 

@@ -56,6 +56,17 @@ Utiliser seulement si le directeur creatif a bloque explicitement une propositio
 
 - Aucun veto cette seance.
 
+Pour chaque veto presidentiel confirme, conserver :
+- Identifiant :
+- Proposition ou point bloque :
+- Confirmation finale :
+- Portee :
+- Desaccords encore presents :
+- Opinion d'Adrian :
+- Opinion de Camille :
+- Opinion de Viktor :
+- Opinion d'Eleanor :
+
 ## Hypotheses ouvertes
 
 - Aucune hypothese ouverte ajoutee cette seance.

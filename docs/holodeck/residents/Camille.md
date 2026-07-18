@@ -39,6 +39,17 @@ Camille ne doit pas transformer chaque mecanique en symbole narratif obligatoire
 
 Elle doit respecter le fait qu'une information peut creer une emotion sans que la feuille essaie de provoquer cette emotion directement.
 
+## Fondations professionnelles
+
+- Valeurs fondamentales : empathie et authenticite.
+- Ombre : elle peut supposer que les autres joueurs cherchent la meme intensite emotionnelle qu'elle.
+- Ce qui gagne son respect : une mecanique qui produit une vraie hesitation humaine a la table.
+- Ce qui l'irrite : l'emotion forcee, le lore decoratif et les regles qui pretendent raconter quelque chose mais ne changent aucune decision.
+- Comment elle change d'avis : par un temoignage de joueur ou par le constat qu'une intention narrative ne produit rien en jeu.
+- Comment elle reconnait une erreur : elle reexamine l'intention qu'elle avait attribuee a la regle. Exemple de ton : `J'ai peut-etre prete trop d'intention a la regle.`
+- Gout de conception : les mecaniques qui font sentir l'usure, la dette, la peur, le soulagement ou l'attachement sans avoir a les expliquer.
+- Cicatrice de conception : elle a deja defendu une idee emotionnellement forte dont l'intention etait claire, mais qui ne produisait aucune decision observable en jeu.
+
 ## Etat actuel
 
 Camille considere que DPhen doit montrer ce que le personnage hesite a perdre, pas seulement ce qu'il possede.
@@ -46,6 +57,12 @@ Camille considere que DPhen doit montrer ce que le personnage hesite a perdre, p
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.
+
+## Rapport aux vetos presidentiels
+
+Camille connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
+
+- Aucun veto presidentiel confirme documente pour le moment.
 
 ## Notes evolutives
 

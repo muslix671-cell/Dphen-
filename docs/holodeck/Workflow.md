@@ -109,9 +109,19 @@ End program
 
 L'assistant peut aussi sortir de la scene sans attendre une commande si la clarte operatoire est plus importante que le dialogue diegetique.
 
-Lorsqu'une proposition semble acceptee sans que son statut soit clair, un resident peut demander organiquement dans la scene : `Est-ce qu'on note ca comme decision de direction?` Une formulation naturelle equivalente est permise. La question ne doit pas exposer la couche meta.
+Lorsqu'une proposition semble acceptee sans que son statut soit clair, un resident peut demander organiquement dans la scene : `On retient ca comme decision?` Si le directeur creatif tranche malgre un desaccord, il peut plutot demander : `Est-ce qu'on note ca comme decision de direction?`
+
+Ces formulations sont des exemples, pas des phrases fixes. Une formulation naturelle equivalente est permise et la question ne doit pas exposer la couche meta.
 
 Une proposition clairement identifiee devient une decision seulement apres une acceptation explicite du directeur creatif. Un simple `OK`, `interessant` ou `continue` ne constitue pas une validation.
+
+Si le directeur creatif annonce son veto presidentiel, un resident peut demander une seule fois s'il est certain. Une confirmation claire rend le veto immediatement contraignant sur le point vise. Le desaccord peut rester visible, mais le debat decisionnel est clos et ne peut etre rouvert que par une instruction explicite ulterieure du directeur creatif.
+
+Tous les residents connaissent ce droit. Apres chaque veto presidentiel confirme :
+- le Journal attribue un identifiant au veto et conserve sa portee, sa confirmation et les desaccords presents;
+- chaque resident forme une opinion individuelle, meme s'il ne l'exprime pas immediatement;
+- chaque fiche resident conserve une entree concise sous `Rapport aux vetos presidentiels`, avec l'identifiant du veto et l'opinion du resident;
+- les opinions peuvent diverger, mais aucun resident ne traite le point bloque comme encore ouvert.
 
 ## Reperes numerotes de scene
 
@@ -139,6 +149,8 @@ Le numero cree un repere temporel interne a la scene. Meme si le texte complet a
 Les repliques jusqu'au repere choisi restent etablies dans la continuite de la scene. Les elements posterieurs deviennent variables pendant que le directeur creatif precise son intervention.
 
 Si le directeur creatif intervient activement avec les personnages, la suite deja generee est consideree comme n'ayant pas eu lieu et la scene se reecrit a partir de son intervention. Sans intervention qui modifie le cours de la scene, la conversation deja survenue reste dans la continuite de la scene.
+
+Une suite annulee ne doit etre reprise dans aucune memoire, fiche resident, decision, bilan ou resume de seance. Une archive technique peut la conserver seulement sous l'etiquette `branche annulee`.
 
 Cette continuite est un canon de scene seulement. Elle ne finalise aucune decision et ne valide aucun element du canon DPhen.
 
@@ -193,6 +205,21 @@ Avant d'appliquer un update, Codex doit verifier que les fichiers modifies corre
 Un update Godot ne doit pas modifier les journaux ou residents DPhen, sauf instruction explicite.
 
 Une decision, tension, memoire, source ou membre recurrent d'un programme ne doit pas etre importe dans un autre programme sans instruction explicite.
+
+## Creer un resident pour un programme
+
+Utiliser `docs/holodeck/residents/TEMPLATE_Resident.md` comme structure de base pour tout nouveau resident, quel que soit le programme.
+
+Le nouveau fichier doit :
+- nommer explicitement son programme;
+- etre place dans l'emplacement des residents defini par le contexte du programme;
+- utiliser des expertises, valeurs, limites et references propres a ce programme;
+- conserver deux valeurs fondamentales avec une ombre possible;
+- garder la cicatrice de conception breve et professionnelle;
+- commencer sans relation durable ni evolution inventee;
+- retirer tous les textes d'instruction et champs non remplis du template.
+
+Un resident d'un programme existant ne sert jamais de personnalite par defaut pour un autre programme. Reutiliser un resident, ses souvenirs ou ses relations exige une decision explicite du directeur creatif.
 
 ## Utiliser un Holodeck vierge
 

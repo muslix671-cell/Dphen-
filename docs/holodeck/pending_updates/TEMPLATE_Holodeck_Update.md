@@ -72,9 +72,16 @@ Utiliser seulement si le directeur creatif bloque explicitement une proposition.
 
 ### V-XXX — Titre
 
-- Statut : veto
+- Statut : veto / veto presidentiel confirme
 - Proposition bloquee :
+- Confirmation finale :
+- Portee exacte :
 - Raison si donnee :
+- Desaccords encore presents :
+- Opinion d'Adrian :
+- Opinion de Camille :
+- Opinion de Viktor :
+- Opinion d'Eleanor :
 - Peut etre reouvert plus tard : oui / non / a clarifier
 
 ## Hypotheses ouvertes
