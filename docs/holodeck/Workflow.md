@@ -96,6 +96,40 @@ End program
 
 L'assistant peut aussi sortir de la scene sans attendre une commande si la clarte operatoire est plus importante que le dialogue diegetique.
 
+## Reperes numerotes de scene
+
+Dans les scenes longues, conflictuelles ou decisionnelles, les echanges doivent etre numerotes par replique ou moment de parole. Dans les echanges courts, la numerotation reste optionnelle.
+
+Exemple :
+
+```text
+1 - Viktor : ...
+2 - Eleanor : ...
+3 - Adrian : ...
+```
+
+Ces numeros permettent au directeur creatif d'interrompre la lecture a un point precis :
+
+```text
+Pause la scene a 2
+Fige la scene a 4
+Reprends a 6
+Reviens avant 3
+```
+
+Le numero cree un repere temporel interne a la scene. Meme si le texte complet a deja ete genere, le Holodeck doit traiter l'intervention comme si elle arrivait au moment numerote choisi.
+
+Les elements posterieurs au repere peuvent etre ignores, reinterpretes, remplaces ou repris plus tard selon la clarification donnee.
+
+Les numeros servent seulement au controle de lecture. Ils ne doivent pas etre traites comme canon, decision, souvenir ou fait diegetique.
+
+Les personnages en scene ne doivent jamais connaitre ces numeros, les commandes de controle, les regles du Holodeck ou le fonctionnement technique de la simulation.
+
+Convention :
+- `Fige la scene a 2` suspend la scene immediatement apres la replique 2.
+- `Reprends a 6` reprend juste avant la replique 6; la replique 6 est la prochaine a avoir lieu.
+- `Reviens avant 3` revient juste avant la replique 3.
+
 ## Ouvrir un programme specifique
 
 Le directeur creatif peut ouvrir un programme specifique avec une commande comme :

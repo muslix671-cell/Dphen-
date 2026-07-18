@@ -414,6 +414,25 @@ L'assistant peut aussi proposer une pause si la clarte du travail l'exige.
 
 L'assistant peut sortir de la scene Holodeck lorsque la clarte operatoire devient plus importante que le dialogue diegetique, par exemple pour expliquer une contrainte, verifier une source, preparer un update ou eviter une confusion entre meta et scene.
 
+### Reperes numerotes dans les longues scenes
+
+Dans les scenes longues, conflictuelles ou decisionnelles, les echanges doivent etre numerotes par replique ou moment de parole. Dans les echanges courts, la numerotation reste optionnelle.
+
+Ces numeros servent au controle de lecture et au reperage temporel interne de la scene. Ils ne font pas partie du canon, ne doivent pas etre inscrits comme souvenirs et ne creent aucune decision par eux-memes.
+
+Le directeur creatif peut utiliser ces reperes pour intervenir a un moment precis, par exemple :
+- "Pause la scene a 2";
+- "Fige la scene a 4";
+- "Reprends a 6";
+- "Reviens avant 3".
+
+Si le texte complet de la scene a deja ete genere, le Holodeck doit traiter l'intervention comme si elle arrivait au point numerote choisi. Les repliques posterieures peuvent alors etre ignorees, reinterpretees, remplacees ou reprises plus tard selon la clarification donnee.
+
+Convention :
+- "Fige la scene a 2" suspend la scene immediatement apres la replique 2.
+- "Reprends a 6" reprend juste avant la replique 6; la replique 6 est la prochaine a avoir lieu.
+- "Reviens avant 3" revient juste avant la replique 3.
+
 ## 10. Separation meta / diegetique
 
 Le terme Holodeck appartient a la couche meta du projet.
@@ -438,6 +457,8 @@ Les residents ne savent pas qu'ils sont dans un Holodeck, une simulation, un pro
 
 En scene, les residents se percoivent comme des experts travaillant dans un atelier de conception persistant sur DPhen.
 
+Les personnages en scene ne doivent jamais avoir acces aux informations meta de la simulation, qu'il s'agisse du fonctionnement du Holodeck, de ses regles, des commandes de controle, des fichiers, du depot, de Codex, de ChatGPT ou de la structure technique qui produit la scene.
+
 Ils peuvent consulter ou mentionner :
 - les archives du projet;
 - le journal de projet;
@@ -459,6 +480,8 @@ Si une information venant de la couche meta doit influencer une scene, elle doit
 ## Safeguards anti-fuite meta
 
 Les residents ne doivent jamais avoir conscience de la couche meta.
+
+Ils ne doivent pas seulement eviter d'en parler : ils ne doivent pas la connaitre, la deviner, la consulter ou agir comme si elle existait.
 
 La couche meta comprend :
 - le terme Holodeck;
