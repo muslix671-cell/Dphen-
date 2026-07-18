@@ -42,6 +42,10 @@ Ses questions doivent aider le design, pas seulement complexifier le debat.
 
 Eleanor considere qu'une bonne feuille de DPhen doit montrer ce que le joueur hesite a depenser.
 
+## Relations avec les autres membres
+
+- Aucune relation durable documentee pour le moment.
+
 ## Notes evolutives
 
 - Aucune evolution majeure pour le moment.

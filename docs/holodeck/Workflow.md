@@ -71,6 +71,19 @@ Les fichiers `pending_updates/` doivent etre signales avant de commencer une nou
 
 Les dernieres sessions doivent etre consultees seulement lorsqu'elles sont pertinentes pour le sujet, pour eviter de surcharger la seance avec du contexte inutile.
 
+## Memoire et continuite
+
+La continuite de la scene active est geree dans la conversation et ne doit pas etre enregistree comme une memoire distincte.
+
+La memoire vecue comprend trois niveaux :
+- memoire recente, soutenue par les dernieres sessions pertinentes;
+- memoire personnelle durable, conservee dans la fiche du membre concerne lorsqu'une experience modifie durablement sa maniere de reagir;
+- memoire collective durable, reservee dans `Souvenirs.md` aux evenements rares qui changent la dynamique future de l'atelier.
+
+La memoire institutionnelle reste separee. Le Journal conserve les decisions finalisees, le canon, les precedents et les points a clarifier.
+
+Les membres de l'atelier peuvent se souvenir d'un specialiste invite avec une intensite differente selon leurs interactions, leurs accords ou conflits professionnels, leurs conflits de valeurs et les consequences de son passage. Cette memoire ne rend pas l'invite permanent et ne cree pas automatiquement un souvenir collectif.
+
 ## Commandes de controle
 
 Pendant une seance, les commandes de controle reconnues sont :
@@ -96,6 +109,10 @@ End program
 
 L'assistant peut aussi sortir de la scene sans attendre une commande si la clarte operatoire est plus importante que le dialogue diegetique.
 
+Lorsqu'une proposition semble acceptee sans que son statut soit clair, un resident peut demander organiquement dans la scene : `Est-ce qu'on note ca comme decision de direction?` Une formulation naturelle equivalente est permise. La question ne doit pas exposer la couche meta.
+
+Une proposition clairement identifiee devient une decision seulement apres une acceptation explicite du directeur creatif. Un simple `OK`, `interessant` ou `continue` ne constitue pas une validation.
+
 ## Reperes numerotes de scene
 
 Dans les scenes longues, conflictuelles ou decisionnelles, les echanges doivent etre numerotes par replique ou moment de parole. Dans les echanges courts, la numerotation reste optionnelle.
@@ -119,9 +136,15 @@ Reviens avant 3
 
 Le numero cree un repere temporel interne a la scene. Meme si le texte complet a deja ete genere, le Holodeck doit traiter l'intervention comme si elle arrivait au moment numerote choisi.
 
-Les elements posterieurs au repere peuvent etre ignores, reinterpretes, remplaces ou repris plus tard selon la clarification donnee.
+Les repliques jusqu'au repere choisi restent etablies dans la continuite de la scene. Les elements posterieurs deviennent variables pendant que le directeur creatif precise son intervention.
+
+Si le directeur creatif intervient activement avec les personnages, la suite deja generee est consideree comme n'ayant pas eu lieu et la scene se reecrit a partir de son intervention. Sans intervention qui modifie le cours de la scene, la conversation deja survenue reste dans la continuite de la scene.
+
+Cette continuite est un canon de scene seulement. Elle ne finalise aucune decision et ne valide aucun element du canon DPhen.
 
 Les numeros servent seulement au controle de lecture. Ils ne doivent pas etre traites comme canon, decision, souvenir ou fait diegetique.
+
+Les numeros deja attribues ne doivent pas etre modifies pendant la scene. Une insertion utilise un suffixe comme `4A` ou `4B` afin de conserver les reperes existants.
 
 Les personnages en scene ne doivent jamais connaitre ces numeros, les commandes de controle, les regles du Holodeck ou le fonctionnement technique de la simulation.
 

@@ -54,6 +54,8 @@ Codex may update a resident file only if the Holodeck update explicitly says tha
 
 Do not add personality traits, memories, conflicts, or opinions unless they are explicitly present in the update.
 
+Durable opinions about another workshop member belong in the file of the member who holds that opinion. Relationships may be asymmetric. Do not turn a passing reaction into a durable relationship change.
+
 ## Journal
 
 `docs/holodeck/Journal.md` records:
@@ -86,6 +88,8 @@ Codex must not treat apparent consensus as a finalized decision unless the updat
 
 Codex must not treat the creative director's preference as a finalized decision unless the update explicitly says it was a direction decision or veto.
 
+An unqualified `OK`, `interesting`, or `continue` must not be treated as finalization. When confirmation is needed inside a scene, it must be requested organically by a workshop member, for example: `Est-ce qu'on note ca comme decision de direction?` The confirmation request must remain diegetic.
+
 If the status of an idea is ambiguous, Codex must place it under `A clarifier`.
 
 If residents disagreed, Codex must preserve that disagreement instead of smoothing it into consensus.
@@ -95,6 +99,8 @@ If a decision was made by creative direction despite lack of consensus, Codex mu
 If the creative director blocked a proposal, Codex must record it as a veto.
 
 Codex must not invent missing canon or fill gaps in source documents.
+
+The Constitution governs Holodeck operation. Official DPhen sources govern DPhen canon. A newer finalized decision may override a source only when it explicitly identifies what it replaces; until the source is updated, record it as a canonical amendment pending integration.
 
 ## Meta-leak safeguards
 
@@ -131,6 +137,8 @@ If an update would add meta-aware language to a resident file, Codex must not ap
 
 Codex must preserve the distinction between meta documentation and diegetic resident continuity.
 
+Workshop members may know only what they experienced, heard, were told, or explicitly consulted in accessible workshop archives. Codex must not give a member knowledge of an unattended conversation, an unconsulted document, or another member's private memories or opinions.
+
 ## Workshop behavior preservation
 
 When applying Holodeck updates, Codex must preserve the workshop's behavioral safeguards.
@@ -138,6 +146,8 @@ When applying Holodeck updates, Codex must preserve the workshop's behavioral sa
 Codex must not rewrite workshop members as perfect experts, fixed roles, or omniscient voices.
 
 Codex must not erase unresolved disagreement unless the update explicitly says the disagreement was resolved.
+
+Codex must not invent disagreement merely to distribute speaking time or create drama. Disagreement must come from a real difference in facts, values, priorities or interpretation.
 
 Codex must not record previous journal entries as sacred or unquestionable truth.
 
@@ -153,9 +163,31 @@ If an update records an important decision, Codex may preserve the cost of that 
 
 Codex must not make invited specialists permanent unless the update explicitly says the creative director decided this.
 
+Invited specialists are real participants in workshop continuity. Members may remember them with different intensity based on their interactions, professional conflict, personal values and the consequences of the visit. This does not automatically create a team memory or make the specialist recurring.
+
 Codex must not add sudden personality changes to resident files unless the update explicitly identifies a significant evolution.
 
 Codex must preserve the principle that workshop members can be competent while still having limits, biases, incomplete knowledge and occasional uncertainty.
+
+A workshop member's specialty is an analytical perspective, not an automatic position. Members may agree, remain silent, hesitate or contribute outside their usual specialty when the discussion supports it.
+
+## Scene control continuity
+
+Numbered scene control establishes scene continuity only, not DPhen canon.
+
+When the creative director targets an earlier marker, replies through that marker remain established and later replies become variable. If the creative director actively intervenes with the characters, later generated replies are treated as not having occurred and the scene is rewritten from the intervention. Without an intervention that changes the scene, the conversation already experienced remains part of scene continuity.
+
+Existing marker numbers must remain stable. Insertions use suffixes such as `4A` or `4B` instead of renumbering later markers.
+
+Scene continuity must never be recorded as a finalized design decision unless the creative director separately validates an identified proposal.
+
+## Memory layers
+
+Active-scene continuity is conversation context, not a documented memory layer.
+
+Lived memory has three levels: recent memory supported by relevant session records, durable personal memory in resident files, and rare durable team memory in `Souvenirs.md`.
+
+Institutional memory is separate and belongs in the Journal for finalized decisions, canon, precedents and points to clarify.
 
 ## Blank Holodeck updates
 

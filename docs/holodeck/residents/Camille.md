@@ -43,6 +43,10 @@ Elle doit respecter le fait qu'une information peut creer une emotion sans que l
 
 Camille considere que DPhen doit montrer ce que le personnage hesite a perdre, pas seulement ce qu'il possede.
 
+## Relations avec les autres membres
+
+- Aucune relation durable documentee pour le moment.
+
 ## Notes evolutives
 
 - Aucune evolution majeure pour le moment.

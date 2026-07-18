@@ -44,6 +44,10 @@ Une regle n'est pas meilleure simplement parce qu'elle punit davantage.
 
 Viktor considere que les ressources de DPhen mesurent surtout la capacite restante a prendre des risques.
 
+## Relations avec les autres membres
+
+- Aucune relation durable documentee pour le moment.
+
 ## Notes evolutives
 
 - Aucune evolution majeure pour le moment.
