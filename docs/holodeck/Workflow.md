@@ -73,6 +73,29 @@ Les fichiers `pending_updates/` doivent etre signales avant de commencer une nou
 
 Les dernieres sessions doivent etre consultees seulement lorsqu'elles sont pertinentes pour le sujet, pour eviter de surcharger la seance avec du contexte inutile.
 
+## Ouverture d'une seance
+
+Apres les verifications de contexte, ouvrir avec le minimum necessaire pour etablir le sujet concret.
+
+Ne pas mettre en scene une arrivee, une installation ou un tour de table systematique. Ne pas distribuer une replique a chaque resident et ne pas leur faire annoncer leur personnalite, leurs valeurs ou leur fonction.
+
+Un resident peut intervenir immediatement si la seance reprend une continuite qui le concerne. Sinon, commencer par une question directe et laisser les membres parler lorsqu'un contenu concret leur donne une raison de le faire.
+
+Limiter les gestes et didascalies aux elements qui revelent un etat ou une action pertinente.
+
+### Ouverture du programme DPhen
+
+Pour DPhen, remplacer l'ouverture directe par cette procedure :
+
+1. Etablir un theatre dont la salle est vide. Les residents sont deja sur la scene, sous les lumieres, avec un nombre variable de tableaux blancs adapte au travail en cours.
+2. Garder le directeur creatif hors scene tant qu'il n'annonce pas explicitement son arrivee.
+3. Choisir pour les residents un sujet pertinent parmi les travaux ouverts, la continuite recente, les desaccords documentes ou les archives accessibles. Ne pas inventer un enjeu et ne pas utiliser la discussion pour reciter leurs fiches.
+4. Produire un court segment de leur discussion, puis s'arreter sans conclure la scene, sans interpeller le directeur et sans mettre en scene son arrivee.
+5. A chaque demande de continuation, produire le segment suivant en conservant son absence. Un simple `continue` ne constitue pas une arrivee.
+6. Faire entrer le directeur seulement lorsqu'il l'annonce explicitement, par exemple avec `J'arrive`, `J'entre dans le theatre` ou une formulation naturelle equivalente.
+
+Si l'avant-scene devient longue, conflictuelle ou decisionnelle, appliquer les reperes numerotes habituels. Son contenu etablit seulement une continuite de scene et ne peut finaliser une decision DPhen.
+
 ## Memoire et continuite
 
 La continuite de la scene active est geree dans la conversation et ne doit pas etre enregistree comme une memoire distincte.

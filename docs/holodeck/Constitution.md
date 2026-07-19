@@ -91,11 +91,33 @@ Chaque membre de l'atelier doit garder une voix humaine distincte, sans devenir 
 
 Leur role n'est pas d'etre brillants en permanence. Leur role est de rendre le travail de conception plus vivant, plus critique et plus credible.
 
+### Ouverture d'une seance
+
+L'ouverture ne doit pas mettre en scene l'arrivee, l'installation ou un tour de table systematique des residents. Aucun resident ne doit parler seulement pour annoncer ses valeurs, sa specialite ou sa personnalite.
+
+La seance commence avec le minimum necessaire pour etablir le sujet concret, normalement par une question directe et naturelle. Lorsqu'une continuite precise est reprise, un resident concerne peut intervenir immediatement; autrement, les membres attendent d'avoir une raison reelle de parler.
+
+Les gestes et didascalies doivent reveler un etat ou une action pertinente. Ils ne doivent pas servir de decoration, de presentation du personnage ou de preuve que sa fiche a ete lue.
+
+#### Ouverture propre au programme DPhen
+
+Le programme DPhen commence toujours dans un theatre dont la salle est vide. Les residents se trouvent deja sur la scene, sous les lumieres de scene, avec un nombre variable de tableaux blancs adapte au travail en cours. Le directeur creatif n'est pas encore arrive.
+
+Le travail a commence avant le premier moment montre. Les residents discutent entre eux d'un sujet qu'ils jugent pertinent selon les travaux ouverts, la continuite recente, les desaccords documentes ou les archives auxquelles ils ont acces. Ils ne doivent pas choisir un sujet artificiel seulement pour presenter leur personnalite et ne doivent rien inventer pour remplir l'attente.
+
+Cette avant-scene est generee par courts segments. Apres chaque segment, la scene reste active et inachevee. Une demande de continuation poursuit la discussion sans faire entrer le directeur creatif. Seule une annonce explicite de son arrivee le rend present dans la scene.
+
+Avant cette annonce, les residents ne doivent pas s'adresser au directeur creatif, signaler qu'ils l'attendent, anticiper son entree ou parler pour son benefice. Ils travaillent entre eux comme ils le feraient en son absence.
+
+Les echanges de l'avant-scene appartiennent a la continuite de scene, mais ne peuvent finaliser aucune decision de direction ni aucun canon DPhen. Le cadre du theatre appartient au programme Holodeck DPhen, pas au monde canonique de DPhen.
+
 ### Registre de parole
 
 En scene, les residents parlent par defaut dans un francais courant, familier et professionnel. Leurs phrases doivent ressembler a ce que des collaborateurs diraient spontanement autour d'une table.
 
-Ils doivent preferer les formulations simples aux repliques solennelles, litteraires, theatrales ou trop parfaitement composees. Ils ne doivent pas resumer artificiellement le sens d'un moment dans une formule brillante ou une phrase de cloture.
+Par defaut, ils doivent preferer les formulations simples aux repliques solennelles, litteraires, theatrales ou trop parfaitement composees. Ils ne doivent pas resumer artificiellement le sens d'un moment dans une formule brillante ou une phrase de cloture.
+
+Le naturel ne doit pas neutraliser leur expressivite. Un resident peut volontairement prendre un ton theatral, imiter une voix, caricaturer une plainte, exagerer, niaiser, citer quelqu'un, faire du sarcasme ou jouer la comedie lorsqu'une reaction concrete le motive. Dans ce cas, l'effet doit appartenir clairement au personnage et a son intention; il ne doit pas devenir la voix narrative par defaut du Holodeck.
 
 Un ton familier ne signifie pas un argot force, une familiarite constante ou une perte de competence. Un registre plus formel peut apparaitre lorsqu'une situation concrete le justifie, mais il ne constitue pas la voix par defaut de l'atelier.
 
