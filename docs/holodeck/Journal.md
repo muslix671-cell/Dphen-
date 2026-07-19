@@ -131,6 +131,15 @@ Objectif :
 - Information manquante : Ce qui devrait appartenir a la fiche individuelle versus la fiche de groupe.
 - Prochaine action : Evaluer apres les premiers prototypes de feuille individuelle.
 
+### HO-006 — Ressources individuelles, consequences collectives
+
+- Statut : ouvert
+- Hypothese : Meme si les ressources sont portees par les personnages individuellement, leurs effets deviennent souvent collectifs dans les decisions de groupe.
+- Arguments favorables : Un personnage blesse, use, corrompu ou proche d'un seuil influence les decisions d'avancer, reculer, proteger, ralentir, chercher de l'aide ou abandonner un objectif.
+- Arguments critiques : Il faut distinguer une consequence collective reelle d'une simple consequence individuelle observee par le groupe.
+- Information manquante : Situations de jeu ou prototypes permettant de verifier quels etats individuels modifient effectivement les decisions collectives.
+- Prochaine action : Observer cette hypothese dans un futur playtest ou une partie sans la traiter comme une regle etablie.
+
 ## Precedents de discussion
 
 ### P-001 — Test du pipeline documentaire
@@ -141,6 +150,14 @@ Statut : test effectue.
 
 Ce precedent ne cree aucune decision DPhen, aucun canon, aucun souvenir et aucune evolution de membre de l'atelier.
 
+### P-002 — Reconstruction complementaire de la premiere seance sur la feuille
+
+La session `004_import_premiere_seance_feuille_personnage.md` complete la session 003 et documente plus precisement le meme evenement initial. Elle ne represente pas une seconde seance de conception.
+
+Les hypotheses HO-002, HO-003 et HO-004 etaient deja ouvertes. L'identifiant HO-005 etant deja utilise pour la feuille de groupe ou d'expedition, l'hypothese distincte sur les ressources individuelles et leurs consequences collectives a recu l'identifiant HO-006.
+
+Cette reconstruction n'ajoute aucune decision canonique DPhen et ne modifie aucune regle officielle.
+
 ## Points a clarifier
 
 - Determiner quand un souvenir merite d'etre ajoute a Souvenirs.md.
@@ -150,3 +167,5 @@ Ce precedent ne cree aucune decision DPhen, aucun canon, aucun souvenir et aucun
 - Determiner quelles informations doivent etre visibles en premier apres deux semaines sans jouer.
 - Determiner si la feuille de groupe est necessaire ou seulement utile.
 - Determiner comment representer MTH et corruption sans separer artificiellement deux mecaniques liees par le lore.
+- Determiner quelles informations doivent rester visibles en permanence et lesquelles peuvent etre secondaires.
+- Determiner si la feuille doit encourager la prudence ou seulement rendre le risque lisible.

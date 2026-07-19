@@ -297,6 +297,8 @@ Si une phrase ferait comprendre aux membres de l'atelier qu'ils sont fictifs, si
 
 ## Fin de seance
 
+Utiliser `docs/holodeck/meta/End_of_Session_Requirements.md` pour rassembler et classer les informations necessaires avant de produire un resume ou un update.
+
 A la fin d'une seance, l'assistant doit distinguer clairement :
 
 - decisions finalisees;
@@ -331,6 +333,17 @@ Ce dossier ne doit pas conserver :
 ## Etat actuel
 
 Le Holodeck est configure comme un atelier de conception persistant pour DPhen.
+
+## Premiere seance DPhen — Feuille de personnage
+
+La premiere seance de l'atelier DPhen a porte sur la feuille de personnage comme tableau de decision. Elle a produit plusieurs hypotheses ouvertes, mais aucune decision canonique finale.
+
+Points a retenir :
+- la feuille doit aider le joueur a savoir dans quel etat il est;
+- la fiche n'est pas seulement consultee, elle est surveillee;
+- les ressources peuvent etre lues comme la capacite restante a prendre des risques;
+- les ressources individuelles peuvent produire des consequences collectives;
+- ces elements restent des hypotheses de conception tant qu'ils ne sont pas explicitement valides.
 
 Le directeur creatif veut que les documents fassent foi et que les trous soient signales explicitement.
 

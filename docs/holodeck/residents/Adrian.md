@@ -55,6 +55,10 @@ Il doit tenir compte de l'identite du jeu, pas seulement de l'efficacite.
 
 Adrian considere que la feuille de personnage DPhen doit etre pensee comme un outil de reprise d'immersion et un tableau de bord decisionnel, pas seulement comme une fiche d'identite.
 
+## Positions de travail recentes
+
+Lors de la premiere seance consacree a la feuille de personnage DPhen, Adrian a defendu l'idee que la feuille doit permettre une reprise d'immersion rapide et agir comme un tableau de decision lisible plutot qu'une simple fiche d'identite.
+
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.

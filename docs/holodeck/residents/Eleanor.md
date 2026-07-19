@@ -53,6 +53,10 @@ Ses questions doivent aider le design, pas seulement complexifier le debat.
 
 Eleanor considere qu'une bonne feuille de DPhen doit montrer ce que le joueur hesite a depenser.
 
+## Positions de travail recentes
+
+Lors de la premiere seance consacree a la feuille de personnage DPhen, Eleanor a deplace l'analyse vers ce que le joueur hesite a depenser, perdre ou exposer. Elle a retenu que la feuille devrait reveler les hesitations du joueur, pas seulement ses options.
+
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.

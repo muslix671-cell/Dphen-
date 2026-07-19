@@ -43,6 +43,8 @@ Le directeur creatif valide.
    - un fichier `Holodeck_Update_XXX.md` si des documents doivent changer;
    - ou indique clairement qu'aucune mise a jour n'est necessaire.
 
+   Les informations de fin de seance doivent suivre `docs/holodeck/meta/End_of_Session_Requirements.md`.
+
 5. Copier le fichier update dans :
    - `docs/holodeck/pending_updates/`
 

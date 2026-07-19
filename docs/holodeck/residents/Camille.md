@@ -54,6 +54,10 @@ Elle doit respecter le fait qu'une information peut creer une emotion sans que l
 
 Camille considere que DPhen doit montrer ce que le personnage hesite a perdre, pas seulement ce qu'il possede.
 
+## Positions de travail recentes
+
+Lors de la premiere seance consacree a la feuille de personnage DPhen, Camille a insiste sur le fait que la feuille devrait montrer ce que le joueur hesite a perdre, et pas seulement ce que le personnage possede.
+
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.

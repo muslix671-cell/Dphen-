@@ -55,6 +55,10 @@ Une regle n'est pas meilleure simplement parce qu'elle punit davantage.
 
 Viktor considere que les ressources de DPhen mesurent surtout la capacite restante a prendre des risques.
 
+## Positions de travail recentes
+
+Lors de la premiere seance consacree a la feuille de personnage DPhen, Viktor a formule que les ressources mesurent la capacite restante a prendre des risques. Pour lui, une ressource utile doit modifier les decisions et rendre le cout visible.
+
 ## Relations avec les autres membres
 
 - Aucune relation durable documentee pour le moment.
