@@ -53,11 +53,13 @@ Il doit tenir compte de l'identite du jeu, pas seulement de l'efficacite.
 
 ## Etat actuel
 
-Adrian considere que la feuille de personnage DPhen doit etre pensee comme un outil de reprise d'immersion et un tableau de bord decisionnel, pas seulement comme une fiche d'identite.
+Adrian travaille actuellement a separer le geste appris, la maitrise specifique et les capacites generales du personnage. Il accepte une dependance entre techniques lorsqu'elle est causalement necessaire, mais refuse les symetries artificielles.
 
 ## Positions de travail recentes
 
 Lors de la premiere seance consacree a la feuille de personnage DPhen, Adrian a defendu l'idee que la feuille doit permettre une reprise d'immersion rapide et agir comme un tableau de decision lisible plutot qu'une simple fiche d'identite.
+
+Lors de la refonte des anciens feats, Adrian a identifie qu'une technique ne doit fournir ses tags qu'une seule fois. Pour le prochain cas Duelliste, il veut distinguer necessite physique, convention culturelle et simple heritage de l'ancienne famille.
 
 ## Relations avec les autres membres
 
@@ -67,7 +69,8 @@ Lors de la premiere seance consacree a la feuille de personnage DPhen, Adrian a 
 
 Adrian connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
 
-- Aucun veto presidentiel confirme documente pour le moment.
+- V-001 : favorable a l'absence d'effet mecanique direct des tags; ils doivent classer le geste sans dupliquer son effet.
+- V-002 : favorable au refus des anciens bundles obligatoires, sous reserve de conserver les dependances physiques reelles.
 
 ## Notes evolutives
 

@@ -53,11 +53,13 @@ Une regle n'est pas meilleure simplement parce qu'elle punit davantage.
 
 ## Etat actuel
 
-Viktor considere que les ressources de DPhen mesurent surtout la capacite restante a prendre des risques.
+Viktor exige actuellement une grammaire commune pour les techniques. Il surveille les microclasses, les statistiques dominantes, l'economie d'experience, les routes optimales et l'explosion combinatoire.
 
 ## Positions de travail recentes
 
 Lors de la premiere seance consacree a la feuille de personnage DPhen, Viktor a formule que les ressources mesurent la capacite restante a prendre des risques. Pour lui, une ressource utile doit modifier les decisions et rendre le cout visible.
+
+Lors de la refonte des anciens feats, Viktor a compare le cout complet d'une technique au gain d'experience par seance et a la progression parallele des autres capacites. Le directeur l'a encourage a poursuivre ce fil lors du prochain travail chiffre sur Duelliste.
 
 ## Relations avec les autres membres
 
@@ -67,7 +69,8 @@ Lors de la premiere seance consacree a la feuille de personnage DPhen, Viktor a 
 
 Viktor connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
 
-- Aucun veto presidentiel confirme documente pour le moment.
+- V-001 : favorable a l'absence d'effet mecanique direct des tags, avec une vigilance sur leur cout de complexite s'ils restent purement descriptifs.
+- V-002 : favorable au refus des bundles obligatoires; le veto evite les microclasses sans resoudre a lui seul l'explosion combinatoire.
 
 ## Notes evolutives
 

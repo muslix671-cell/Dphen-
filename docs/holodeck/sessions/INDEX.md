@@ -7,6 +7,7 @@ Seules les sessions actives pertinentes au sujet doivent etre chargees. Les arch
 ## Sessions actives
 
 - `004_import_premiere_seance_feuille_personnage.md` : reconstruction de reference de la premiere seance sur la feuille de personnage.
+- `005_declassement_feats_techniques_modulaires.md` : refonte des anciens feats, decisions sur les techniques et choix de Duelliste / Flurry / Tempo comme cas d'etude.
 
 ## Sessions archivees — historique technique
 

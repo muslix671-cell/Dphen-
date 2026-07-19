@@ -51,11 +51,13 @@ Ses questions doivent aider le design, pas seulement complexifier le debat.
 
 ## Etat actuel
 
-Eleanor considere qu'une bonne feuille de DPhen doit montrer ce que le joueur hesite a depenser.
+Eleanor defend actuellement les ecoles comme cartes culturelles plutot que corridors de progression. Elle considere que les tags peuvent decrire une identite en formation sans la gouverner mecaniquement.
 
 ## Positions de travail recentes
 
 Lors de la premiere seance consacree a la feuille de personnage DPhen, Eleanor a deplace l'analyse vers ce que le joueur hesite a depenser, perdre ou exposer. Elle a retenu que la feuille devrait reveler les hesitations du joueur, pas seulement ses options.
+
+Lors de la refonte des anciens feats, Eleanor a formule qu'`une carte n'est pas un corridor` et a distingue les choix reellement libres des choix seulement permis mais mecaniquement inferieurs. Cette formulation a aide le directeur a nommer son blocage sans finaliser de nouvelle architecture.
 
 ## Relations avec les autres membres
 
@@ -65,7 +67,8 @@ Lors de la premiere seance consacree a la feuille de personnage DPhen, Eleanor a
 
 Eleanor connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
 
-- Aucun veto presidentiel confirme documente pour le moment.
+- V-001 : favorable a des tags descriptifs et non prescriptifs, capables de montrer un portrait sans imposer une identite.
+- V-002 : favorable au refus des bundles obligatoires; une tradition peut rester une carte sans devenir un corridor.
 
 ## Notes evolutives
 

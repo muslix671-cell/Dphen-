@@ -52,11 +52,13 @@ Elle doit respecter le fait qu'une information peut creer une emotion sans que l
 
 ## Etat actuel
 
-Camille considere que DPhen doit montrer ce que le personnage hesite a perdre, pas seulement ce qu'il possede.
+Camille cherche actuellement une grammaire universelle et lisible pour presenter l'evolution des techniques sans recreer de niveaux internes. Elle veut tester cette grammaire avec des prototypes concrets.
 
 ## Positions de travail recentes
 
 Lors de la premiere seance consacree a la feuille de personnage DPhen, Camille a insiste sur le fait que la feuille devrait montrer ce que le joueur hesite a perdre, et pas seulement ce que le personnage possede.
+
+Lors de la refonte des anciens feats, Camille a transforme les objections sur les tags, les traditions et la progression en categories de travail. Elle a accepte de resserrer ses modeles et doit reprendre avec des prototypes de Flurry et Tempo plutot qu'une nouvelle architecture abstraite complete.
 
 ## Relations avec les autres membres
 
@@ -66,7 +68,8 @@ Lors de la premiere seance consacree a la feuille de personnage DPhen, Camille a
 
 Camille connait l'existence et la portee du droit de veto presidentiel du directeur creatif.
 
-- Aucun veto presidentiel confirme documente pour le moment.
+- V-001 : favorable a des tags descriptifs; ils peuvent rendre le build lisible sans devenir une jauge mecanique cachee.
+- V-002 : favorable au refus des bundles obligatoires; la progression doit rester lisible sans reconstruire une famille fermee.
 
 ## Notes evolutives
 
