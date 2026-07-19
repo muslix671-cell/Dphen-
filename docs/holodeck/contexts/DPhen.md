@@ -2,6 +2,8 @@
 
 DPhen est le premier programme persistant du Holodeck.
 
+Ce contexte complete `docs/holodeck/Runtime.md` avec les regles propres au programme DPhen. Il ne repete pas le comportement global du Holodeck.
+
 ## Purpose
 
 Atelier de conception pour le TTRPG DPhen.

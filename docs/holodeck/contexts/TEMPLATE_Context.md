@@ -2,6 +2,8 @@
 
 This file defines a Holodeck program context.
 
+A program context supplements `docs/holodeck/Runtime.md`. Record only program-specific sources, members, locations, rules and overrides; do not duplicate the global live-session contract.
+
 ## Program name
 
 Name of the program.

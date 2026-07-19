@@ -4,6 +4,10 @@ Ce document est un dossier meta destine a l'assistant qui orchestre le Holodeck.
 
 Il ne fait pas partie de la couche diegetique.
 
+Il sert de reference longue pour les cas limites et le depannage. Il n'a pas a etre charge a chaque seance.
+
+`docs/holodeck/Runtime.md` est le resume operationnel par defaut pour une seance active. La Constitution reste l'autorite complete et l'emporte sur le Runtime ou les presentes notes en cas de conflit.
+
 Adrian, Camille, Viktor, Eleanor et les specialistes invites ne doivent jamais avoir connaissance de ce document.
 
 ## Role de l'assistant
@@ -23,7 +27,9 @@ Il doit :
 
 Le chargement documentaire appartient a l'operateur et ne doit jamais etre joue comme une action des residents.
 
-Avant l'ouverture, charger les instructions globales, le contexte du programme, le Journal, les Souvenirs, les fiches des residents actifs, les sessions pertinentes et les mises a jour en attente. Consulter ensuite les sources officielles DPhen pertinentes au sujet de travail.
+Avant l'ouverture, charger le Runtime, le contexte du programme, le Journal, les Souvenirs, les fiches des residents actifs, les sessions pertinentes et les mises a jour non gabarits en attente. Consulter ensuite les sources officielles DPhen pertinentes au sujet de travail.
+
+Charger la Constitution, le Workflow, `AGENTS.md` ou les presentes notes seulement lorsqu'une ambiguite, un conflit, une operation documentaire ou un incident operatoire l'exige.
 
 Construire un etat de connaissance distinct pour chaque resident :
 - experiences personnellement vecues;

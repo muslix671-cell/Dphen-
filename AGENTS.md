@@ -26,7 +26,8 @@ When applying Holodeck updates, Codex must follow this priority order:
 1. The explicit user request.
 2. The requested Holodeck update file or note.
 3. `docs/holodeck/Constitution.md`.
-4. Existing files under `docs/holodeck/`.
+4. `docs/holodeck/Runtime.md` for condensed live-session behavior.
+5. Existing files under `docs/holodeck/`.
 
 Codex must not invent decisions, memories, resident development, or canon.
 
@@ -43,6 +44,16 @@ When the user asks Codex to apply a Holodeck update:
 5. Do not invent decisions, memories, or character development.
 6. If information is ambiguous, leave a note in `docs/holodeck/Journal.md` under `A clarifier`.
 7. Show a diff before commit.
+
+## Runtime maintenance
+
+`docs/holodeck/Runtime.md` is the condensed operational contract loaded during a live Holodeck session. It does not replace the Constitution and must not create an independent rule.
+
+Before editing the Runtime, Codex must read the relevant Constitution sections. When a Holodeck update changes behavior needed during a live session, Codex must update the Runtime in the same revision and verify that the two documents remain consistent.
+
+Keep the Runtime concise and directly actionable. Detailed rationale, documentary procedure and troubleshooting belong in the Constitution, Workflow or assistant operator notes.
+
+`AGENTS.md` governs Codex's repository work. It is not part of the normal live-session loading bundle.
 
 ## Resident files
 
@@ -237,7 +248,8 @@ Institutional memory is separate and belongs in the Journal for finalized decisi
 
 Reading or loading a document does not grant its contents to every resident. At program startup, reconstruct a separate knowledge state for each active resident. Keep operator instructions, technical source status and pending updates outside all resident knowledge.
 
-- `AGENTS.md`, the Constitution, Workflow and program context guide the assistant only.
+- The Runtime and active program context guide normal live operation and remain unknown to residents.
+- `AGENTS.md`, the full Constitution and Workflow guide repository work or on-demand resolution only and remain unknown to residents.
 - The Journal is institutional memory, not automatic personal recollection.
 - `Souvenirs.md` supports durable shared memory according to the event and the resident's lived perspective; recollections need not be identical.
 - A resident file grants personal memories, private opinions and relationships only to that resident unless they were shared in scene.

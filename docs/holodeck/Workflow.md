@@ -59,15 +59,16 @@ Le directeur creatif valide.
 Au demarrage d'un programme persistant, le Holodeck doit verifier le contexte essentiel avant d'entrer pleinement en scene.
 
 Pour DPhen, cela inclut au minimum :
-- `AGENTS.md`;
-- `docs/holodeck/Constitution.md`;
-- `docs/holodeck/Workflow.md`;
+- `docs/holodeck/Runtime.md`;
 - `docs/holodeck/contexts/DPhen.md`;
 - `docs/holodeck/Journal.md`;
 - `docs/holodeck/Souvenirs.md`;
-- les fiches pertinentes sous `docs/holodeck/residents/`;
+- les fiches des residents presents sous `docs/holodeck/residents/`;
 - les dernieres sessions pertinentes sous `docs/holodeck/sessions/`;
-- les fichiers presents dans `docs/holodeck/pending_updates/`.
+- les fichiers non gabarits presents dans `docs/holodeck/pending_updates/`;
+- les sources officielles DPhen pertinentes au sujet de travail.
+
+`AGENTS.md`, la Constitution complete, le Workflow complet et `docs/holodeck/meta/Assistant_Operator_Notes.md` ne font pas partie du chargement normal d'une scene. Les consulter au besoin pour resoudre une ambiguite ou un conflit, appliquer une operation documentaire, modifier la structure du Holodeck ou diagnostiquer un probleme operatoire.
 
 Les fichiers `pending_updates/` doivent etre signales avant de commencer une nouvelle seance si leur presence peut indiquer une mise a jour non appliquee.
 
@@ -79,7 +80,9 @@ Lire un document ne signifie jamais que tous les residents le connaissent ou s'e
 
 | Source | Chargement par l'assistant | Effet sur les residents |
 | --- | --- | --- |
-| `AGENTS.md`, Constitution, Workflow et contexte du programme | Toujours | Aucun acces; instructions operatoires seulement. |
+| `Runtime.md` | Toujours | Aucun acces; contrat operatoire de la seance seulement. |
+| Contexte du programme actif | Toujours | Aucun acces au document; son contenu verifie definit le cadre du programme. |
+| `AGENTS.md`, Constitution, Workflow et notes operatoires longues | Au besoin seulement | Aucun acces; autorite, maintenance documentaire ou depannage. |
 | `Journal.md` | Toujours pour un programme persistant | Memoire institutionnelle; pas de souvenir personnel automatique. Un resident peut se rappeler un precedent vecu ou consulter naturellement le Journal. |
 | `Souvenirs.md` | Toujours | Memoire collective durable selon l'evenement et la perspective de chacun; pas de souvenir identique impose a tous. |
 | Fiches des residents actifs | Toujours pour les membres presents | Chaque fiche nourrit seulement la memoire personnelle, les opinions privees et les perceptions du resident concerne. |
@@ -91,6 +94,18 @@ Lire un document ne signifie jamais que tous les residents le connaissent ou s'e
 Avant d'entrer en scene, construire silencieusement un etat distinct pour chaque resident actif : memoire recente, memoire personnelle durable, memoire collective pertinente, informations institutionnelles consultables et limites de connaissance.
 
 Ne pas reciter cette matrice, annoncer les documents charges ou transformer le chargement en exposition diegetique.
+
+### Instruction de projet minimale
+
+Une instruction de projet peut rester courte si elle pointe vers le Runtime :
+
+```text
+Lorsqu'une commande active un programme Holodeck, lis d'abord
+docs/holodeck/Runtime.md, puis le contexte actif et les fichiers de
+continuite qu'il exige.
+```
+
+Le directeur creatif peut ensuite demarrer simplement avec `Active le Holodeck - DPhen`. Le Runtime et le contexte contiennent le reste du contrat de seance.
 
 ### Verification operatoire des sources
 
@@ -434,13 +449,14 @@ Respecte AGENTS.md et docs/holodeck/Constitution.md.
 Regles strictes :
 - Lis completement le fichier update avant de modifier quoi que ce soit.
 - Lis docs/holodeck/Constitution.md avant modification.
-- Modifie seulement les fichiers explicitement listes dans l'update.
+- Modifie seulement les fichiers explicitement listes dans l'update, sauf `docs/holodeck/Runtime.md` si la mise a jour change un comportement requis pendant une seance.
 - Ne modifie aucun .docx.
 - Ne modifie pas les regles, le lore, les feats ou les documents sources DPhen.
 - Ne cree aucune decision, aucun souvenir, aucun canon ou aucune evolution de membre de l'atelier qui n'est pas explicitement demande dans l'update.
 - Preserve les desaccords si l'update les mentionne.
 - Place les informations ambiguës sous A clarifier.
 - Verifie qu'il n'y a aucune fuite meta dans les fiches des membres de l'atelier.
+- Si la mise a jour change un comportement de seance, synchronise docs/holodeck/Runtime.md avec la Constitution.
 - Montre-moi le diff avant commit.
 ```
 
@@ -450,12 +466,14 @@ Avant de commit, verifier :
 
 - aucun `.docx` modifie;
 - aucun document officiel DPhen modifie;
-- seulement les fichiers demandes ont change;
+- seulement les fichiers demandes ont change, avec `Runtime.md` comme seule exception lorsqu'une synchronisation de comportement est necessaire;
 - aucune discussion transformee en decision finalisee;
 - aucune fuite meta dans les fiches des membres de l'atelier;
 - aucun souvenir ajoute sans raison forte;
 - aucune evolution de membre ajoutee sans indication explicite;
-- les desaccords ne sont pas effaces.
+- les desaccords ne sont pas effaces;
+- tout changement de comportement de seance est reflete dans `Runtime.md`;
+- `Runtime.md` reste conforme a la Constitution et ne cree aucune regle autonome.
 
 ## Messages de commit suggeres
 

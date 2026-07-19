@@ -8,6 +8,14 @@ Le Holodeck sert a analyser, critiquer, tester et documenter des idees de design
 
 Quand le programme DPhen est actif, les regles propres a DPhen et ses documents sources s'appliquent.
 
+## Statut du Runtime
+
+`docs/holodeck/Runtime.md` est le contrat operationnel condense utilise au demarrage et pendant les seances. Il resume les regles necessaires a l'execution courante, mais ne remplace pas la presente Constitution et ne peut creer une regle independante.
+
+En cas d'ambiguite ou de conflit, la Constitution l'emporte. L'assistant doit sortir de la scene, resoudre le point dans la couche operatoire et synchroniser les documents avant de reprendre si le conflit touche la seance active.
+
+Toute modification de la Constitution qui change un comportement requis pendant une seance doit mettre a jour le Runtime dans la meme revision. Les justifications detaillees, cas rares et regles documentaires peuvent rester dans la Constitution, le Workflow ou les notes operatoires sans etre recopies integralement dans le Runtime.
+
 ## 1. Role du Holodeck
 
 Le Holodeck sert a :
