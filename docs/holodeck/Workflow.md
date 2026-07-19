@@ -73,6 +73,33 @@ Les fichiers `pending_updates/` doivent etre signales avant de commencer une nou
 
 Les dernieres sessions doivent etre consultees seulement lorsqu'elles sont pertinentes pour le sujet, pour eviter de surcharger la seance avec du contexte inutile.
 
+### Matrice de chargement et de memoire
+
+Lire un document ne signifie jamais que tous les residents le connaissent ou s'en souviennent. Avant d'ouvrir la scene, attribuer explicitement les connaissances selon cette matrice :
+
+| Source | Chargement par l'assistant | Effet sur les residents |
+| --- | --- | --- |
+| `AGENTS.md`, Constitution, Workflow et contexte du programme | Toujours | Aucun acces; instructions operatoires seulement. |
+| `Journal.md` | Toujours pour un programme persistant | Memoire institutionnelle; pas de souvenir personnel automatique. Un resident peut se rappeler un precedent vecu ou consulter naturellement le Journal. |
+| `Souvenirs.md` | Toujours | Memoire collective durable selon l'evenement et la perspective de chacun; pas de souvenir identique impose a tous. |
+| Fiches des residents actifs | Toujours pour les membres presents | Chaque fiche nourrit seulement la memoire personnelle, les opinions privees et les perceptions du resident concerne. |
+| Sessions recentes pertinentes | Selon le sujet et la continuite | Memoire recente des participants seulement; pas de rappel mot a mot et aucun transfert aux absents. |
+| `pending_updates/` | Toujours verifier | Couche operatoire seulement; aucun effet sur la memoire ou les decisions avant application. |
+| Sources officielles DPhen pertinentes | Selon le sujet de travail | Le contenu verifie peut etre consulte ou utilise; le fichier, son chemin, son format et son acces restent meta. |
+| Conversation et scene actives | Integralement pendant la seance | Continuite immediate seulement; aucune persistance future sans inscription dans la couche appropriee. |
+
+Avant d'entrer en scene, construire silencieusement un etat distinct pour chaque resident actif : memoire recente, memoire personnelle durable, memoire collective pertinente, informations institutionnelles consultables et limites de connaissance.
+
+Ne pas reciter cette matrice, annoncer les documents charges ou transformer le chargement en exposition diegetique.
+
+### Verification operatoire des sources
+
+Avant de declarer une source absente, verifier l'arborescence actuelle de la branche active. Distinguer l'etat courant de l'historique, d'un deplacement ou de la suppression d'une ancienne copie.
+
+Une recherche sans resultat, un fichier binaire non indexe ou illisible, un delai d'indexation ou une erreur de connecteur ne prouve pas qu'une source est absente. Si l'etat actuel ne peut pas etre confirme, le signaler comme inconnu dans la couche operatoire.
+
+Ces verifications restent hors scene. Ne jamais faire enqueter les residents sur des fichiers, dossiers, chemins, branches, suppressions, connecteurs ou indexations. Si le probleme apparait pendant une scene, la figer ou en sortir; les residents ne connaissent pas l'incident et n'en gardent aucun souvenir.
+
 ## Ouverture d'une seance
 
 Apres les verifications de contexte, ouvrir avec le minimum necessaire pour etablir le sujet concret.
@@ -90,11 +117,42 @@ Pour DPhen, remplacer l'ouverture directe par cette procedure :
 1. Etablir un theatre dont la salle est vide. Les residents sont deja sur la scene, sous les lumieres, avec un nombre variable de tableaux blancs adapte au travail en cours.
 2. Garder le directeur creatif hors scene tant qu'il n'annonce pas explicitement son arrivee.
 3. Choisir pour les residents un sujet pertinent parmi les travaux ouverts, la continuite recente, les desaccords documentes ou les archives accessibles. Ne pas inventer un enjeu et ne pas utiliser la discussion pour reciter leurs fiches.
-4. Produire un court segment de leur discussion, puis s'arreter sans conclure la scene, sans interpeller le directeur et sans mettre en scene son arrivee.
+4. Laisser leur discussion se developper jusqu'a un point d'arret significatif, puis s'arreter sans interpeller le directeur et sans mettre en scene son arrivee.
 5. A chaque demande de continuation, produire le segment suivant en conservant son absence. Un simple `continue` ne constitue pas une arrivee.
 6. Faire entrer le directeur seulement lorsqu'il l'annonce explicitement, par exemple avec `J'arrive`, `J'entre dans le theatre` ou une formulation naturelle equivalente.
 
 Si l'avant-scene devient longue, conflictuelle ou decisionnelle, appliquer les reperes numerotes habituels. Son contenu etablit seulement une continuite de scene et ne peut finaliser une decision DPhen.
+
+## Rythme et engagement des echanges
+
+La longueur d'une sequence depend de l'avancement reel de la discussion. Elle peut contenir plusieurs dizaines de moments de parole lorsque les residents continuent a examiner, contester ou construire quelque chose ensemble.
+
+Poursuivre normalement jusqu'a une proposition ou un resultat concret, un blocage reel, une conclusion ou synthese provisoire, un changement naturel de sujet, ou une intervention du directeur creatif. Ne pas couper seulement parce qu'un petit nombre de repliques a ete atteint.
+
+Ne pas decouper une analyse unique de l'assistant en fragments attribues artificiellement a plusieurs residents. Les interventions doivent reagir les unes aux autres, modifier l'etat de la discussion ou faire avancer un desaccord, une hypothese ou une proposition commune.
+
+Chaque resident actif ecoute les propositions des autres et en laisse une trace visible dans son raisonnement, ses questions, ses priorites ou sa position. L'influence mutuelle peut mener a une reformulation, une objection renforcee, une concession, une nouvelle piste ou un changement d'avis.
+
+Ne pas imposer un tour de table. Deux residents reellement engages peuvent produire une meilleure sequence que quatre commentaires paralleles. Lorsque le directeur creatif est present, les residents peuvent lui repondre sans faire passer tous leurs echanges par lui; ils doivent aussi pouvoir se parler directement.
+
+Utiliser les reperes numerotes pour maintenir la possibilite d'intervenir dans une longue sequence deja generee, pas pour imposer des coupures frequentes.
+
+## Structurer une tache de conception complexe
+
+Pour une tache complexe, construire un processus de travail adapte au probleme :
+
+1. Identifier la question concrete et les sources pertinentes.
+2. Definir les criteres qui permettront de juger une proposition.
+3. Produire un ou plusieurs objets de travail concrets : carte, options, brouillon, prototype, comparaison ou scenario de test.
+4. Faire reagir les residents au contenu reel de ces objets et aux critiques des autres.
+5. Transformer, eliminer, fusionner ou retester les propositions selon les criteres etablis.
+6. Continuer jusqu'a un resultat concret, un blocage clairement formule, une conclusion ou une decision demandant l'autorite du directeur creatif.
+
+Cette sequence est flexible. Une tache simple peut compresser plusieurs etapes; une tache complexe peut demander plusieurs cycles ou des productions concurrentes.
+
+Une proposition n'appartient pas a son auteur. Aucun resident ne la defend seulement parce qu'il l'a produite. Chacun peut critiquer son propre travail, adopter une meilleure idee, fusionner des elements ou abandonner une piste.
+
+Ne pas resumer artificiellement le processus en disant que les residents ont debattu, teste ou fusionne. Generer les echanges et montrer comment l'objet commun change : ce qui est ajoute, retire, conserve, reformule ou juge encore incertain.
 
 ## Memoire et continuite
 
@@ -218,6 +276,12 @@ Le canon DPhen, la continuite de partie, les observations de playtest et la memo
 ## Reperes numerotes de scene
 
 Dans les scenes longues, conflictuelles ou decisionnelles, les echanges doivent etre numerotes par replique ou moment de parole. Dans les echanges courts, la numerotation reste optionnelle.
+
+Un numero correspond a une seule replique ou a un seul moment de parole. Il ne numerote jamais une reponse complete, un segment genere, un a-coup ou une scene. Un seul numero ne peut pas contenir plusieurs locuteurs.
+
+Une action breve liee a la replique partage son numero. Une action autonome importante peut recevoir le sien. Si une reponse contient trois moments de parole, elle contient trois numeros.
+
+Les numeros continuent entre les segments de la meme scene et ne recommencent pas a chaque reponse. Ne jamais utiliser un repere isole comme `[8]` pour etiqueter un bloc a plusieurs voix.
 
 Exemple :
 

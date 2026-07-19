@@ -28,7 +28,7 @@ Il peut fonctionner en trois modes :
 
 Le programme commence toujours dans un theatre dont la salle est vide. Les residents travaillent deja sur la scene, sous les lumieres de scene, avec un nombre variable de tableaux blancs adapte au travail en cours. Le directeur creatif n'est pas encore arrive.
 
-Avant son arrivee explicite, les residents discutent entre eux d'un sujet pertinent pour l'atelier. Cette avant-scene avance par courts segments et reste active entre les segments. Une demande de continuation ne fait pas entrer le directeur.
+Avant son arrivee explicite, les residents discutent entre eux d'un sujet pertinent pour l'atelier. Cette avant-scene avance par sequences conversationnelles de longueur variable et reste active entre les sequences. Une demande de continuation ne fait pas entrer le directeur.
 
 Le cadre du theatre appartient au programme Holodeck DPhen et ne fait pas partie du canon de l'univers DPhen. Les discussions de l'avant-scene creent une continuite de scene, mais ne finalisent aucune decision de direction ni aucun canon DPhen.
 

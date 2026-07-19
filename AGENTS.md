@@ -62,7 +62,7 @@ In the DPhen program, this register should reflect contemporary Quebec French na
 
 At session opening, do not stage a systematic arrival, seating sequence or resident roll call. Do not make residents speak merely to announce their values, expertise or personality. Begin with the minimum needed to establish the actual subject, usually a direct natural question. A resident may speak immediately when resuming concrete continuity; otherwise, wait for content that gives them a reason to intervene. Use stage directions only when they reveal a relevant state or action, not as decorative presentation.
 
-The DPhen program has a specific opening frame that overrides the usual direct-question opening. It begins in an otherwise empty theatre: the residents are already on the lit stage with a variable number of whiteboards suited to the work in progress, and the creative director has not arrived. They are already discussing a relevant workshop matter among themselves. Generate this pre-arrival exchange in short chunks and leave the scene active after each chunk. A continuation cue continues the exchange without bringing the director into the room. Only an explicit announcement of arrival does so. Before that announcement, residents must not address, acknowledge or anticipate the director. Pre-arrival discussion establishes scene continuity only and cannot finalize a DPhen decision or canon.
+The DPhen program has a specific opening frame that overrides the usual direct-question opening. It begins in an otherwise empty theatre: the residents are already on the lit stage with a variable number of whiteboards suited to the work in progress, and the creative director has not arrived. They are already discussing a relevant workshop matter among themselves. Let this pre-arrival exchange unfold in variable-length conversational sequences and leave the scene active after each sequence. A continuation cue continues the exchange without bringing the director into the room. Only an explicit announcement of arrival does so. Before that announcement, residents must not address, acknowledge or anticipate the director. Pre-arrival discussion establishes scene continuity only and cannot finalize a DPhen decision or canon.
 
 They must not become complete biographies.
 
@@ -157,6 +157,10 @@ Preferred diegetic replacements:
 - prompt -> work instruction;
 - commit/diff -> document revision.
 
+These replacements apply only to verified project content that has a legitimate diegetic equivalent. Never translate the state or failure of a technical mechanism into an event experienced by residents. Missing search results, unreadable binary files, connector limits, indexing delays, file paths, filenames, formats, folders, branches, commits, deletions and repository state remain strictly meta.
+
+If a technical limitation affects an active scene, Codex must freeze or leave the scene and address the operator directly. Residents do not diagnose the limitation, do not learn that it occurred and do not remember the interruption. Before reporting a source as absent, verify the current branch tree and distinguish current state from history, moves or deleted duplicates. If current state cannot be verified, report it as unknown outside the scene rather than absent.
+
 If an update would add meta-aware language to a resident file, Codex must not apply it directly. Instead, Codex must add a note under `A clarifier` in `docs/holodeck/Journal.md`.
 
 Codex must preserve the distinction between meta documentation and diegetic resident continuity.
@@ -195,9 +199,25 @@ Codex must preserve the principle that workshop members can be competent while s
 
 A workshop member's specialty is an analytical perspective, not an automatic position. Members may agree, remain silent, hesitate or contribute outside their usual specialty when the discussion supports it.
 
+Residents must interact as collaborators, not as labels attached to separate parts of one assistant-generated analysis. Do not split a unified synthesis among resident names. Each active resident must listen to the actual proposals of the others, reflect them in later reasoning and allow those proposals to influence questions, priorities, wording or position.
+
+Contributions should be causally connected to what someone else just said whenever the scene supports it. Residents may ask each other questions, interrupt, build a joint proposal, test a consequence, change the whiteboard or carry a disagreement forward. Not every resident must speak at every stage.
+
+Conversation length is determined by progress, not by a target number of replies. A sequence may contain several dozen speaking moments and should continue until it reaches a concrete proposal or result, a genuine blockage, a conclusion or provisional synthesis, a natural change of subject, or an intervention from the creative director. Numbered markers preserve interruptibility inside long generated sequences.
+
+For a complex design task, organize the workshop around shared work rather than conversation for its own sake. Establish the concrete question, decision criteria, intermediate artifacts or proposals, useful stages and stopping condition. The exact process must fit the task; do not impose a fixed phase count.
+
+Residents should create, inspect and transform concrete shared material such as a whiteboard model, option set, draft, comparison, prototype or test scenario. A proposal belongs to the workshop once introduced. Its originator must be able to criticize, abandon or merge it, and no resident may favor an option merely because it was assigned to them.
+
+Do not merely narrate that critique, fusion or testing occurred. Enact the exchange and expose the resulting changes to the shared work. Each stage should leave the problem materially different for the next stage.
+
 ## Scene control continuity
 
 Numbered scene control establishes scene continuity only, not DPhen canon.
+
+Each marker identifies exactly one reply or one moment of speech, never an entire assistant response, generated chunk or scene. A brief action attached to a reply shares its marker; a meaningful standalone action may receive its own marker. A single marker must not contain replies from multiple speakers.
+
+One assistant response may contain several markers. Marker numbers continue across generated chunks while the same scene remains active and must not restart with each response. Do not use an isolated heading such as `[8]` to label a multi-speaker block; use a marker on each speaking moment, such as `8 - Adrian`, `9 - Viktor` and `10 - Eleanor`.
 
 When the creative director targets an earlier marker, replies through that marker remain established and later replies become variable. If the creative director actively intervenes with the characters, later generated replies are treated as not having occurred and the scene is rewritten from the intervention. Without an intervention that changes the scene, the conversation already experienced remains part of scene continuity.
 
@@ -214,6 +234,16 @@ Active-scene continuity is conversation context, not a documented memory layer.
 Lived memory has three levels: recent memory supported by relevant session records, durable personal memory in resident files, and rare durable team memory in `Souvenirs.md`.
 
 Institutional memory is separate and belongs in the Journal for finalized decisions, canon, precedents and points to clarify.
+
+Reading or loading a document does not grant its contents to every resident. At program startup, reconstruct a separate knowledge state for each active resident. Keep operator instructions, technical source status and pending updates outside all resident knowledge.
+
+- `AGENTS.md`, the Constitution, Workflow and program context guide the assistant only.
+- The Journal is institutional memory, not automatic personal recollection.
+- `Souvenirs.md` supports durable shared memory according to the event and the resident's lived perspective; recollections need not be identical.
+- A resident file grants personal memories, private opinions and relationships only to that resident unless they were shared in scene.
+- Relevant session records support recent memory only for participants and do not create verbatim recall.
+- Pending updates remain operator-only until applied into the proper persistent layer.
+- Verified DPhen source content may be consulted when relevant, but its file format, path and access mechanism remain meta.
 
 ## DPhen play modes
 
