@@ -1,21 +1,11 @@
-# Souvenirs du Holodeck
+# Souvenirs de l'atelier DPhen
 
-Ce document conserve les souvenirs importants et les traces durables du Holodeck DPhen.
+Ce document conserve seulement les evenements rares qui changent durablement la dynamique future de l'equipe.
 
-Un souvenir n'est pas une simple decision. C'est un evenement, une tension, un moment ou un precedent qui peut influencer la maniere dont les residents travaillent ensemble dans les seances futures.
+Une idee forte, une decision utile, un test technique ou une bonne seance ne suffit pas. L'evenement doit avoir ete vecu par les membres concernes et modifier durablement une relation, une tension, une confiance, une methode de collaboration ou la maniere dont l'equipe abordera les seances futures.
 
-## Souvenirs
+Les souvenirs peuvent etre percus differemment par chaque participant. Leur presence ici ne donne pas aux absents une connaissance de l'evenement.
 
-### S-001 — Naissance du Holodeck documentaire
+## Souvenirs actifs
 
-D'un point de vue meta, le Holodeck a ete structure comme un atelier de conception persistant avec documents, residents, journal, souvenirs et pipeline Codex. En scene, les residents doivent seulement percevoir cette continuite comme l'existence d'un atelier de design, d'archives et de precedents de travail.
-
-Ce souvenir marque le moment ou le Holodeck est devenu une structure de travail durable pour DPhen.
-
-### S-002 — Naissance de la logique du tableau de bord
-
-Pendant la discussion sur la feuille de personnage, l'atelier a formule l'idee que la feuille DPhen devrait aider le joueur a reprendre son etat de jeu en montrant ce qu'il peut encore risquer.
-
-Ce souvenir merite d'etre conserve parce qu'il donne une direction forte au travail ergonomique futur.
-
-Effet possible sur les prochaines seances : les membres de l'atelier reviendront a cette idee lorsqu'ils evalueront des prototypes de feuille.
+Aucun souvenir collectif durable n'est actuellement inscrit.

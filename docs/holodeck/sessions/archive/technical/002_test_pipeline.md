@@ -1,5 +1,7 @@
 # Session 002 — Test du pipeline documentaire
 
+> Statut d'archive : test technique du pipeline. Ne pas charger comme memoire recente d'une seance vecue par les residents.
+
 ## Sujet
 
 Test technique du pipeline documentaire.

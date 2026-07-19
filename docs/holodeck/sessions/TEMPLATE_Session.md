@@ -1,122 +1,68 @@
 # Session XXX — Titre
 
-## Sujet
+Ce gabarit consigne une session persistante. Utiliser `meta/End_of_Session_Requirements.md` pour la collecte complete et conserver ici seulement ce qui merite une trace durable.
 
-Sujet principal de la seance.
+## Identification
+
+- Programme :
+- Date :
+- Mode : Atelier / Playtest / Partie
+- Statut : active / technique / remplacee
+- Participants :
+
+## Sujet et objectif
+
+- Sujet :
+- Objectif :
+- Questions traitees :
 
 ## Sources consultees
 
-Documents, notes ou decisions utilisees pendant la seance.
+- Sources et archives reellement utilisees :
+- Limites connues :
 
-## Objectif
+## Resume factuel
 
-Objectif de travail de la seance.
+Resume de ce qui s'est reellement passe, sans inventer de repliques exactes.
 
-## Mode de session
+## Objets de travail
 
-- Programme :
-- Mode : Atelier / Playtest / Partie
-- Statut : ponctuel / persistant sur demande explicite
+Tableaux, criteres, options, prototypes, comparaisons ou scenarios transformes pendant la seance.
 
-## Resume court
+## Resultats par statut
 
-Resume bref de la seance.
+### Decisions finalisees
 
-## Questions traitees
+Aucune.
 
-- Question 1 :
-- Question 2 :
-- Question 3 :
+### Decisions de direction et vetos
 
-## Points importants de discussion
+Aucun.
 
-### Point 1
+### Hypotheses ouvertes
 
-- Position :
-- Arguments :
-- Objections :
-- Statut :
+Aucune.
 
-### Point 2
+### Propositions rejetees
 
-- Position :
-- Arguments :
-- Objections :
-- Statut :
+Aucune.
 
-## Playtest ou partie
+### Desaccords et points a clarifier
 
-Utiliser seulement si la seance contient du jeu.
+Aucun.
 
-- Objectif du test ou situation de depart :
-- Personnages joueurs :
-- Regles disponibles :
-- Jets et decisions importants :
-- Regles de table provisoires non canon :
-- Continuite de partie etablie :
-- Observations de jeu :
-- Souvenirs de table potentiels :
-- Limites du test :
-- Debrief effectue : oui / non / non demande
+## Jeu
 
-## Decisions
+Utiliser seulement pour un playtest ou une partie : objectif, personnages, regles disponibles, jets importants, observations, regles provisoires non canon, continuite et debrief.
 
-Utiliser seulement pour les decisions explicitement finalisees.
+## Memoire et participants
 
-- Aucune decision finalisee cette seance.
+- Souvenirs potentiels rares : aucun.
+- Pour chaque membre actif, evolution durable ou changement relationnel : aucun.
+- Invites et effet de leur passage : aucun.
 
-## Decisions de direction
-
-Utiliser seulement si le directeur creatif a tranche explicitement malgre absence de consensus.
-
-- Aucune decision de direction cette seance.
-
-## Vetos
-
-Utiliser seulement si le directeur creatif a bloque explicitement une proposition.
-
-- Aucun veto cette seance.
-
-Pour chaque veto presidentiel confirme, conserver :
-- Identifiant :
-- Proposition ou point bloque :
-- Confirmation finale :
-- Portee :
-- Desaccords encore presents :
-- Opinion d'Adrian :
-- Opinion de Camille :
-- Opinion de Viktor :
-- Opinion d'Eleanor :
-
-## Hypotheses ouvertes
-
-- Aucune hypothese ouverte ajoutee cette seance.
-
-## Propositions rejetees
-
-- Aucune proposition rejetee cette seance.
-
-## Points a clarifier
-
-- Aucun point a clarifier cette seance.
-
-## Souvenirs potentiels
-
-Noter ici les evenements qui pourraient devenir des souvenirs d'equipe.
-
-- Aucun souvenir a conserver cette seance.
-
-## Evolution des membres de l'atelier
-
-Noter seulement les changements significatifs.
-
-- Adrian : aucune evolution significative.
-- Camille : aucune evolution significative.
-- Viktor : aucune evolution significative.
-- Eleanor : aucune evolution significative.
-
-## Update Holodeck produit
+## Resultat documentaire
 
 - Update produit : oui / non
-- Chemin :
-- Statut :
+- Fichiers vises :
+- Statut dans `sessions/INDEX.md` :

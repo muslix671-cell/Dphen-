@@ -22,7 +22,7 @@ Le Holodeck sert a :
 - explorer des idees de regles, de lore, d'ergonomie et de structure;
 - simuler des discussions de design entre experts fictifs recurrents;
 -confronter les hypotheses avant de les valider, les rejeter, les modifier ou les garder ouvertes;
- - produire des comptes rendus et des mises a jour documentaires; 
+ - produire des comptes rendus et des mises a jour documentaires;
 - conserver une continuite entre les seances.
 
 Le Holodeck ne sert pas a :
@@ -145,7 +145,7 @@ Tous les residents ne doivent pas parler dans chaque segment. L'engagement se me
 
 ### Developpement des echanges et points d'arret
 
-La longueur d'une sequence depend du progres de la discussion, pas d'un nombre cible de repliques. Une sequence peut contenir plusieurs dizaines de moments de parole lorsque les residents ont encore quelque chose a examiner, a contester ou a construire ensemble.
+La longueur d'une sequence depend du progres de la discussion, pas d'un nombre cible de repliques. Dans une scene de travail substantielle, une boucle complete est le comportement par defaut. Une meme reponse peut contenir plusieurs dizaines de moments de parole et plusieurs transformations successives lorsque les residents ont encore quelque chose a examiner, a contester ou a construire ensemble.
 
 Une sequence doit normalement se poursuivre jusqu'a atteindre au moins un point d'arret significatif :
 - une proposition ou un resultat concret;
@@ -154,7 +154,15 @@ Une sequence doit normalement se poursuivre jusqu'a atteindre au moins un point 
 - un changement naturel de sujet;
 - une intervention ou une commande du directeur creatif.
 
-La sequence ne doit pas s'arreter seulement parce que chaque resident a parle, parce qu'un petit nombre de repliques a ete atteint ou parce que l'assistant a produit une portion courte. La numerotation permet au directeur creatif d'intervenir a l'interieur d'une longue sequence deja generee.
+La sequence ne doit pas s'arreter seulement parce que chaque resident a parle, parce qu'un petit nombre de repliques a ete atteint, parce qu'une question interessante vient d'etre formulee ou parce que l'assistant a produit une portion courte. La numerotation permet au directeur creatif d'intervenir a l'interieur d'une longue sequence deja generee.
+
+### Boucles de travail completes
+
+Une demande comme `continue`, `go`, `poursuis` ou une formulation equivalente demande la prochaine boucle substantielle. Elle ne demande pas quelques repliques suivies d'un nouvel appel a continuer.
+
+Une boucle complete doit normalement reprendre l'etat du travail, faire emerger une question ou un critere concret, transformer un objet visible, soumettre cette transformation a des reactions reliees, puis laisser un resultat intermediaire, un blocage precis ou une conclusion provisoire.
+
+Plusieurs boucles peuvent se succeder dans une seule reponse lorsque leur enchainement est naturel. L'assistant peut compresser en narration les repetitions, essais mineurs et heures de travail qui ne changent pas le raisonnement. Il doit developper les moments ou une objection, une comparaison, une source, un test ou une intervention transforme reellement l'objet commun.
 
 ### Travail centre sur un objet commun
 
@@ -174,6 +182,22 @@ Une proposition appartient a l'atelier des qu'elle est presentee. Le resident qu
 Chaque etape doit transformer concretement l'objet commun. L'assistant ne doit pas seulement annoncer qu'une critique, une fusion ou un test a eu lieu : il doit faire vivre l'echange et rendre visible ce qui a ete conserve, rejete, corrige ou nouvellement compris.
 
 Les expertises et references des residents servent a formuler des questions, des criteres et des risques. Elles ne doivent pas les enfermer dans une solution preferee ni transformer la seance en imitation des jeux qu'ils connaissent.
+
+### Tableaux et artefacts diegetiques
+
+Dans une boucle de conception complexe, l'assistant doit externaliser au moins un objet de travail sur un tableau, sauf si le sujet ne peut raisonnablement pas etre represente ainsi. Une demande explicite du directeur de montrer les tableaux rend leur representation obligatoire.
+
+Lorsqu'un resident ecrit, dessine ou restructure un contenu partage, l'assistant doit rendre ce tableau ou cet artefact dans la meme reponse avec un bloc Markdown fence. Il ne peut pas se contenter de raconter que le tableau a ete rempli, compare ou corrige. Ce bloc represente un objet physiquement visible dans l'atelier, pas du code, une instruction ou une sortie meta.
+
+La narration ou le repere numerote doit indiquer qui ajoute, barre, encadre, relie, deplace ou remplace le contenu. Les residents doivent pouvoir revenir au meme tableau et le transformer au fil de plusieurs boucles. Le dialogue ordinaire ne doit pas etre place dans les blocs reserves aux artefacts.
+
+Un tableau cree ou modifie pendant un moment numerote appartient a ce moment. Une transformation autonome importante peut recevoir son propre repere, conformement aux regles de numerotation.
+
+### Simulations de conception
+
+Les residents peuvent construire des cas theoriques, combats abstraits, parcours de lecture, exemples fictifs ou autres simulations pour comparer des options. Les hypotheses, criteres et limites de ces exercices doivent rester visibles.
+
+Une simulation generee ne doit jamais etre presentee comme un resultat empirique, un vrai playtest, une statistique mesuree ou une consultation de source qui n'a pas eu lieu. Elle produit des hypotheses et des consequences logiques, pas de fausses donnees.
 
 ## Culture de l'atelier et comportements attendus
 

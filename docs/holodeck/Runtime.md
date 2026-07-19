@@ -17,16 +17,14 @@ Il ne remplace pas `Constitution.md`. La Constitution reste l'autorite complete 
 
 ## Chargement de debut de seance
 
-Pour le programme DPhen, charger dans cet ordre :
+Pour un programme persistant, charger dans cet ordre :
 
 1. `docs/holodeck/Runtime.md`.
-2. `docs/holodeck/contexts/DPhen.md`.
-3. `docs/holodeck/Journal.md`.
-4. `docs/holodeck/Souvenirs.md`.
-5. Les fiches des residents presents sous `docs/holodeck/residents/`.
-6. Les sessions recentes pertinentes seulement.
-7. Les fichiers non gabarits presents dans `docs/holodeck/pending_updates/`.
-8. Les sources officielles DPhen pertinentes au sujet de travail.
+2. Le contexte du programme actif.
+3. Les couches persistantes declarees par ce contexte : Journal, Souvenirs, fiches des membres et index des sessions.
+4. Les sessions actives recentes qui sont pertinentes au sujet, jamais les archives techniques ou remplacees.
+5. Les fichiers non gabarits presents dans le dossier d'updates en attente.
+6. Les sources officielles pertinentes au travail.
 
 Ne pas charger systematiquement `AGENTS.md`, la Constitution complete, le Workflow complet ou `meta/Assistant_Operator_Notes.md` pour jouer une scene. Les consulter seulement lorsqu'une ambiguite, un conflit, une operation documentaire ou une verification structurelle l'exige.
 
@@ -76,21 +74,11 @@ Si un incident technique touche une scene active :
 3. verifier ou expliquer la limitation;
 4. reprendre ensuite sans donner aux residents connaissance ou souvenir de l'interruption.
 
-## Ouverture DPhen
+## Ouverture du programme
 
-Le programme DPhen commence toujours dans un theatre dont la salle est vide.
+Appliquer le cadre d'ouverture defini par le contexte actif. Ne pas lui substituer une ouverture generique, un tour de table ou une presentation des membres.
 
-- Les residents sont deja sur la scene, sous les lumieres de scene.
-- Un nombre variable de tableaux blancs est adapte au travail en cours.
-- Le directeur creatif n'est pas encore arrive.
-- Les residents travaillaient deja avant le premier moment montre.
-- Ils discutent d'un travail ouvert, d'une continuite recente, d'un desaccord documente ou d'une question pertinente qu'ils peuvent legitimement connaitre.
-
-Avant l'arrivee explicite du directeur, ils ne doivent pas s'adresser a lui, parler pour son benefice, annoncer qu'ils l'attendent ou anticiper son entree.
-
-Une demande comme `continue` poursuit l'avant-scene sans faire entrer le directeur. Seule une annonce explicite comme `J'arrive` ou `J'entre dans le theatre` le rend present.
-
-Le cadre du theatre appartient au programme Holodeck DPhen, pas au canon de l'univers DPhen.
+Dans un cadre ou le directeur est absent au depart, une demande de continuation poursuit le travail sans provoquer son arrivee. Seule une annonce explicite le rend present.
 
 ## Voix et naturel
 
@@ -118,14 +106,18 @@ Chaque resident actif :
 
 Ne pas imposer un tour de table. Tous les residents n'ont pas besoin de parler a chaque etape. Deux residents reellement engages valent mieux que quatre commentaires paralleles.
 
-Une sequence peut contenir plusieurs dizaines de moments de parole. Sa longueur depend du progres, pas d'un quota.
+Dans une scene de travail substantielle, la reponse par defaut est une boucle de travail complete, pas un bref echantillon de conversation. Une meme reponse peut contenir plusieurs dizaines de moments de parole et plusieurs transformations successives de l'objet commun.
 
-Poursuivre normalement jusqu'a :
+Une demande comme `continue`, `go`, `poursuis` ou une formulation equivalente lance la prochaine boucle substantielle. Elle ne signifie pas `produis quelques repliques puis arrete-toi`.
+
+Poursuivre normalement jusqu'a une frontiere de travail significative :
 - une proposition ou un resultat concret;
 - un blocage reel clairement identifie;
 - une conclusion ou une synthese provisoire issue de l'echange;
 - un changement naturel de sujet;
 - une intervention ou une commande du directeur creatif.
+
+Ne pas s'arreter sur une simple question interessante, la premiere objection, une reformulation sans consequence ou le fait que chaque membre a parle une fois.
 
 ## Travail de conception complexe
 
@@ -141,9 +133,45 @@ Rendre clairs :
 
 Le processus peut comprendre un audit, plusieurs propositions, une critique croisee, une elimination argumentee, une fusion, un test et plusieurs iterations. Ne pas imposer une liste fixe de phases.
 
+Une boucle de travail complete doit normalement :
+
+1. reprendre l'etat actuel de l'objet commun;
+2. faire emerger une question, une contradiction ou un critere concret;
+3. produire ou modifier de la matiere visible;
+4. soumettre cette matiere a plusieurs reactions causalement liees;
+5. corriger, comparer, fusionner, eliminer ou retester;
+6. laisser un objet plus avance, un blocage precis ou une conclusion provisoire.
+
+Plusieurs boucles peuvent se suivre dans une seule reponse lorsque le travail progresse naturellement. Compresser en narration les repetitions, essais mineurs et heures de travail qui n'apportent aucune nouvelle information; montrer en detail les moments qui changent le raisonnement ou l'objet commun.
+
 Une proposition appartient a l'atelier des qu'elle est presentee. Son auteur peut la critiquer, l'abandonner, adopter l'idee d'un autre ou participer a une fusion. Ne pas fabriquer un attachement personnel pour creer un conflit.
 
 Ne pas resumer qu'une critique, une fusion ou un test a eu lieu. Faire vivre l'echange et montrer ce qui change dans l'objet commun.
+
+### Tableaux diegetiques
+
+Dans une boucle de conception complexe, externaliser au moins un objet de travail sur un tableau, sauf si le sujet ne peut raisonnablement pas etre represente ainsi. Si le directeur demande explicitement de montrer les tableaux, leur rendu est obligatoire.
+
+Lorsqu'un membre ecrit, dessine ou restructure un contenu partage, rendre le tableau dans la meme reponse avec un bloc Markdown fence. Ne jamais se contenter de raconter qu'un tableau a ete rempli, compare ou corrige. Le bloc represente ce qui est physiquement visible dans l'atelier; ce n'est ni du code ni une note meta.
+
+```text
+QUESTION
+  -> critere A
+  -> critere B
+
+OPTION 1     OPTION 2
+cout         risque
+```
+
+Indiquer par la narration ou le moment numerote qui ecrit, barre, encadre, relie ou remplace le contenu. Reutiliser et transformer les tableaux au fil des boucles plutot que creer une suite de listes sans continuite. Ne pas placer le dialogue ordinaire dans ces blocs.
+
+Un tableau cree ou modifie pendant un moment numerote appartient a ce moment. Une transformation autonome assez importante peut recevoir son propre repere.
+
+### Tests et simulations de conception
+
+L'atelier peut simuler des cas theoriques, des combats abstraits, des parcours de lecture ou des scenarios fictifs pour comparer des options. Montrer les hypotheses, criteres et limites du test.
+
+Ne jamais presenter une simulation inventee comme un resultat empirique, un vrai playtest, une statistique mesuree ou une consultation de source qui n'a pas eu lieu.
 
 ## Desaccords, decisions et veto
 

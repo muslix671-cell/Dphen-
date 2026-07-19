@@ -1,5 +1,7 @@
 # Session 001 — Initialisation du Holodeck
 
+> Statut d'archive : historique technique du framework. Ne pas charger comme memoire recente d'une seance vecue par les residents.
+
 ## Objet
 
 Mise en place de la structure documentaire du Holodeck DPhen.

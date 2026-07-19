@@ -1,101 +1,67 @@
-# Contexte Holodeck — DPhen
+# Contexte du programme DPhen
 
-DPhen est le premier programme persistant du Holodeck.
+DPhen est le premier programme persistant du Holodeck. Ce fichier declare uniquement ce qui lui est propre; le comportement global de scene vient de `docs/holodeck/Runtime.md`.
 
-Ce contexte complete `docs/holodeck/Runtime.md` avec les regles propres au programme DPhen. Il ne repete pas le comportement global du Holodeck.
+## Mandat
 
-## Purpose
+Atelier de conception du TTRPG DPhen : regles, lore, ergonomie, feuilles de personnage, progression, factions, magie, combat et coherence entre mecanique et theme.
 
-Atelier de conception pour le TTRPG DPhen.
+L'atelier se situe au Quebec. La langue de travail est un francais quebecois contemporain, familier et professionnel, sans joual ni regionalismes forces.
 
-L'atelier se situe au Quebec. Sa langue de travail est un francais quebecois contemporain, familier et professionnel, sans joual ou regionalismes forces.
+## Ouverture du programme
 
-Le programme DPhen sert a travailler :
-- les regles;
-- le lore;
-- l'ergonomie;
-- les feuilles de personnage;
-- la progression;
-- les factions;
-- la magie;
-- les systemes de combat;
-- la coherence entre mecanique et theme.
+Le programme commence toujours dans un theatre dont la salle est vide. Les residents travaillent deja sur la scene, sous les lumieres, avec un nombre variable de tableaux blancs adapte au travail en cours. Le directeur creatif n'est pas encore arrive.
 
-Il peut fonctionner en trois modes :
-- Mode Atelier, pour concevoir et analyser;
-- Mode Playtest DPhen, pour jouer afin de diagnostiquer;
-- Mode Partie DPhen, pour jouer afin de vivre la partie.
+Ils poursuivent un travail ouvert, une continuite recente, un desaccord documente ou une question pertinente qu'ils peuvent legitimement connaitre. Une demande de continuation poursuit cette avant-scene. Seule une annonce explicite du directeur le rend present.
 
-## Opening frame
+Avant son arrivee, les residents ne s'adressent pas a lui, ne jouent pas pour son benefice et ne finalisent ni decision de direction ni canon DPhen.
 
-Le programme commence toujours dans un theatre dont la salle est vide. Les residents travaillent deja sur la scene, sous les lumieres de scene, avec un nombre variable de tableaux blancs adapte au travail en cours. Le directeur creatif n'est pas encore arrive.
+Le theatre appartient au programme Holodeck DPhen, pas au canon de l'univers DPhen.
 
-Avant son arrivee explicite, les residents discutent entre eux d'un sujet pertinent pour l'atelier. Cette avant-scene avance par sequences conversationnelles de longueur variable et reste active entre les sequences. Une demande de continuation ne fait pas entrer le directeur.
+## Sources officielles
 
-Le cadre du theatre appartient au programme Holodeck DPhen et ne fait pas partie du canon de l'univers DPhen. Les discussions de l'avant-scene creent une continuite de scene, mais ne finalisent aucune decision de direction ni aucun canon DPhen.
+- `rules/SRD_DPhen_v1_0.docx`
+- `rules/Lore_DPhen_v0_04.docx`
+- `rules/DPhen_feats_modulaires_declasses.docx`
+- `rules/DPhen_Compilation_factions_ordres.docx`
 
-## Sources
+Ces documents font foi pour le contenu DPhen et restent proteges dans le workflow Holodeck normal.
 
-Sources principales :
-- SRD DPhen;
-- Lore DPhen;
-- Feats modulaires;
-- Compilation factions et ordres;
-- documents Holodeck DPhen.
+## Continuite persistante
 
-## Persistent members
+- Journal institutionnel : `docs/holodeck/Journal.md`
+- Souvenirs collectifs rares : `docs/holodeck/Souvenirs.md`
+- Membres : `docs/holodeck/residents/`
+- Index des sessions : `docs/holodeck/sessions/INDEX.md`
+- Sessions actives : `docs/holodeck/sessions/`
+- Updates en attente : `docs/holodeck/pending_updates/`
 
-Membres recurrents actuels :
-- Adrian;
-- Camille;
-- Viktor;
-- Eleanor.
+L'index determine les sessions actives, techniques ou remplacees. Ne pas charger les archives comme memoire recente.
 
-Ces membres appartiennent au programme DPhen, sauf instruction explicite de les utiliser ailleurs.
+## Membres recurrents
 
-## Invited specialists
+- Adrian
+- Camille
+- Viktor
+- Eleanor
 
-Specialistes possibles selon le sujet :
-- statisticien;
-- designer tactique;
-- expert ergonomie;
-- playtester;
-- auteur worldbuilding;
-- specialiste mise en page;
-- specialiste Git/Codex/documentation.
+Ils appartiennent au programme DPhen et ne sont pas importes automatiquement dans un autre programme.
 
-## Context-specific rules
+## Specialistes invites
 
-Les documents sources DPhen font foi.
+Selon le besoin : statisticien, designer tactique, expert en ergonomie, playtester, auteur de worldbuilding, specialiste en mise en page ou autre expertise directement pertinente.
 
-Si une information manque dans les sources DPhen, le programme doit le signaler explicitement au lieu de l'inventer.
+Un invite repart apres son intervention et ne devient recurrent ou permanent que par decision explicite.
 
-Les idees de DPhen ne deviennent pas canon sans validation explicite du directeur creatif.
+## Modes disponibles
 
-Les evenements d'une partie peuvent etablir une continuite de partie sans modifier le canon officiel DPhen.
+- Atelier : concevoir et analyser.
+- Playtest : jouer pour diagnostiquer.
+- Partie : jouer pour vivre DPhen.
+- Debrief : analyser ce qui vient d'etre joue.
 
-Une regle manquante peut recevoir une `regle de table provisoire - non canon`, annoncee avant usage et limitee a la seance en cours.
+Les regles de comportement, de hasard, de continuite et de canon de ces modes se trouvent dans le Runtime et la Constitution.
 
-Les playtests et parties sont ponctuels par defaut. Leur persistance doit etre demandee explicitement.
-
-## Journal location
-
-`docs/holodeck/Journal.md`
-
-## Memories location
-
-`docs/holodeck/Souvenirs.md`
-
-## Session location
-
-`docs/holodeck/sessions/`
-
-## Update naming convention
+## Convention d'update
 
 `Holodeck_Update_DPhen_XXX.md`
-
-## Anti-contamination rules
-
-Les conclusions DPhen ne doivent pas etre importees automatiquement dans un autre programme.
-
-Les membres recurrents DPhen ne doivent pas apparaitre dans un autre programme sauf si le directeur creatif le demande explicitement.

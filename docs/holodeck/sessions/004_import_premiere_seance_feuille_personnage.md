@@ -6,16 +6,16 @@ Atelier de conception — DPhen.
 
 Cette seance n'etait pas une partie DPhen ni un playtest joue. Elle a servi a eprouver l'atelier comme espace de discussion conceptuelle autour de la feuille de personnage.
 
-## Nature retrospective
+## Provenance documentaire hors scene
 
-Ce document complete `003_retrospective_feuille_personnage.md` et reconstruit le meme evenement initial. Il ne represente pas une seconde seance sur le sujet.
+Ce document remplace comme reference active `archive/superseded/003_retrospective_feuille_personnage.md` et reconstruit le meme evenement initial. Il ne represente pas une seconde seance sur le sujet.
 
 Il s'agit d'une reconstruction retrospective structuree, pas d'un transcript complet. Aucune replique exacte ni numerotation originale n'est reconstituee.
 
-## Sources consultees
+## Sources consultees hors scene
 
 - `Holodeck_Update_003_import_premiere_seance_feuille_personnage.md`, fourni par le directeur creatif;
-- `docs/holodeck/sessions/003_retrospective_feuille_personnage.md`;
+- `docs/holodeck/sessions/archive/superseded/003_retrospective_feuille_personnage.md`;
 - `docs/holodeck/Journal.md`;
 - `docs/holodeck/Souvenirs.md`;
 - les fiches actuelles des membres de l'atelier.
@@ -175,7 +175,7 @@ Aucune proposition rejetee formellement.
 
 ## Souvenirs
 
-Aucun nouveau souvenir ajoute. `S-002 — Naissance de la logique du tableau de bord` conserve deja la trace durable de cette premiere seance.
+Aucun souvenir collectif durable ajoute. Les idees importantes de la seance sont conservees comme hypotheses de conception et comme memoire recente de session, sans devenir automatiquement un souvenir d'equipe.
 
 ## Evolution et relations des membres de l'atelier
 

@@ -1,5 +1,7 @@
 # Session 003 — Retrospective feuille de personnage
 
+> Statut d'archive : reconstruction remplacee par la session 004, plus complete. Conservee pour la provenance; ne pas charger comme session active.
+
 ## Sujet
 
 Retrospective de la seance ayant explore la feuille de personnage DPhen et la structure documentaire du Holodeck.

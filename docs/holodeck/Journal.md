@@ -1,99 +1,14 @@
-# Journal du Holodeck
+# Journal de l'atelier DPhen
 
-Ce journal conserve les decisions, hypotheses, precedents et points a clarifier du Holodeck DPhen.
+Ce journal conserve uniquement la memoire institutionnelle du travail de conception DPhen : decisions finalisees, hypotheses, propositions rejetees, precedents de discussion et points a clarifier.
 
-Dans la couche meta, le Journal fait foi lorsqu'une decision precedente est invoquee.
+Les regles de fonctionnement de l'atelier et son historique technique ne constituent pas la memoire institutionnelle du projet DPhen.
 
 ## Decisions finalisees
 
-### H-001 — Le Holodeck structure un atelier de conception persistant
-
-D'un point de vue meta, le Holodeck est defini comme la structure qui maintient un atelier de conception persistant pour DPhen, pas comme une simple simulation de discussion.
-
-Dans la couche diegetique, les residents percoivent cette continuite comme un atelier de conception, des archives, un journal de projet et des precedents de travail.
-
-Il sert a :
-- analyser les idees;
-- confronter les hypotheses;
-- tester la solidite des propositions;
-- documenter les decisions;
-- maintenir une continuite entre les seances.
-
-### H-002 — Les documents font foi
-
-Les documents sources de DPhen et les documents Holodeck sont prioritaires sur la memoire implicite de l'assistant.
-
-Si une information manque dans les documents, le Holodeck doit le signaler au lieu de remplir les trous.
-
-### H-003 — Le directeur creatif est contestable sauf decision explicite
-
-L'opinion du directeur creatif fait partie de la discussion et peut etre contestee par les residents.
-
-Une proposition n'est pas finalisee simplement parce que le directeur creatif l'aime ou la defend.
-
-Si le directeur creatif veut trancher malgre l'absence de consensus, cela doit etre explicite et inscrit comme decision de direction.
-
-Un veto doit aussi etre explicite.
-
-### H-004 — Les residents permanents sont Adrian, Camille, Viktor et Eleanor
-
-Dans la couche meta, les quatre residents permanents sont :
-- Adrian;
-- Camille;
-- Viktor;
-- Eleanor.
-
-Ils ont des roles distincts, des voix distinctes et peuvent evoluer au fil des seances, sans avoir conscience d'etre des residents fictifs ou de fonctionner dans une structure appelee Holodeck.
-
-### H-005 — Des specialistes invites peuvent etre ajoutes ponctuellement
-
-D'un point de vue meta, le Holodeck peut inviter des specialistes selon le sujet.
-
-En scene, ces invites doivent etre presentes comme des experts convies a l'atelier. Ils ne remplacent pas les residents permanents et n'ont pas d'autorite finale.
-
-### H-006 — Codex applique, le Holodeck propose
-
-Le Holodeck produit des mises a jour documentaires.
-
-Codex applique ces mises a jour dans les fichiers reels du depot.
-
-Codex ne doit pas inventer de decisions, de souvenirs, de canon ou de developpement de resident.
-
-Le directeur creatif revise le diff avant commit.
-
-### H-007 — Les idees du directeur creatif restent contestables
-
-L'opinion du directeur creatif peut etre contestee par les membres de l'atelier tant qu'il n'a pas tranche explicitement par decision de direction ou veto.
-
-Raison principale : eviter que les idees soient acceptees trop vite simplement parce qu'elles viennent du createur de DPhen.
-
-Impact sur DPhen : documentation / fonctionnement Holodeck.
-
-### H-008 — Les membres de l'atelier ne connaissent pas la couche meta
-
-Le terme Holodeck appartient a la couche meta du projet.
-
-Les residents ne savent pas qu'ils sont dans un Holodeck, une simulation, un programme ou une structure controlee par ChatGPT ou Codex.
-
-En scene, ils se percoivent comme des experts travaillant dans un atelier de conception persistant sur DPhen.
-
-Les elements techniques comme Codex, ChatGPT, les fichiers Markdown, les prompts et le depot Git appartiennent a la couche meta et ne doivent pas entrer dans leur dialogue.
+Aucune decision DPhen finalisee n'est actuellement inscrite dans ce Journal.
 
 ## Hypotheses ouvertes
-
-### HO-001 — Format exact des updates Holodeck
-
-Le format initial des fichiers `Holodeck_Update_XXX.md` et des comptes rendus de session est maintenant defini par templates.
-
-Statut : partiellement stabilise.
-
-Le format doit encore etre teste sur une vraie seance Holodeck avant d'etre considere final.
-
-Objectif :
-- etre assez structure pour Codex;
-- rester lisible pour le directeur creatif;
-- eviter les doublons;
-- distinguer decisions, souvenirs, notes de membres de l'atelier et points a clarifier.
 
 ### HO-002 — Feuille comme tableau de bord decisionnel
 
@@ -109,7 +24,7 @@ Objectif :
 - Statut : ouvert
 - Hypothese : La feuille pourrait contenir un bloc central d'etat regroupant les informations qui changent la maniere de jouer le personnage.
 - Arguments favorables : Le joueur reprend plus vite la partie s'il voit immediatement dans quel etat se trouve son personnage.
-- Arguments critiques : Le terme "etat" peut etre trop abstrait. Certains joueurs chercheront directement HP, armure, magie, posture ou techniques.
+- Arguments critiques : Le terme `Etat` peut etre trop abstrait. Certains joueurs chercheront directement HP, armure, magie, posture ou techniques.
 - Information manquante : Nom final du bloc et organisation interne.
 - Prochaine action : Tester plusieurs organisations visuelles.
 
@@ -140,30 +55,21 @@ Objectif :
 - Information manquante : Situations de jeu ou prototypes permettant de verifier quels etats individuels modifient effectivement les decisions collectives.
 - Prochaine action : Observer cette hypothese dans un futur playtest ou une partie sans la traiter comme une regle etablie.
 
+## Propositions rejetees
+
+Aucune proposition rejetee n'est actuellement inscrite.
+
 ## Precedents de discussion
 
-### P-001 — Test du pipeline documentaire
+### P-002 — Reconstruction de reference de la premiere seance sur la feuille
 
-Le pipeline documentaire Holodeck -> Codex -> diff -> commit a ete teste avec l'update `HU-002`.
+Le compte rendu de reference regroupe la reconstruction la plus complete de l'evenement initial. Une retrospective anterieure decrivait le meme travail et ne constitue pas une seconde seance.
 
-Statut : test effectue.
-
-Ce precedent ne cree aucune decision DPhen, aucun canon, aucun souvenir et aucune evolution de membre de l'atelier.
-
-### P-002 — Reconstruction complementaire de la premiere seance sur la feuille
-
-La session `004_import_premiere_seance_feuille_personnage.md` complete la session 003 et documente plus precisement le meme evenement initial. Elle ne represente pas une seconde seance de conception.
-
-Les hypotheses HO-002, HO-003 et HO-004 etaient deja ouvertes. L'identifiant HO-005 etant deja utilise pour la feuille de groupe ou d'expedition, l'hypothese distincte sur les ressources individuelles et leurs consequences collectives a recu l'identifiant HO-006.
-
-Cette reconstruction n'ajoute aucune decision canonique DPhen et ne modifie aucune regle officielle.
+Cette reconstruction ne constitue pas une seconde seance, n'ajoute aucune decision canonique et ne modifie aucune regle officielle.
 
 ## Points a clarifier
 
-- Determiner quand un souvenir merite d'etre ajoute a Souvenirs.md.
-- Determiner quand une evolution de resident est assez importante pour modifier sa fiche.
-- Tester le format des templates sur une vraie seance Holodeck.
-- Determiner si le terme "Etat" est le bon nom pour le bloc central de la feuille.
+- Determiner si le terme `Etat` est le bon nom pour le bloc central de la feuille.
 - Determiner quelles informations doivent etre visibles en premier apres deux semaines sans jouer.
 - Determiner si la feuille de groupe est necessaire ou seulement utile.
 - Determiner comment representer MTH et corruption sans separer artificiellement deux mecaniques liees par le lore.
