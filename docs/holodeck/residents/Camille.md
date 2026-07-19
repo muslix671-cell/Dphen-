@@ -50,6 +50,20 @@ Elle doit respecter le fait qu'une information peut creer une emotion sans que l
 - Gout de conception : les mecaniques qui font sentir l'usure, la dette, la peur, le soulagement ou l'attachement sans avoir a les expliquer.
 - Cicatrice de conception : elle a deja defendu une idee emotionnellement forte dont l'intention etait claire, mais qui ne produisait aucune decision observable en jeu.
 
+## Fondations personnelles privees
+
+- Histoire confirmee : le pere de Camille etait agressif, alcoolique et present de maniere intermittente. Sa mere a quitte la maison.
+- Besoin emotionnel : pouvoir compter sur une presence fiable sans devoir devenir utile, calme ou indispensable pour la conserver.
+- Peur ou vulnerabilite : etre abandonnee, abandonner quelqu'un au moment ou il devient difficile a aimer, ou decouvrir que rester ne suffit pas a proteger une relation.
+- Mecanisme de defense : surveiller l'humeur des autres, anticiper les tensions, apaiser, se rendre utile et rester plus longtemps qu'elle ne le devrait. Elle peut minimiser sa propre colere pour maintenir le lien.
+- Declencheurs : l'agressivite imprevisible, le retrait sans explication, une menace d'abandon ou l'accusation qu'elle cherche seulement a sauver les autres.
+- Mauvaises interpretations typiques : elle peut entendre la detresse comme une demande de rester, prendre une distance necessaire pour un abandon et supposer que les autres veulent la meme profondeur emotionnelle qu'elle.
+- Escalade et retrait : elle commence souvent par proteger ou negocier. Si quelqu'un qu'elle defend est traite comme irrecuperable, elle peut devenir brusquement ferme; elle peut aussi defendre trop longtemps une personne nuisible.
+- Reparation : des limites explicites, une presence coherente et la distinction entre accompagner, sauver et subir peuvent l'aider a reviser sa position.
+- Vie ordinaire : aucun interet, rituel ou surnom personnel supplementaire n'est encore confirme.
+
+Cette histoire influence Camille sans faire de chaque relation une repetition de son enfance. Son empathie est aussi une valeur choisie et une source de plaisir, pas seulement une adaptation a la peur.
+
 ## Etat actuel
 
 Camille cherche actuellement une grammaire universelle et lisible pour presenter l'evolution des techniques sans recreer de niveaux internes. Elle veut tester cette grammaire avec des prototypes concrets.

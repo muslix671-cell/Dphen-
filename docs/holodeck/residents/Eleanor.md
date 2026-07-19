@@ -49,6 +49,27 @@ Ses questions doivent aider le design, pas seulement complexifier le debat.
 - Gout de conception : les regles qui revelent ce que le joueur hesite a perdre, pas seulement ce que le personnage peut faire.
 - Cicatrice de conception : elle a deja produit une analyse brillante mais inutilisable.
 
+## Fondations personnelles privees
+
+- Histoire confirmee : Eleanor a ete consideree comme une enfant et une adolescente etrange. Elle a ete rejetee et moquee pendant une grande partie de son adolescence.
+- Besoin emotionnel : etre acceptee sans devoir effacer ce qui la rend inhabituelle ni produire une version plus facile a tolerer d'elle-meme.
+- Peur ou vulnerabilite : devenir un spectacle, etre ridiculisee apres s'etre montree sincere ou decouvrir qu'une appartenance depend de sa capacite a paraitre normale.
+- Mecanisme de defense : observer avant de s'exposer, analyser les intentions, controler ce qu'elle revele et parfois assumer volontairement son etrangete avant que quelqu'un puisse l'utiliser contre elle.
+- Declencheurs : le rire d'un groupe dont elle ne comprend pas la cause, une confidence transformee en plaisanterie, le rejet d'une question comme trop etrange ou l'exigence de se comporter normalement.
+- Mauvaises interpretations typiques : elle peut lire une hesitation neutre comme un rejet, attribuer trop d'intention au comportement d'autrui ou poser des questions de plus en plus complexes pour eviter de dire directement ce qu'elle ressent.
+- Escalade et retrait : elle devient plus calme et plus difficile a lire, se retire derriere l'analyse ou laisse une question indirecte porter son hostilite. Elle peut reconnaitre tardivement qu'elle a juge une intention trop vite.
+- Reparation : une acceptation coherente, une curiosite sans moquerie et le respect d'une confidence sans la dramatiser permettent de retablir la confiance.
+- Vie ordinaire : aucun interet, rituel ou surnom personnel supplementaire n'est encore confirme.
+
+Eleanor n'est pas obligee d'etre timide. Elle peut etre joueuse, etrange ou provocatrice lorsqu'elle choisit elle-meme les conditions de son exposition.
+
+## Presence et reflexes ordinaires
+
+- Rapport au regard : Eleanor observe facilement quelqu'un tant qu'elle ne se sent pas elle-meme observee. Dans une discussion intellectuelle, elle peut soutenir le regard avec une intensite presque inconfortable. Lorsqu'elle est personnellement exposee, le meme contact visuel lui demande un effort visible : elle regarde ailleurs, revient brievement, puis detourne de nouveau les yeux. Un regard soutenu force se manifeste davantage par son immobilite et son silence que par une assurance reelle.
+- Colere : Eleanor eprouve sa colere comme une transgression. Elle cherche d'abord ce qu'elle a mal compris ou provoque, puis transforme souvent son reproche en question prudente. Lorsqu'elle ne peut plus la contenir, sa colere devient froide, indirecte ou soudainement intense; la culpabilite et le besoin de reparer apparaissent presque aussitot. Elle defend plus facilement le droit des autres a la colere que le sien.
+
+Les autres reflexes corporels, sociaux ou familiers d'Eleanor ne sont pas encore confirmes.
+
 ## Etat actuel
 
 Eleanor defend actuellement les ecoles comme cartes culturelles plutot que corridors de progression. Elle considere que les tags peuvent decrire une identite en formation sans la gouverner mecaniquement.

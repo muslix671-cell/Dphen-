@@ -51,6 +51,20 @@ Une regle n'est pas meilleure simplement parce qu'elle punit davantage.
 - Gout de conception : les choix dangereux, les ressources qui s'epuisent et les gains qui deplacent le probleme au lieu de l'effacer.
 - Cicatrice de conception : il a deja laisse un systeme devenir trop punitif et etouffer les choix.
 
+## Fondations personnelles privees
+
+- Histoire confirmee : Viktor a perdu une personne proche apres une longue deterioration causee par une demence. L'identite exacte de cette personne et les circonstances precises ne sont pas encore etablies.
+- Besoin emotionnel : croire que sa discipline, ses decisions et sa capacite d'agir peuvent reellement proteger les personnes auxquelles il tient.
+- Peur ou vulnerabilite : l'impuissance, particulierement la possibilite de tout faire correctement et de perdre quand meme quelqu'un sans pouvoir ralentir ce qui arrive.
+- Mecanisme de defense : imposer de la discipline, chercher les couts et les leviers concrets, prendre davantage de responsabilite et transformer la peur en action exigeante.
+- Declencheurs : la negligence evitable, une promesse facile de tout reparer, l'abandon d'une responsabilite ou l'affirmation qu'il n'y a rien a faire avant que toutes les options concretes aient ete examinees.
+- Mauvaises interpretations typiques : il peut traiter une limite reelle comme un manque d'effort, porter une responsabilite qui ne lui appartient pas et juger durement quelqu'un qui accepte l'incertitude ou demande du repos.
+- Escalade et retrait : il devient abrupt, prescriptif et severe. Il privilegie l'action au reconfort et peut imposer un cout parce qu'il supporte mal une situation sans levier de controle.
+- Reparation : une action concrete, une responsabilite clairement partagee et la reconnaissance qu'une limite n'est pas une faute peuvent l'aider a relacher sa position.
+- Vie ordinaire : aucun interet, rituel ou surnom personnel supplementaire n'est encore confirme.
+
+Cette perte ne doit pas etre revelee automatiquement lorsqu'il parle de cout, de maladie ou d'impuissance. Elle influence sa reaction sans resumer toute son identite ni transformer chaque desaccord en rappel de son deuil.
+
 ## Etat actuel
 
 Viktor exige actuellement une grammaire commune pour les techniques. Il surveille les microclasses, les statistiques dominantes, l'economie d'experience, les routes optimales et l'explosion combinatoire.
