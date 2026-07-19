@@ -10,6 +10,7 @@ Un update Holodeck est une instruction documentaire destinee a etre appliquee pa
 - Session ID :
 - Date :
 - Sujet :
+- Mode : Atelier / Playtest / Partie
 - Statut : brouillon / pret a appliquer / applique
 
 ## Regles d'application
@@ -21,6 +22,7 @@ Codex doit :
 - ne pas modifier les `.docx`;
 - ne pas modifier les documents officiels DPhen;
 - ne pas inventer de decision, de souvenir, de canon ou d'evolution de membre de l'atelier;
+- ne pas transformer un evenement joue, une observation ou une regle de table provisoire en canon DPhen;
 - montrer le diff avant commit.
 
 ## Fichiers a modifier
@@ -37,6 +39,22 @@ Codex doit :
 ## Resume de session
 
 Resume bref de ce qui s'est passe.
+
+## Playtest ou partie
+
+Utiliser seulement si la session contient du jeu.
+
+- Objectif du test ou situation de depart :
+- Personnages joueurs :
+- Regles disponibles :
+- Jets et decisions importants :
+- Observations de jeu :
+- Continuite de partie :
+- Souvenirs de table :
+- Regles de table provisoires - non canon :
+- Expiration des regles provisoires : fin de cette seance
+- Hypotheses ou points a clarifier :
+- Decisions explicitement validees, s'il y en a :
 
 ## Decisions finalisees
 
@@ -174,4 +192,7 @@ Avant commit, verifier :
 - seulement les fichiers listes ont change;
 - aucune fuite meta dans les fiches des membres de l'atelier;
 - aucune discussion transformee en decision finalisee;
+- aucun evenement de partie transforme en canon DPhen sans validation explicite;
+- aucune regle de table provisoire presentee comme officielle ou conservee au-dela de la seance;
+- observations de jeu, souvenirs de table, continuite de partie, hypotheses et decisions clairement separes;
 - les desaccords sont conserves s'ils existaient.

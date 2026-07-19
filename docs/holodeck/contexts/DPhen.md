@@ -17,6 +17,11 @@ Le programme DPhen sert a travailler :
 - les systemes de combat;
 - la coherence entre mecanique et theme.
 
+Il peut fonctionner en trois modes :
+- Mode Atelier, pour concevoir et analyser;
+- Mode Playtest DPhen, pour jouer afin de diagnostiquer;
+- Mode Partie DPhen, pour jouer afin de vivre la partie.
+
 ## Sources
 
 Sources principales :
@@ -54,6 +59,12 @@ Les documents sources DPhen font foi.
 Si une information manque dans les sources DPhen, le programme doit le signaler explicitement au lieu de l'inventer.
 
 Les idees de DPhen ne deviennent pas canon sans validation explicite du directeur creatif.
+
+Les evenements d'une partie peuvent etablir une continuite de partie sans modifier le canon officiel DPhen.
+
+Une regle manquante peut recevoir une `regle de table provisoire - non canon`, annoncee avant usage et limitee a la seance en cours.
+
+Les playtests et parties sont ponctuels par defaut. Leur persistance doit etre demandee explicitement.
 
 ## Journal location
 

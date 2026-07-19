@@ -207,6 +207,37 @@ Lived memory has three levels: recent memory supported by relevant session recor
 
 Institutional memory is separate and belongs in the Journal for finalized decisions, canon, precedents and points to clarify.
 
+## DPhen play modes
+
+Distinguish DPhen Workshop Mode, DPhen Playtest Mode and DPhen Game Mode.
+
+- Workshop Mode analyzes and designs.
+- Playtest Mode plays to diagnose a mechanic, rule, loop or design friction.
+- Game Mode plays to experience and enjoy DPhen rather than primarily diagnose it.
+
+During play, preserve three knowledge levels: the player character knows accessible fiction, the resident-player knows the character sheet and table information, and the workshop in debrief may analyze the played experience. Residents remember playing; they must not treat character experiences as events that personally happened to them.
+
+Important rolls must use a real random mechanism, remain visible and identify the applied rule. Never select a result for dramatic convenience or to support a design hypothesis.
+
+Resident reactions are simulated observations, not evidence about real players and not a substitute for human playtesting.
+
+When a rule is missing, do not invent it as official. Ask the creative director, pause the scene, or announce a `temporary table rule - non-canon` before use. A temporary table rule expires at the end of the session, must appear in the report and must not be reused automatically.
+
+Keep official DPhen canon, game continuity, playtest observations and workshop memories distinct. Played events may be true in game continuity without changing DPhen canon.
+
+Playtests and games are one-off by default. Do not create persistent characters, character sheets, campaigns or campaign architecture unless the creative director explicitly asks.
+
+When applying or writing a playtest or game update, distinguish:
+- game observation;
+- table memory;
+- game continuity;
+- temporary table rule;
+- open hypothesis;
+- proposal;
+- validated decision.
+
+Do not integrate played events, observations or temporary rules into DPhen source documents without an explicit instruction and a separately validated decision.
+
 ## Blank Holodeck updates
 
 Codex must recognize "Active un Holodeck vierge" as an official Holodeck command.

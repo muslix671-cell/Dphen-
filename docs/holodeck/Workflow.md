@@ -95,6 +95,14 @@ Reprendre le programme
 Computer, resume program
 Figer la scene
 Computer, freeze frame
+Lance un playtest DPhen
+Lance un playtest court
+Lance une partie DPhen
+Lance une partie DPhen pour le fun
+Passe en debrief
+Pause la partie
+Reprends la partie
+Arrete la partie et fais un bilan
 Terminer le programme
 End program
 ```
@@ -104,6 +112,12 @@ End program
 `Reprendre le programme` reprend la scene apres une pause.
 
 `Figer la scene` suspend l'action sans cloturer la seance.
+
+`Pause la partie` suspend la fiction mais reste a la table avec les residents comme joueurs. `Reprends la partie` reprend cette fiction.
+
+`Passe en debrief` quitte le jeu et revient au Mode Atelier pour analyser ce qui vient d'etre vecu ou teste.
+
+`Arrete la partie et fais un bilan` termine la partie, distingue les observations, la continuite de partie et les eventuelles questions a clarifier, sans rien canoniser automatiquement.
 
 `Terminer le programme` cloture la seance et prepare le bilan ou les updates necessaires.
 
@@ -122,6 +136,59 @@ Tous les residents connaissent ce droit. Apres chaque veto presidentiel confirme
 - chaque resident forme une opinion individuelle, meme s'il ne l'exprime pas immediatement;
 - chaque fiche resident conserve une entree concise sous `Rapport aux vetos presidentiels`, avec l'identifiant du veto et l'opinion du resident;
 - les opinions peuvent diverger, mais aucun resident ne traite le point bloque comme encore ouvert.
+
+## Modes DPhen
+
+Difference essentielle :
+
+```text
+Atelier = travailler comme concepteurs.
+Playtest = jouer pour diagnostiquer.
+Partie = jouer pour vivre la partie.
+Debrief = analyser ce qui vient d'etre joue ou teste.
+```
+
+Pendant le jeu, distinguer le personnage, le resident-joueur et l'atelier en debrief. Les informations connues par un niveau ne passent pas automatiquement aux autres.
+
+Le MJ par defaut est l'assistant. Le directeur creatif peut observer, jouer, prendre le role de MJ ou intervenir.
+
+Les jets importants doivent etre reellement aleatoires et visibles. Indiquer le resultat et la regle appliquee; ne jamais choisir un resultat pour arranger la scene ou confirmer une hypothese.
+
+Les reactions simulees des residents peuvent produire des hypotheses, mais ne constituent pas une preuve sur l'experience de vrais joueurs.
+
+Une partie ou un playtest est ponctuel par defaut. Ne pas creer de campagne, de fiche persistante ou de nouvelle architecture sans demande explicite.
+
+### Deroulement recommande d'un playtest
+
+1. Definir l'objectif du test.
+2. Identifier les regles ciblees.
+3. Choisir les personnages ou la situation.
+4. Jouer une scene courte.
+5. Rendre les jets et decisions visibles.
+6. Noter les frictions sans interrompre inutilement la scene.
+7. Passer en debrief.
+8. Classer les resultats en observations, hypotheses, points a clarifier, propositions ou decisions explicitement validees.
+
+### Deroulement recommande d'une partie
+
+1. Definir la situation de depart.
+2. Attribuer les personnages joueurs.
+3. Identifier les regles disponibles.
+4. Jouer naturellement en limitant les commentaires de conception.
+5. Mettre la fiction en pause seulement si necessaire.
+6. Faire un debrief sur demande ou en fin de seance.
+7. Conserver la continuite de partie sans la confondre avec le canon DPhen.
+
+### Regles manquantes et continuite
+
+Si une regle manque, choisir une des options suivantes :
+- demander une decision au directeur creatif;
+- annoncer une `regle de table provisoire - non canon` avant son utilisation;
+- suspendre la scene si le trou bloque la suite.
+
+Toute regle provisoire expire a la fin de la seance, doit apparaitre dans le bilan et ne doit pas etre reutilisee automatiquement.
+
+Le canon DPhen, la continuite de partie, les observations de playtest et la memoire de table doivent rester distincts. Les residents se souviennent d'avoir joue; ils ne confondent pas leur experience de joueur avec les souvenirs de leur personnage.
 
 ## Reperes numerotes de scene
 

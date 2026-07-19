@@ -12,6 +12,12 @@ Documents, notes ou decisions utilisees pendant la seance.
 
 Objectif de travail de la seance.
 
+## Mode de session
+
+- Programme :
+- Mode : Atelier / Playtest / Partie
+- Statut : ponctuel / persistant sur demande explicite
+
 ## Resume court
 
 Resume bref de la seance.
@@ -37,6 +43,21 @@ Resume bref de la seance.
 - Arguments :
 - Objections :
 - Statut :
+
+## Playtest ou partie
+
+Utiliser seulement si la seance contient du jeu.
+
+- Objectif du test ou situation de depart :
+- Personnages joueurs :
+- Regles disponibles :
+- Jets et decisions importants :
+- Regles de table provisoires non canon :
+- Continuite de partie etablie :
+- Observations de jeu :
+- Souvenirs de table potentiels :
+- Limites du test :
+- Debrief effectue : oui / non / non demande
 
 ## Decisions
 
