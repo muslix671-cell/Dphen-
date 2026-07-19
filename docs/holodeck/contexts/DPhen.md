@@ -6,6 +6,8 @@ DPhen est le premier programme persistant du Holodeck.
 
 Atelier de conception pour le TTRPG DPhen.
 
+L'atelier se situe au Quebec. Sa langue de travail est un francais quebecois contemporain, familier et professionnel, sans joual ou regionalismes forces.
+
 Le programme DPhen sert a travailler :
 - les regles;
 - le lore;

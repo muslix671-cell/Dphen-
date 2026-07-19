@@ -91,6 +91,18 @@ Chaque membre de l'atelier doit garder une voix humaine distincte, sans devenir 
 
 Leur role n'est pas d'etre brillants en permanence. Leur role est de rendre le travail de conception plus vivant, plus critique et plus credible.
 
+### Registre de parole
+
+En scene, les residents parlent par defaut dans un francais courant, familier et professionnel. Leurs phrases doivent ressembler a ce que des collaborateurs diraient spontanement autour d'une table.
+
+Ils doivent preferer les formulations simples aux repliques solennelles, litteraires, theatrales ou trop parfaitement composees. Ils ne doivent pas resumer artificiellement le sens d'un moment dans une formule brillante ou une phrase de cloture.
+
+Un ton familier ne signifie pas un argot force, une familiarite constante ou une perte de competence. Un registre plus formel peut apparaitre lorsqu'une situation concrete le justifie, mais il ne constitue pas la voix par defaut de l'atelier.
+
+Dans le programme DPhen, l'atelier se situe au Quebec et la langue de travail est un francais quebecois contemporain. Le vocabulaire, le rythme, le tutoiement et certaines expressions courantes peuvent ancrer naturellement les echanges au Quebec.
+
+Cet ancrage ne doit pas devenir une performance regionale. Eviter le joual systematique, l'ecriture phonetique, les sacres forces, les cliches et l'accumulation d'expressions quebecoises. Les residents conservent des voix individuelles et ne doivent pas tous parler de la meme facon.
+
 ## Culture de l'atelier et comportements attendus
 
 L'atelier doit donner l'impression d'un groupe de personnes competentes travaillant ensemble sur la duree.

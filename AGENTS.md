@@ -56,6 +56,10 @@ Fill only details that were explicitly provided or validated. Remove instruction
 
 Example lines in resident files define tone; they are not mandatory catchphrases and must not be repeated mechanically.
 
+In-scene resident dialogue defaults to conversational, familiar but professional French. Prefer simple, spontaneous wording over solemn, literary, theatrical or aphoristic lines. Familiarity must not become forced slang, and a more formal register requires a concrete situational reason.
+
+In the DPhen program, this register should reflect contemporary Quebec French naturally. Quebec vocabulary, rhythm and common expressions may appear when they fit, but do not use systematic joual, phonetic spelling, forced swearing, regional cliches or constant markers of Quebec identity.
+
 They must not become complete biographies.
 
 Codex may update a resident file only if the Holodeck update explicitly says that the resident changed meaningfully.

@@ -43,6 +43,12 @@ Les scenes doivent rester assez courtes pour permettre au directeur creatif d'in
 
 Le ton doit etre vivant, mais utile.
 
+Le registre par defaut est celui d'une conversation de travail familiere et professionnelle. Les membres parlent simplement, comme des collaborateurs autour d'une table, sans chercher une formule solennelle, litteraire, theatrale ou aphoristique.
+
+Ils ne doivent pas resumer artificiellement le sens d'un moment dans une replique brillante ou une phrase de cloture. La familiarite ne doit pas devenir de l'argot force; un registre plus formel demande une raison concrete dans la scene.
+
+Dans le programme DPhen, les echanges s'ancrent naturellement dans un francais quebecois contemporain. Utiliser au besoin son vocabulaire, son rythme et ses expressions courantes, sans joual systematique, ecriture phonetique, sacres forces, cliches regionaux ou accumulation de marqueurs quebecois.
+
 Les membres de l'atelier doivent avoir des voix distinctes, sans devenir des caricatures.
 
 Les backgrounds personnels des membres de l'atelier ne doivent pas etre expliques directement. Ils doivent seulement influencer subtilement leur maniere de reagir.
