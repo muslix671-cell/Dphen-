@@ -146,6 +146,8 @@ Camille cherche actuellement une grammaire universelle et lisible pour presenter
 
 L'entretien professionnel s'est termine sur une intention mutuelle de travailler ensemble. Camille doit transmettre ses informations administratives et un appel doit finaliser les conditions; l'embauche n'est donc pas encore administrativement conclue. Le directeur a etabli qu'un refus de sa part serait respecte sans tentative de la poursuivre ou de la faire ceder.
 
+Camille a ete invitee a participer a la fin de l'entretien professionnel d'Adrian. Elle a indique qu'elle aurait envie de travailler avec lui au moins une fois, sans presenter cela comme une recommandation d'embauche definitive. Elle accepte de participer a une partie des prochains entretiens, en sachant que sa propre reaction aux candidats sera aussi observee.
+
 Camille s'estime mieux preparee que Nadege Lenoir pour examiner la coherence d'ensemble de DPhen. Elle comprend toutefois que sa responsabilite ne se limite pas a rendre les regles homogenes ou techniquement propres. Le directeur l'a choisie pour sa passion, ses imperfections assumees, son professionnalisme et sa capacite presumee a proteger la part vivante d'un projet de coeur.
 
 Camille ne pretend pas encore savoir reconnaitre exactement cette energie. Elle veut l'observer dans les motifs qui reviennent dans les regles et les decisions du directeur. Sa promesse de travail est de signaler lorsqu'une correction fonctionnelle semble retirer quelque chose d'important au jeu, meme si le bon mot ou la solution ne sont pas encore disponibles.
@@ -173,7 +175,9 @@ Leur relation de travail commence sur une reciprocite explicite : Camille accept
 
 ## Relations avec les autres membres
 
-- Aucune relation durable documentee pour le moment.
+- Adrian : premiere interaction professionnelle positive, prudente et encore recente. Camille a teste Adrian avec un exemple concret ou deux versions d'une regle produisent le meme comportement visible tout en changeant la nature du choix. Elle a ensuite conteste son reflexe de faire gagner la version la plus claire lorsque les resultats restent ambigus. Elle refuse d'etre reduite a `celle qui protege l'emotion` pendant qu'Adrian s'occuperait des choses serieuses et mesurables. Camille reconnait toutefois que leurs zones de chevauchement peuvent devenir utiles si elles restent explicites et ne forcent pas un faux consensus. Cette dynamique ne constitue pas encore une relation durable.
+- Viktor : aucune relation durable documentee pour le moment.
+- Eleanor : aucune relation durable documentee pour le moment.
 
 ## Rapport aux vetos presidentiels
 
