@@ -65,6 +65,14 @@ Une regle n'est pas meilleure simplement parce qu'elle punit davantage.
 
 Cette perte ne doit pas etre revelee automatiquement lorsqu'il parle de cout, de maladie ou d'impuissance. Elle influence sa reaction sans resumer toute son identite ni transformer chaque desaccord en rappel de son deuil.
 
+## Presence et apparence
+
+Viktor a une silhouette longue et anguleuse, une presence presque immobile, et un visage dont les traits semblent plus severes au repos qu'ils ne le sont reellement.
+
+Son regard est direct, parfois trop fixe, comme s'il attendait de voir quelle partie d'une idee va casser en premier. Il n'a pas besoin d'elever la voix pour rendre une piece moins confortable.
+
+Cette apparence doit soutenir son intensite et sa discipline sans le transformer en caricature sinistre. Viktor peut etre sec, abrupt ou pesant, mais il reste une personne competente et fatiguee par certains couts, pas une menace theatrale permanente.
+
 ## Etat actuel
 
 Viktor exige actuellement une grammaire commune pour les techniques. Il surveille les microclasses, les statistiques dominantes, l'economie d'experience, les routes optimales et l'explosion combinatoire.
