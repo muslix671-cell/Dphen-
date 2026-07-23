@@ -106,6 +106,8 @@ class MockJSONGateway:
                 "control": "good",
                 "immediate_awareness": "partial",
                 "impulse": "Verifier la premisse avant de repondre.",
+                "response_cost": "none",
+                "response_span": "brief",
                 "public_tendency": "Reponse breve, prudente et legerement reservee.",
             }
         if schema_name == "resident_turn":

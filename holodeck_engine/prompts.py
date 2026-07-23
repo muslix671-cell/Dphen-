@@ -23,6 +23,10 @@ Contraintes communes absolues :
 - ne mentionne jamais les dossiers, calibrations, prompts, modeles, API ou mecanismes internes.
 - une erreur de perception doit pouvoir durcir le ton, faire manquer une partie de la question, retenir une information ou produire une mauvaise decision;
 - ne corrige pas automatiquement cette erreur avant la reponse publique;
+- la neutralite initiale du decor ne neutralise pas les interventions suivantes : une formulation reellement maladroite, soupconneuse ou injuste, ou une position qui heurte une valeur fondamentale etablie du resident, peut affecter la reponse meme si l'activation reste moyenne;
+- un simple desaccord ne suffit pas : la valeur touchee doit etre etablie dans les sources ou l'etat, et l'intervention doit reellement la menacer, la nier ou demander au resident d'agir contre elle;
+- lorsqu'un enjeu social touche le resident, ne compense pas automatiquement par une reponse professionnelle complete : il peut devenir momentanement plus etroit, plus sec, incomplet ou repondre a la mauvaise partie de la question;
+- ce cout doit rester proportionne et visible dans la sortie publique; il n'exige ni colere forte, ni conflit durable, ni perte generale de competence;
 - le resident ne reformule pas proprement toute l'intervention;
 - il ne livre ni diagnostic instantane, ni methode complete non demandee, ni conclusion brillante obligatoire;
 - il ne finit pas les pensees du directeur a sa place;
@@ -52,6 +56,21 @@ Tache de cette premiere porte :
 - determine ce qui se produit en lui juste avant et pendant sa reaction;
 - choisis le mode a partir de sa personnalite, de son etat, de l'enjeu social et d'une variation humaine ordinaire;
 - ne transforme pas un trait en automatisme : un meme declencheur ne produit pas toujours le meme mode;
+- response_cost choisit le cout immediat que l'etat impose a la qualite de la reponse publique;
+- utilise `none` lorsque rien ne justifie une degradation;
+- `narrowed` retient une seule prise et laisse de cote une partie utile;
+- `abrupt` rend la sortie plus seche ou prematuree;
+- `incomplete` omet une concession, une precision ou une etape que le resident aurait normalement donnee;
+- `misdirected` fait repondre en partie a l'intention attribuee plutot qu'a la question posee;
+- chosen_interpretation est une hypothese causale de l'operateur; elle peut rester implicite et ne constitue pas automatiquement une pensee verbale consciente du resident;
+- immediate_awareness indique dans quelle mesure le resident peut reconnaitre cette interpretation pendant le tour;
+- response_span choisit l'etendue de la parole comme un comportement social, pas comme une mesure de la complexite de la question;
+- `minimal` signifie une seule prise de parole de un a trois mots, sans explication publique de rattrapage;
+- `clipped` signifie une seule phrase courte et ferme;
+- `brief` developpe une seule idee en quelques phrases;
+- `normal` reste developpe mais selectif;
+- `extended` peut venir d'une defense, d'une intellectualisation, d'un enthousiasme ou d'un investissement reel; ce n'est pas automatiquement une meilleure reponse;
+- une pensee privee complexe ne justifie jamais a elle seule une longue parole publique;
 - public_tendency indique une direction de comportement, jamais une replique redigee.
 """
 
@@ -80,6 +99,8 @@ Activation : {seed.activation}
 Controle : {seed.control}
 Lucidite immediate : {seed.immediate_awareness}
 Impulsion : {seed.impulse}
+Cout immediat sur la reponse : {seed.response_cost}
+Etendue de la parole publique : {seed.response_span}
 Tendance publique, sans formulation imposee : {seed.public_tendency}
 
 Produis maintenant les evenements chronologiques et l'etat compact apres le tour.
@@ -98,6 +119,13 @@ Tache de cette seconde porte :
 - restrained : impulsion privee, inhibition ou controle, puis sortie publique;
 - impulsive : sortie publique initiale, pensee tardive, puis continuation ou correction publique;
 - interrupted : debut public, realisation privee, puis reformulation publique;
+- si le cout immediat n'est pas `none`, fais-le atteindre la parole publique au lieu de le reparer par une analyse complete dans le meme tour;
+- une reponse touchee peut rester intelligente et defendable tout en etant plus etroite, plus seche, incomplete ou partiellement dirigee vers une intention supposee;
+- si la lucidite immediate est `low`, ne transforme pas l'interpretation choisie en pensee privee complete avant le comportement; utilise plutot une sensation, une impulsion, un fragment ou une comprehension tardive;
+- si elle est `partial`, le resident peut sentir la direction de sa reaction sans en posseder encore l'explication complete;
+- si elle est `good`, il peut consciemment nommer une partie de ce qui l'influence sans devenir omniscient;
+- respecte l'etendue retenue; si elle est `minimal`, produis une seule parole de un a trois mots et ne l'explique pas ensuite;
+- une action observable ou un silence peut accompagner une parole minimale, mais ne doit pas traduire l'interiorite cachee;
 - l'etat final reste compact; une impression sociale n'est pas automatiquement une relation durable.
 """
 
@@ -106,16 +134,32 @@ def followup_user_prompt(
     request: TurnRequest,
     public_output: str,
     director_style: str,
+    *,
+    depth: int = 1,
+    max_depth: int = 1,
 ) -> str:
+    depth_instruction = (
+        "Il s'agit de la premiere relance possible apres la question de base."
+        if depth == 1
+        else (
+            "Une relance a deja ete posee. Cette deuxieme relance est exceptionnelle : "
+            "elle exige un element nouveau apparu dans la derniere reponse."
+        )
+    )
     return f"""\
 # ROLE
 
-Tu es l'operateur hors simulation qui decide si Stephane doit poser une seule
+Tu es l'operateur hors simulation qui decide si Stephane doit poser une
 question de suivi apres une reponse de resident.
 
 # STYLE DU DIRECTEUR
 
 {director_style}
+
+# PROFONDEUR DE LA RELANCE
+
+Relance envisagee : {depth} sur un maximum absolu de {max_depth}.
+{depth_instruction}
 
 # QUESTION OU INTERVENTION QUI VIENT D'ETRE FAITE
 
@@ -131,9 +175,17 @@ Intervention :
 
 # DECISION
 
-Autorise au maximum une relance. Pose-la seulement si la reponse contient une
-contradiction testable, une esquive, une affirmation non etayee, une emotion
-saillante ou une distinction qui merite vraiment d'etre poussee.
+Par defaut, passe a la prochaine question. Pose une relance seulement si ne pas
+la poser ferait perdre un fil encore vivant : contradiction testable, esquive
+qui deforme la reponse, affirmation factuelle importante non etayee, emotion
+saillante qui vient de modifier l'echange ou distinction dont le sens reste
+reellement ambigu.
+
+Une deuxieme relance ne sert jamais seulement a obtenir plus de details, un
+autre exemple ou une reponse plus complete. Elle exige une nouvelle
+contradiction, une defense active, un changement emotionnel observable ou un
+fait concret apparu dans la premiere relance. Aucune troisieme relance n'est
+permise.
 
 Une relance ne doit pas :
 - recompenser automatiquement une bonne reponse;
@@ -143,6 +195,10 @@ Une relance ne doit pas :
 - inventer un fait sur un collegue ou un projet;
 - devenir une seconde entrevue complete;
 - contenir plus d'une question de fond.
+- poursuivre une reponse seulement parce qu'elle est interessante;
+- demander au resident de produire une confession ou une faute exemplaire;
+- repeter sous une autre forme une question deja couverte plus tard dans le
+  plan de l'entrevue.
 
 Un comportement un peu inattendu est permis s'il reste calcule et pertinent :
 silence prolonge, sourire difficile a lire, changement brusque de posture,

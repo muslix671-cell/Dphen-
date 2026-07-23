@@ -183,6 +183,24 @@ def main(argv: list[str] | None = None) -> int:
             if not all(isinstance(item, str) for item in followup_turns):
                 raise ValueError("followup_turns doit contenir des identifiants texte.")
 
+            followup_max_depth = manifest.get("followup_max_depth", 1)
+            if (
+                isinstance(followup_max_depth, bool)
+                or not isinstance(followup_max_depth, int)
+                or followup_max_depth not in {1, 2}
+            ):
+                raise ValueError("followup_max_depth doit valoir 1 ou 2.")
+
+            followup_max_total = manifest.get("followup_max_total")
+            if followup_max_total is not None and (
+                isinstance(followup_max_total, bool)
+                or not isinstance(followup_max_total, int)
+                or followup_max_total < 0
+            ):
+                raise ValueError(
+                    "followup_max_total doit etre un entier positif ou nul."
+                )
+
             director_style = ""
             director_style_path = manifest.get("director_style")
             if director_style_path:
@@ -192,6 +210,7 @@ def main(argv: list[str] | None = None) -> int:
                 director_style = style_path.read_text(encoding="utf-8")
 
             gateway = None if (args.mock or args.check) else OpenAIJSONGateway(settings)
+            followup_total = 0
             for index, raw_input in enumerate(inputs, start=1):
                 if not isinstance(raw_input, str):
                     raise ValueError("Chaque entree inputs doit etre un chemin texte.")
@@ -222,48 +241,71 @@ def main(argv: list[str] | None = None) -> int:
                     print("[mock] Decision de relance ignoree.")
                     continue
 
-                decision_usage_start = len(gateway_usage_records(gateway))
-                decision = gateway.generate(
-                    schema_name="followup_decision",
-                    schema=FOLLOWUP_SCHEMA,
-                    developer_prompt=COMMON_DEVELOPER_PROMPT,
-                    user_prompt=followup_user_prompt(
-                        request,
-                        artifacts.public_output,
-                        director_style,
-                    ),
-                )
-                decision_path = artifacts.turn_dir / "followup_decision.json"
-                decision_path.write_text(
-                    json.dumps(decision, ensure_ascii=False, indent=2) + "\n",
-                    encoding="utf-8",
-                )
-                write_usage_report(
-                    artifacts.turn_dir / "followup_usage.json",
-                    gateway_usage_records(gateway)[decision_usage_start:],
-                    metadata={
-                        "scope": "followup_decision",
-                        "session": request.session_id,
-                        "turn": request.turn_id,
-                        "resident": request.resident,
-                        "program": request.program,
-                    },
-                )
-                if not decision["ask_followup"]:
-                    print("[relance] Aucune.")
-                    continue
+                current_request = request
+                current_artifacts = artifacts
+                for depth in range(1, followup_max_depth + 1):
+                    if (
+                        followup_max_total is not None
+                        and followup_total >= followup_max_total
+                    ):
+                        print("[relance] Budget global atteint.")
+                        break
 
-                followup_id = f"{request.turn_id}f"
-                followup_path = create_followup_note(
-                    settings,
-                    request=request,
-                    turn_id=followup_id,
-                    scene=decision["scene"],
-                    intervention=decision["intervention"],
-                )
-                print(f"[relance] {decision['reason']}")
-                followup_artifacts = HolodeckEngine(settings, gateway).run(followup_path)
-                print(followup_artifacts.public_output)
+                    decision_usage_start = len(gateway_usage_records(gateway))
+                    decision = gateway.generate(
+                        schema_name="followup_decision",
+                        schema=FOLLOWUP_SCHEMA,
+                        developer_prompt=COMMON_DEVELOPER_PROMPT,
+                        user_prompt=followup_user_prompt(
+                            current_request,
+                            current_artifacts.public_output,
+                            director_style,
+                            depth=depth,
+                            max_depth=followup_max_depth,
+                        ),
+                    )
+                    decision_path = (
+                        current_artifacts.turn_dir / "followup_decision.json"
+                    )
+                    decision_path.write_text(
+                        json.dumps(decision, ensure_ascii=False, indent=2) + "\n",
+                        encoding="utf-8",
+                    )
+                    write_usage_report(
+                        current_artifacts.turn_dir / "followup_usage.json",
+                        gateway_usage_records(gateway)[decision_usage_start:],
+                        metadata={
+                            "scope": "followup_decision",
+                            "session": current_request.session_id,
+                            "turn": current_request.turn_id,
+                            "resident": current_request.resident,
+                            "program": current_request.program,
+                            "depth": depth,
+                        },
+                    )
+                    if not decision["ask_followup"]:
+                        print(f"[relance {depth}] Aucune.")
+                        break
+
+                    followup_id = (
+                        f"{request.turn_id}f"
+                        if depth == 1
+                        else f"{request.turn_id}f{depth}"
+                    )
+                    followup_path = create_followup_note(
+                        settings,
+                        request=current_request,
+                        turn_id=followup_id,
+                        scene=decision["scene"],
+                        intervention=decision["intervention"],
+                    )
+                    followup_total += 1
+                    print(f"[relance {depth}] {decision['reason']}")
+                    current_artifacts = HolodeckEngine(settings, gateway).run(
+                        followup_path
+                    )
+                    current_request = parse_turn_note(followup_path, settings.root)
+                    print(current_artifacts.public_output)
 
             if gateway is not None:
                 batch_records = gateway_usage_records(gateway)

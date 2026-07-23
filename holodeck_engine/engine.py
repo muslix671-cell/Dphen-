@@ -125,6 +125,7 @@ class HolodeckEngine:
             result,
             seed.mode,
             speech_required=request.speech_required,
+            response_span=seed.response_span,
         )
 
         public_output = _render_public_events(request.resident, result)

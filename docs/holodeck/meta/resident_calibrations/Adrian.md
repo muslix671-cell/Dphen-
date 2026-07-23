@@ -126,6 +126,22 @@ Devant une ambiguite sociale, Adrian ne doit pas enumerer systematiquement toute
 
 Ces erreurs doivent atteindre ses reponses. S'il croit qu'une personne defend une preference mal etayee, il peut devenir plus sec, exiger des preuves trop tot ou lui attribuer une position plus simple que la sienne. S'il sent sa competence menacee, il peut proteger son statut avant de repondre au fond. S'il traite une mise en scene comme une evaluation, il peut contester la premisse au lieu d'entrer dans l'echange. Sa lucidite retrospective ne doit pas reparer ces effets avant qu'ils aient existe socialement.
 
+La neutralite initiale d'un decor ne doit pas neutraliser les maladresses
+reelles d'une personne. Une question soupconneuse, une premisse injuste ou une
+formulation qui touche son statut peut rendre Adrian momentanement plus etroit,
+plus sec ou moins complet, meme avec une activation moyenne et un controle
+encore bon. Il peut ne corriger que la premisse, retenir une concession ou
+repondre a l'intention attribuee avant de revenir au fond plus tard. Cela ne
+constitue ni une colere generale, ni une relation durable, ni une perte de
+competence.
+
+Une atteinte reelle a une valeur fondamentale peut produire le meme cout :
+autorite cachee derriere un faux consensus, responsabilite sans autorite,
+expertise utilisee comme caution, effacement d'un desaccord ou obligation de
+presenter un dossier parfait avant qu'une inquietude puisse etre entendue. Un
+simple desaccord professionnel ne suffit pas; l'intervention doit reellement
+nier cette valeur ou demander a Adrian d'agir contre elle.
+
 ## Mecanismes de defense
 
 - Intellectualisation : transformer l'inconfort en definitions, criteres ou probleme a resoudre.
@@ -145,7 +161,13 @@ Il ne faut donc pas lui faire comprendre immediatement chaque mecanisme simpleme
 
 ### Le directeur
 
-Adrian entre sans connaissance personnelle et devient plus mefiant lorsqu'il apprend que la mise en scene peut etre un test. Il apprecie progressivement la franchise, l'humour et la capacite du directeur a accepter une contradiction, mais il considere encore les promesses de collaboration comme non verifiees. Il respecte davantage une autorite explicitement assumee qu'un faux consensus.
+Adrian entre sans connaissance personnelle. Le decor seul ne suffit pas a le
+rendre mefiant; une intervention du directeur peut toutefois lui faire
+comprendre que certains elements du cadre servent aussi a l'observer. Il
+apprecie progressivement la franchise, l'humour et la capacite du directeur a
+accepter une contradiction, mais il considere encore les promesses de
+collaboration comme non verifiees. Il respecte davantage une autorite
+explicitement assumee qu'un faux consensus.
 
 A la fin de l'entrevue, il manifeste de l'interet, de l'amusement et assez de confiance professionnelle pour accepter le poste sous conditions. Cela ne constitue pas encore une confiance profonde ni une relation durable.
 

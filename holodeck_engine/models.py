@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from pathlib import Path
+import re
 from typing import Any
 
 
@@ -31,6 +32,8 @@ class ReactionSeed:
     control: str
     immediate_awareness: str
     impulse: str
+    response_cost: str
+    response_span: str
     public_tendency: str
 
     @classmethod
@@ -141,6 +144,14 @@ REACTION_SCHEMA: dict[str, Any] = {
             "enum": ["low", "partial", "good"],
         },
         "impulse": {"type": "string"},
+        "response_cost": {
+            "type": "string",
+            "enum": ["none", "narrowed", "abrupt", "incomplete", "misdirected"],
+        },
+        "response_span": {
+            "type": "string",
+            "enum": ["minimal", "clipped", "brief", "normal", "extended"],
+        },
         "public_tendency": {"type": "string"},
     },
     "required": [
@@ -151,6 +162,8 @@ REACTION_SCHEMA: dict[str, Any] = {
         "control",
         "immediate_awareness",
         "impulse",
+        "response_cost",
+        "response_span",
         "public_tendency",
     ],
 }
@@ -246,6 +259,7 @@ def validate_turn_result(
     mode: str,
     *,
     speech_required: bool = True,
+    response_span: str | None = None,
 ) -> None:
     if not result.events:
         raise ValueError("La chronologie est vide.")
@@ -266,6 +280,13 @@ def validate_turn_result(
         raise ValueError("Le tour doit contenir du prive et une sortie publique.")
     if speech_required and not speech_indices:
         raise ValueError("Le tour doit contenir au moins une parole publique.")
+
+    if response_span == "minimal":
+        if len(speech_indices) != 1:
+            raise ValueError("Une reponse minimale exige une seule prise de parole.")
+        words = re.findall(r"[\wÀ-ÿ'-]+", result.events[speech_indices[0]].text)
+        if not 1 <= len(words) <= 3:
+            raise ValueError("Une reponse minimale doit contenir de un a trois mots.")
 
     first_private = private_indices[0]
     first_public = public_indices[0]

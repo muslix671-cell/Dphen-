@@ -5,6 +5,31 @@ Ce dossier contient l'interface Obsidian du prototype. Le moteur Python orchestr
 1. une porte causale privee choisit l'interpretation, le niveau d'activation et le mode de reaction;
 2. une seconde porte produit la chronologie privee et publique, puis un etat compact pour le prochain tour.
 
+La premiere porte choisit aussi un cout immediat facultatif sur la reponse :
+aucun, plus etroite, plus brusque, incomplete ou partiellement detournee vers
+une intention attribuee. Ce cout permet a une maladresse sociale ou a une
+atteinte reelle a une valeur fondamentale etablie d'affecter la reponse sans
+exiger une colere forte ni retirer la competence du resident. Un simple
+desaccord ne suffit pas.
+
+Elle choisit enfin l'etendue de la parole publique :
+
+- `minimal` : une seule prise de parole de un a trois mots;
+- `clipped` : une phrase courte;
+- `brief` : une seule idee;
+- `normal` : une reponse developpee mais selective;
+- `extended` : une reponse longue dont la longueur doit avoir une cause.
+
+Une parole minimale n'est jamais completee par une explication publique de
+rattrapage. La chronologie privee peut rester complexe.
+
+L'interpretation choisie par la premiere porte est une hypothese causale
+d'operateur, pas necessairement une pensee consciente. Lorsque la lucidite
+immediate est basse, la chronologie privee montre plutot une sensation, une
+impulsion, un fragment ou une comprehension tardive. L'etat compact peut
+conserver l'influence de cette interpretation sans que le resident sache encore
+la nommer.
+
 Les fichiers generes sous `runtime/` sont locaux et ignores par Git. Ils ne constituent ni une decision canonique, ni une mise a jour automatique du dossier cumulatif.
 
 ## Installation
@@ -65,6 +90,22 @@ python -m holodeck_engine usage --session essai-adrian
 Cette commande affiche les jetons d'entree, les lectures et ecritures de cache, les jetons de sortie, la part de raisonnement et la duree API, puis ecrit `usage-summary.json` dans le dossier de la session. Les jetons de cache sont deja inclus dans les jetons d'entree; les jetons de raisonnement sont deja inclus dans les jetons de sortie.
 
 A la fin d'un batch reel, le moteur affiche les memes totaux pour l'ensemble du lot et ecrit un rapport `<manifeste>.usage.json` a cote du manifeste. Le rapport contient aussi le detail par appel, par modele et par schema.
+
+Un manifeste de batch peut limiter les relances :
+
+```json
+{
+  "followup_turns": ["004", "007"],
+  "followup_max_depth": 2,
+  "followup_max_total": 4
+}
+```
+
+- `followup_turns` designe les tours ou une relance peut etre envisagee;
+- `followup_max_depth` vaut `1` par defaut et ne peut depasser `2`;
+- `followup_max_total` fixe un budget global facultatif pour toute la batch;
+- une deuxieme relance exige un nouvel element apparu pendant la premiere;
+- aucune relance n'est produite par defaut et aucune troisieme n'est permise.
 
 Le chargeur ne lit jamais les annexes privees historiques d'un autre resident. Il charge uniquement le dossier public, la calibration operateur du resident actif, le contexte public du programme, son etat local et l'historique public de la session.
 

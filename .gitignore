@@ -14,3 +14,4 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 docs/holodeck/meta/engine/runtime/
+docs/holodeck/meta/engine/experiments/**/*.usage.json

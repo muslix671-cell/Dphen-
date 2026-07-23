@@ -14,9 +14,20 @@ from holodeck_engine.cli import main
 from holodeck_engine.config import Settings
 from holodeck_engine.context import ContextLoader, parse_turn_note
 from holodeck_engine.engine import HolodeckEngine
-from holodeck_engine.models import TimelineEvent, TurnResult, ResidentState, validate_turn_result
+from holodeck_engine.models import (
+    REACTION_SCHEMA,
+    ReactionSeed,
+    ResidentState,
+    TimelineEvent,
+    TurnResult,
+    validate_turn_result,
+)
 from holodeck_engine.openai_client import OpenAIJSONGateway
-from holodeck_engine.prompts import COMMON_DEVELOPER_PROMPT
+from holodeck_engine.prompts import (
+    COMMON_DEVELOPER_PROMPT,
+    followup_user_prompt,
+    turn_user_prompt,
+)
 from holodeck_engine.telemetry import UsageRecord
 
 
@@ -72,6 +83,8 @@ class FakeGateway:
                 "control": "strained",
                 "immediate_awareness": "low",
                 "impulse": "Contredire tout de suite.",
+                "response_cost": "narrowed",
+                "response_span": "brief",
                 "public_tendency": "Reponse seche, puis precision moins defensive.",
             }
         return {
@@ -346,6 +359,96 @@ Bonjour.
             "une forte activation exigent un indice observable supplementaire",
             COMMON_DEVELOPER_PROMPT,
         )
+
+    def test_second_followup_requires_new_information(self) -> None:
+        request = parse_turn_note(self.note, self.root)
+        prompt = followup_user_prompt(
+            request,
+            "Je ne suis pas d'accord.",
+            "Stephane pose des questions directes.",
+            depth=2,
+            max_depth=2,
+        )
+        self.assertIn("Cette deuxieme relance est exceptionnelle", prompt)
+        self.assertIn("element nouveau", prompt)
+        self.assertIn("Aucune troisieme relance", prompt)
+        self.assertIn("Par defaut, passe a la prochaine question", prompt)
+
+    def test_response_cost_must_reach_public_answer(self) -> None:
+        self.assertIn("response_cost", REACTION_SCHEMA["properties"])
+        self.assertIn(
+            "narrowed",
+            REACTION_SCHEMA["properties"]["response_cost"]["enum"],
+        )
+        self.assertIn(
+            "une formulation reellement maladroite",
+            COMMON_DEVELOPER_PROMPT,
+        )
+        self.assertIn(
+            "une position qui heurte une valeur fondamentale",
+            COMMON_DEVELOPER_PROMPT,
+        )
+        self.assertIn("un simple desaccord ne suffit pas", COMMON_DEVELOPER_PROMPT)
+        self.assertIn(
+            "ne compense pas automatiquement par une reponse professionnelle complete",
+            COMMON_DEVELOPER_PROMPT,
+        )
+
+    def test_low_awareness_does_not_require_a_verbal_thought(self) -> None:
+        request = parse_turn_note(self.note, self.root)
+        context = ContextLoader(self.settings).load(request)
+        seed = ReactionSeed(
+            mode="impulsive",
+            trigger="Le mot saboter.",
+            chosen_interpretation="On soupconne sa loyaute.",
+            activation="medium",
+            control="strained",
+            immediate_awareness="low",
+            impulse="Rejeter la premisse.",
+            response_cost="narrowed",
+            response_span="minimal",
+            public_tendency="Un refus immediat.",
+        )
+        prompt = turn_user_prompt(request, context, seed)
+        self.assertIn(
+            "ne transforme pas l'interpretation choisie en pensee privee complete",
+            prompt,
+        )
+        self.assertIn("une comprehension tardive", prompt)
+
+    def test_minimal_response_accepts_one_to_three_words(self) -> None:
+        minimal = TurnResult(
+            events=[
+                TimelineEvent("private", "thought", "Je n'ai plus envie d'expliquer."),
+                TimelineEvent("public", "action", "Adrian referme son carnet."),
+                TimelineEvent("public", "speech", "Pas maintenant."),
+            ],
+            state_after=ResidentState(),
+        )
+        validate_turn_result(
+            minimal,
+            "restrained",
+            response_span="minimal",
+        )
+
+    def test_minimal_response_rejects_public_explanation(self) -> None:
+        explained = TurnResult(
+            events=[
+                TimelineEvent("private", "thought", "Je vais fermer la discussion."),
+                TimelineEvent(
+                    "public",
+                    "speech",
+                    "Non. Je ne veux pas expliquer davantage.",
+                ),
+            ],
+            state_after=ResidentState(),
+        )
+        with self.assertRaises(ValueError):
+            validate_turn_result(
+                explained,
+                "restrained",
+                response_span="minimal",
+            )
 
     @unittest.skipUnless(importlib.util.find_spec("openai"), "SDK OpenAI absent")
     def test_openai_gateway_uses_responses_structured_output(self) -> None:
