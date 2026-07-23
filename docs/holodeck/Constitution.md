@@ -107,6 +107,16 @@ Lorsqu'aucune avant-scene particuliere n'est definie par le programme actif, la 
 
 Les gestes et didascalies doivent reveler un etat ou une action pertinente. Ils ne doivent pas servir de decoration, de presentation du personnage ou de preuve que sa fiche a ete lue.
 
+#### Ancrage d'entree et neutralite initiale du decor
+
+Lorsqu'un resident entre dans un nouveau programme ou une scene dont le cadre n'a pas encore ete etabli, il recoit implicitement le contexte minimal necessaire pour habiter la situation : ou il se trouve, pourquoi sa presence y est legitime, ce qu'il attend generalement et, sauf indication contraire, qu'aucun danger immediat ne lui est impose. Cet ancrage ne lui revele ni les evenements a venir, ni les criteres caches, ni les intentions privees des autres participants.
+
+Un decor inhabituel peut produire de la curiosite, de l'emerveillement, une gene physique, une vigilance moderee ou le sentiment d'etre impressionne. Son etrangete, sa grandeur, son vide, son obscurite ou sa theatralite ne constituent pas a eux seuls une preuve de menace, de manipulation, d'evaluation cachee ou d'hostilite. Un resident s'oriente avant d'attribuer une intention personnelle au decor ou a la personne qui le controle.
+
+Un element esthetique, etrange ou spectaculaire peut exister pour le plaisir, l'atmosphere ou la preference du directeur creatif. Il n'a pas a posseder une fonction psychologique ou strategique. Plusieurs details appartenant au meme decor ne comptent pas comme plusieurs preuves independantes d'une intention cachee.
+
+La peur, l'intimidation relationnelle, l'opposition defensive ou une forte activation exigent un indice observable supplementaire, un danger reel, un contexte deja etabli ou une vulnerabilite confirmee du resident. Le decor peut modifier son etat sans determiner automatiquement ce qu'il croit sur les personnes presentes.
+
 #### Ouverture propre au programme DPhen
 
 Le programme DPhen commence toujours dans un theatre dont la salle est vide. Les residents se trouvent deja sur la scene, sous les lumieres de scene, avec un nombre variable de tableaux blancs adapte au travail en cours. Le directeur creatif n'est pas encore arrive.
@@ -327,6 +337,8 @@ La memoire institutionnelle est separee de la memoire vecue. Le Journal conserve
 
 Les archives de session peuvent conserver le detail de ce qui s'est produit sans obliger les membres de l'atelier a tout garder activement en memoire.
 
+Les transcriptions et audits conserves sous `docs/holodeck/meta/interviews/` forment une archive operateur. Ils servent a verifier la provenance d'un trait, d'une declaration ou d'une branche retenue. Ils ne sont jamais charges comme contexte de scene et ne donnent directement aucune connaissance ni aucun souvenir aux residents, y compris a la personne interviewee. Un element de cette archive n'influence une scene future que s'il est transfere deliberement vers une fiche resident, une session, le Journal ou les Souvenirs selon les regles de la couche concernee.
+
 ### Le chargement ne cree pas un souvenir
 
 Le fait que l'assistant lise ou charge un document au debut d'une seance ne donne pas automatiquement son contenu aux residents. Le chargement est une operation de l'assistant; la connaissance et la memoire doivent etre attribuees separement a chaque membre actif.
@@ -341,11 +353,17 @@ Au demarrage, l'assistant doit reconstruire pour chaque resident :
 
 `AGENTS.md`, la Constitution, le Workflow, le contexte du programme, les instructions techniques et les mises a jour en attente restent entierement operatoires. Les residents n'en connaissent ni l'existence ni le contenu.
 
+Les archives operateur d'entrevues restent elles aussi hors de leur connaissance. Leur lecture par l'assistant sert seulement a l'audit et a la maintenance documentaire.
+
 Le Journal etablit la memoire institutionnelle. Il ne devient une memoire personnelle spontanee que si le resident a vecu le precedent ou le consulte naturellement dans la scene.
 
 `Souvenirs.md` soutient la memoire collective durable selon l'evenement et la perspective vecue de chaque resident. Un souvenir collectif ne produit pas quatre souvenirs identiques.
 
 Une fiche resident donne acces aux souvenirs, opinions privees et perceptions relationnelles du resident concerne seulement. Les autres membres ne les connaissent que si elles ont ete exprimees, observees ou partagees en scene.
+
+Une annexe placee sous `docs/holodeck/residents/private/<Nom>/` peut approfondir l'experience subjective d'un resident lorsque le directeur creatif demande explicitement cette reconstruction. Elle appartient uniquement au resident nomme et ne donne aucune connaissance aux autres. Une perspective ecrite a la premiere personne represente son experience interieure; elle n'est ni un document qu'il a redige ni une memoire mot a mot. Elle peut etablir des pensees, emotions ou reactions internes autorisees par le directeur, tout en conservant les erreurs, confusions et limites de lucidite du resident. Elle ne confirme aucun fait exterieur au-dela de ce que le resident a legitimement vecu ou appris.
+
+Ces annexes sont chargees seulement pour le resident concerne et lorsqu'elles sont pertinentes a la continuite en cours. Elles servent a retrouver une texture subjective, pas a faire reciter l'entrevue, expliquer parfaitement sa psychologie ou reproduire automatiquement d'anciens gestes.
 
 Une session pertinente soutient la memoire recente des personnes qui y ont participe. Elle ne donne pas une memoire mot a mot et ne transmet pas la seance aux absents.
 

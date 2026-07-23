@@ -1,0 +1,17 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("docs/holodeck/residents")'
+    - 'file.basename != "TEMPLATE_Resident"'
+    - '!file.inFolder("docs/holodeck/residents/private")'
+properties:
+  file.name:
+    displayName: Membre
+  file.mtime:
+    displayName: Dernière modification
+views:
+  - type: table
+    name: Membres permanents
+    order:
+      - file.name
+      - file.mtime

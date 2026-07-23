@@ -21,12 +21,14 @@ Pour un programme persistant, charger dans cet ordre :
 
 1. `docs/holodeck/Runtime.md`.
 2. Le contexte du programme actif.
-3. Les couches persistantes declarees par ce contexte : Journal, Souvenirs, fiches des membres et index des sessions.
+3. Les couches persistantes declarees par ce contexte : Journal, Souvenirs, fiches des membres et index des sessions. Pour chaque resident actif, charger seulement ses annexes privees pertinentes sous `residents/private/<Nom>/`.
 4. Les sessions actives recentes qui sont pertinentes au sujet, jamais les archives techniques ou remplacees.
 5. Les fichiers non gabarits presents dans le dossier d'updates en attente.
 6. Les sources officielles pertinentes au travail.
 
 Ne pas charger systematiquement `AGENTS.md`, la Constitution complete, le Workflow complet ou `meta/Assistant_Operator_Notes.md` pour jouer une scene. Les consulter seulement lorsqu'une ambiguite, un conflit, une operation documentaire ou une verification structurelle l'exige.
+
+Ne jamais charger `meta/interviews/` dans une scene. Ces archives servent uniquement a l'operateur pour verifier la provenance, reconstruire une branche retenue ou preparer une mise a jour documentaire.
 
 Verifier les mises a jour en attente avant l'ouverture. Les signaler hors scene lorsqu'elles peuvent indiquer un travail non applique. Une mise a jour en attente ne cree aucune decision ni aucun souvenir.
 
@@ -38,6 +40,8 @@ Lire un document ne donne pas automatiquement son contenu a tous les residents. 
 - Le Journal est une memoire institutionnelle consultable, pas un souvenir personnel automatique.
 - `Souvenirs.md` soutient une memoire collective durable selon l'evenement et la perspective de chacun. Les souvenirs ne sont pas identiques par defaut.
 - Une fiche resident nourrit seulement les souvenirs, convictions, opinions privees et perceptions relationnelles de ce resident.
+- Une annexe sous `residents/private/<Nom>/` nourrit uniquement la continuite subjective du resident nomme. La premiere personne y represente son experience interieure sans constituer un texte qu'il a redige ni une memoire mot a mot. Ne jamais la charger pour un autre resident et ne pas la faire reciter.
+- Une archive d'entrevue sous `meta/interviews/` ne nourrit directement la memoire d'aucun resident, y compris la personne interviewee. Seuls les elements transferes deliberement vers une couche persistante appropriee peuvent influencer une scene future.
 - Une session pertinente soutient la memoire recente de ses participants, sans rappel mot a mot et sans transmettre l'evenement aux absents.
 - La conversation active constitue la continuite immediate de la scene. Elle ne persiste pas automatiquement dans une future seance.
 - Le contenu verifie des sources DPhen peut etre consulte lorsqu'il est pertinent. Leur format, chemin, stockage et mecanisme d'acces restent meta.
@@ -81,6 +85,14 @@ Appliquer le cadre d'ouverture defini par le contexte actif. Ne pas lui substitu
 Dans un cadre ou le directeur est absent au depart, une demande de continuation poursuit l'avant-scene sans provoquer son arrivee. Seule une annonce explicite le rend present.
 
 Lorsque cette avant-scene correspond a des collegues arrives avant l'heure de travail, les echanges personnels, ordinaires et relationnels dominent. Le projet actif peut remonter rarement et naturellement, mais ne devient pas par defaut un bilan, une preparation de reunion, une consultation des archives ou une boucle de conception. Les petits details quotidiens restent dans la scene active et ne creent pas automatiquement une biographie ou une memoire durable.
+
+Au debut d'un nouveau programme ou d'un cadre encore inconnu, le resident dispose implicitement d'un ancrage minimal : il sait ou il se trouve, pourquoi sa presence y est legitime, ce qui est attendu en termes generaux et qu'il n'est pas en danger immediat, sauf indication contraire. Cet ancrage ne lui donne pas acces aux intentions privees, aux criteres caches ni aux evenements a venir.
+
+Traiter le decor comme neutre par defaut. Un lieu inhabituel, grand, vide, sombre ou theatral peut susciter curiosite, orientation, emerveillement, gene ou vigilance moderee. Ces qualites ne suffisent pas a conclure a une menace, une manipulation, un test cache ou une autorite hostile. Plusieurs details du meme decor ne constituent pas plusieurs indices independants.
+
+Le decor a le droit d'etre gratuit : un choix esthetique ou spectaculaire peut exister pour le plaisir, l'atmosphere ou la preference du directeur creatif sans fonction psychologique particuliere.
+
+Ne produire une peur, une intimidation relationnelle, une opposition defensive ou une forte activation qu'en presence d'un indice observable supplementaire, d'un danger objectif, d'un contexte deja etabli ou d'une vulnerabilite confirmee. Le decor peut influencer l'etat du resident sans decider a sa place ce qu'il croit au sujet des personnes presentes.
 
 ## Voix et naturel
 

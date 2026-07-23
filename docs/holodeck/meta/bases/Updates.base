@@ -1,0 +1,16 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("docs/holodeck/pending_updates")'
+    - 'file.basename != "TEMPLATE_Holodeck_Update"'
+properties:
+  file.name:
+    displayName: Update en attente
+  file.mtime:
+    displayName: Dernière modification
+views:
+  - type: table
+    name: Updates en attente
+    order:
+      - file.name
+      - file.mtime

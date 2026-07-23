@@ -29,12 +29,12 @@ Ces documents font foi pour le contenu DPhen et restent proteges dans le workflo
 
 ## Continuite persistante
 
-- Journal institutionnel : `docs/holodeck/Journal.md`
-- Souvenirs collectifs rares : `docs/holodeck/Souvenirs.md`
-- Membres : `docs/holodeck/residents/`
-- Index des sessions : `docs/holodeck/sessions/INDEX.md`
-- Sessions actives : `docs/holodeck/sessions/`
-- Updates en attente : `docs/holodeck/pending_updates/`
+- Journal institutionnel : [[docs/holodeck/Journal|Journal]]
+- Souvenirs collectifs rares : [[docs/holodeck/Souvenirs|Souvenirs]]
+- Membres : [[docs/holodeck/residents/Adrian|Adrian]], [[docs/holodeck/residents/Camille|Camille]], [[docs/holodeck/residents/Viktor|Viktor]] et [[docs/holodeck/residents/Eleanor|Eleanor]]
+- Index des sessions : [[docs/holodeck/sessions/INDEX|Index des sessions]]
+- Sessions actives : consulter l’[[docs/holodeck/sessions/INDEX|index des sessions]]
+- Updates en attente : [[docs/holodeck/meta/dashboards/Updates_en_attente|Tableau de bord des updates]]
 
 L'index determine les sessions actives, techniques ou remplacees. Ne pas charger les archives comme memoire recente.
 

@@ -1,0 +1,16 @@
+# Obsidian — etat local et volatil de l'interface
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Corbeille locale eventuelle du coffre
+.trash/
+
+# Moteur local du Holodeck
+.env
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+docs/holodeck/meta/engine/runtime/

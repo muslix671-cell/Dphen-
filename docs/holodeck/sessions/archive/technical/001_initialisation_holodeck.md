@@ -1,3 +1,11 @@
+---
+holodeck_type: session
+session_id: "001"
+programme: DPhen
+session_status: technical
+mode: Technique
+---
+
 # Session 001 — Initialisation du Holodeck
 
 > Statut d'archive : historique technique du framework. Ne pas charger comme memoire recente d'une seance vecue par les residents.

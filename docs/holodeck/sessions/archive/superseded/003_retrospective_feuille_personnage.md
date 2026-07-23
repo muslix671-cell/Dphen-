@@ -1,3 +1,11 @@
+---
+holodeck_type: session
+session_id: "003"
+programme: DPhen
+session_status: superseded
+mode: Atelier
+---
+
 # Session 003 — Retrospective feuille de personnage
 
 > Statut d'archive : reconstruction remplacee par la session 004, plus complete. Conservee pour la provenance; ne pas charger comme session active.

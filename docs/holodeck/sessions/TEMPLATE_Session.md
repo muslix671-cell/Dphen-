@@ -1,3 +1,13 @@
+---
+holodeck_type: session
+session_id: ""
+programme:
+session_status:
+mode:
+date:
+participants: []
+---
+
 # Session XXX — Titre
 
 Ce gabarit consigne une session persistante. Utiliser `meta/End_of_Session_Requirements.md` pour la collecte complete et conserver ici seulement ce qui merite une trace durable.

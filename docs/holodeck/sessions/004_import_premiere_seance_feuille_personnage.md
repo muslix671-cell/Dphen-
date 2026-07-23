@@ -1,3 +1,11 @@
+---
+holodeck_type: session
+session_id: "004"
+programme: DPhen
+session_status: active
+mode: Atelier
+---
+
 # Session 004 — Reconstruction complementaire : premiere seance feuille de personnage
 
 ## Type de seance

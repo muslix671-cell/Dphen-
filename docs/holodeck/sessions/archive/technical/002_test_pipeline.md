@@ -1,3 +1,11 @@
+---
+holodeck_type: session
+session_id: "002"
+programme: DPhen
+session_status: technical
+mode: Technique
+---
+
 # Session 002 — Test du pipeline documentaire
 
 > Statut d'archive : test technique du pipeline. Ne pas charger comme memoire recente d'une seance vecue par les residents.

@@ -1,0 +1,62 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.inFolder("docs/holodeck/sessions")
+    - file.basename != "INDEX"
+    - file.basename != "TEMPLATE_Session"
+    - holodeck_type == "session"
+properties:
+  note.session_id:
+    displayName: ID
+  note.programme:
+    displayName: Programme
+  note.session_status:
+    displayName: Statut
+  note.mode:
+    displayName: Mode
+  note.date:
+    displayName: Date
+  note.participants:
+    displayName: Participants
+  file.name:
+    displayName: Séance
+  file.folder:
+    displayName: Dossier
+  file.mtime:
+    displayName: Dernière modification
+views:
+  - type: table
+    name: Sessions actives
+    filters:
+      and:
+        - session_status == "active"
+    order:
+      - session_id
+      - file.name
+      - programme
+      - mode
+      - date
+      - participants
+      - file.mtime
+  - type: table
+    name: Archives techniques
+    filters:
+      and:
+        - session_status == "technical"
+    order:
+      - session_id
+      - file.name
+      - programme
+      - mode
+      - file.mtime
+  - type: table
+    name: Sessions remplacées
+    filters:
+      and:
+        - session_status == "superseded"
+    order:
+      - session_id
+      - file.name
+      - programme
+      - mode
+      - file.mtime

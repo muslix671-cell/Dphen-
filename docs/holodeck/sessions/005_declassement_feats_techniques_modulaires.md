@@ -1,3 +1,18 @@
+---
+holodeck_type: session
+session_id: "005"
+programme: DPhen
+session_status: active
+mode: Atelier
+date: 2026-07-19
+participants:
+  - Directeur créatif
+  - Adrian
+  - Camille
+  - Viktor
+  - Eleanor
+---
+
 # Session 005 — Declassement des feats en techniques modulaires
 
 ## Identification
