@@ -28,7 +28,7 @@
 		{"id":"viktor","type":"file","x":1470,"y":-100,"width":280,"height":360,"color":"3","file":"docs/holodeck/residents/Viktor.md"},
 		{"id":"private-warning","type":"text","x":1150,"y":320,"width":600,"height":300,"color":"1","text":"## Annexes privées\n\nElles appartiennent uniquement au membre nommé. Ne jamais les utiliser pour un autre membre et ne jamais les transformer en mémoire collective automatique."},
 		{"id":"source-warning","type":"text","x":-1250,"y":1030,"width":900,"height":180,"color":"1","text":"## Sources protégées\n\nConsultation permise selon le besoin. Modification interdite sans instruction explicite séparée."},
-		{"id":"source-srd","type":"file","x":-1250,"y":1270,"width":420,"height":220,"color":"1","file":"rules/SRD_DPhen_v1_0.docx"},
+		{"id":"source-srd","type":"file","x":-1250,"y":1270,"width":420,"height":220,"color":"1","file":"rules/SRD_DPhen_v1_01.docx"},
 		{"id":"source-lore","type":"file","x":-780,"y":1270,"width":420,"height":220,"color":"1","file":"rules/Lore_DPhen_v0_04.docx"},
 		{"id":"source-feats","type":"file","x":-1250,"y":1540,"width":420,"height":220,"color":"1","file":"rules/DPhen_feats_modulaires_declasses.docx"},
 		{"id":"source-factions","type":"file","x":-780,"y":1540,"width":420,"height":220,"color":"1","file":"rules/DPhen_Compilation_factions_ordres.docx"},

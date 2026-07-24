@@ -20,7 +20,7 @@ Le theatre appartient au programme Holodeck DPhen, pas au canon de l'univers DPh
 
 ## Sources officielles
 
-- `rules/SRD_DPhen_v1_0.docx`
+- `rules/SRD_DPhen_v1_01.docx`
 - `rules/Lore_DPhen_v0_04.docx`
 - `rules/DPhen_feats_modulaires_declasses.docx`
 - `rules/DPhen_Compilation_factions_ordres.docx`
