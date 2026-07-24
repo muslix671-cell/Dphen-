@@ -12,10 +12,16 @@ from typing import Any
 
 from holodeck_engine.cli import main
 from holodeck_engine.config import Settings
-from holodeck_engine.context import ContextLoader, parse_turn_note
-from holodeck_engine.engine import HolodeckEngine
+from holodeck_engine.context import ContextBundle, ContextLoader, parse_turn_note
+from holodeck_engine.engine import (
+    HolodeckEngine,
+    add_scene_adjustment,
+    answer_scene_question,
+    rewind_last_turn,
+)
 from holodeck_engine.models import (
     REACTION_SCHEMA,
+    TURN_RESULT_SCHEMA,
     ReactionSeed,
     ResidentState,
     TimelineEvent,
@@ -28,12 +34,13 @@ from holodeck_engine.prompts import (
     followup_user_prompt,
     turn_user_prompt,
 )
-from holodeck_engine.telemetry import UsageRecord
+from holodeck_engine.telemetry import UsageRecord, load_session_usage
 
 
 class FakeGateway:
     def __init__(self) -> None:
         self.usage_records: list[UsageRecord] = []
+        self.user_prompts: list[str] = []
 
     def generate(
         self,
@@ -42,8 +49,11 @@ class FakeGateway:
         schema: dict[str, Any],
         developer_prompt: str,
         user_prompt: str,
+        cache_prefix: str | None = None,
+        prompt_cache_key: str | None = None,
     ) -> dict[str, Any]:
-        del schema, developer_prompt, user_prompt
+        self.user_prompts.append(user_prompt)
+        del schema, developer_prompt, cache_prefix, prompt_cache_key
         if schema_name == "reaction_seed":
             self.usage_records.append(
                 UsageRecord(
@@ -86,6 +96,14 @@ class FakeGateway:
                 "response_cost": "narrowed",
                 "response_span": "brief",
                 "public_tendency": "Reponse seche, puis precision moins defensive.",
+            }
+        if schema_name == "scene_query":
+            return {
+                "answer": (
+                    "Adrian se trouve face au directeur; sa position exacte "
+                    "n'est pas entierement etablie."
+                ),
+                "certainty": "partially_inferred",
             }
         return {
             "events": [
@@ -176,6 +194,25 @@ Est-ce vraiment ton meilleur travail?
         self.assertEqual(request.resident, "Adrian")
         self.assertEqual(request.turn_id, "001")
         self.assertIn("croise les bras", request.scene)
+
+    def test_turn_schema_only_allows_valid_event_pairs(self) -> None:
+        variants = TURN_RESULT_SCHEMA["properties"]["events"]["items"]["anyOf"]
+        pairs = {
+            (
+                variant["properties"]["visibility"]["enum"][0],
+                variant["properties"]["kind"]["enum"][0],
+            )
+            for variant in variants
+        }
+        self.assertEqual(
+            pairs,
+            {
+                ("private", "thought"),
+                ("private", "sensation"),
+                ("public", "action"),
+                ("public", "speech"),
+            },
+        )
 
     def test_template_placeholder_is_rejected(self) -> None:
         note = self.root / "placeholder.md"
@@ -326,6 +363,130 @@ Bonjour.
         with self.assertRaises(FileExistsError):
             engine.run(self.note)
 
+    def test_rewind_archives_last_turn_and_rebuilds_session(self) -> None:
+        HolodeckEngine(self.settings, FakeGateway()).run(self.note)
+        second_note = self.root / "turn-002.md"
+        second_note.write_text(
+            self.note.read_text(encoding="utf-8")
+            .replace("turn: 001", "turn: 002")
+            .replace(
+                "Est-ce vraiment ton meilleur travail?",
+                "Pourquoi as-tu choisi ce projet?",
+            ),
+            encoding="utf-8",
+        )
+        HolodeckEngine(self.settings, FakeGateway()).run(second_note)
+
+        session_dir = self.settings.runtime_root / "test-session"
+        self.assertIn(
+            "## Tour 002",
+            (session_dir / "public.md").read_text(encoding="utf-8"),
+        )
+
+        artifacts = rewind_last_turn(self.settings, "test-session")
+
+        self.assertEqual(artifacts.turn_id, "002")
+        self.assertTrue((artifacts.archive_dir / "result.json").is_file())
+        self.assertTrue((artifacts.archive_dir / "replacement.json").is_file())
+        self.assertTrue(artifacts.input_path.is_file())
+        self.assertFalse((session_dir / "turns" / "002").exists())
+        self.assertNotIn(
+            "## Tour 002",
+            (session_dir / "public.md").read_text(encoding="utf-8"),
+        )
+        self.assertNotIn(
+            "## Tour 002",
+            (session_dir / "private" / "Adrian.md").read_text(encoding="utf-8"),
+        )
+        self.assertEqual(len(load_session_usage(session_dir)), 4)
+
+    def test_scene_query_does_not_advance_or_modify_resident_state(self) -> None:
+        HolodeckEngine(self.settings, FakeGateway()).run(self.note)
+        session_dir = self.settings.runtime_root / "test-session"
+        public_before = (session_dir / "public.md").read_text(encoding="utf-8")
+        private_before = (session_dir / "private" / "Adrian.md").read_text(
+            encoding="utf-8"
+        )
+        state_before = (session_dir / "state" / "Adrian.json").read_text(
+            encoding="utf-8"
+        )
+
+        artifacts = answer_scene_question(
+            self.settings,
+            FakeGateway(),
+            session_id="test-session",
+            question="Ou est Adrian?",
+        )
+
+        self.assertEqual(artifacts.certainty, "partially_inferred")
+        self.assertIn("position exacte", artifacts.answer)
+        self.assertTrue((artifacts.query_dir / "request.json").is_file())
+        self.assertTrue((artifacts.query_dir / "result.json").is_file())
+        self.assertEqual(
+            (session_dir / "public.md").read_text(encoding="utf-8"),
+            public_before,
+        )
+        self.assertEqual(
+            (session_dir / "private" / "Adrian.md").read_text(encoding="utf-8"),
+            private_before,
+        )
+        self.assertEqual(
+            (session_dir / "state" / "Adrian.json").read_text(encoding="utf-8"),
+            state_before,
+        )
+        self.assertEqual(
+            [path.name for path in (session_dir / "turns").iterdir()],
+            ["001"],
+        )
+        self.assertEqual(len(load_session_usage(session_dir)), 3)
+
+    def test_scene_adjustment_is_public_context_without_advancing_turn(self) -> None:
+        HolodeckEngine(self.settings, FakeGateway()).run(self.note)
+        session_dir = self.settings.runtime_root / "test-session"
+        public_before = (session_dir / "public.md").read_text(encoding="utf-8")
+        state_before = (session_dir / "state" / "Adrian.json").read_text(
+            encoding="utf-8"
+        )
+
+        artifacts = add_scene_adjustment(
+            self.settings,
+            session_id="test-session",
+            text=(
+                "Deux tableaux blancs se trouvent derriere la causeuse. "
+                "Ils portent des traces mal effacees."
+            ),
+        )
+
+        self.assertTrue(artifacts.scene_file.is_file())
+        self.assertTrue(artifacts.audit_file.is_file())
+        self.assertIn(
+            "Deux tableaux blancs",
+            ContextLoader(self.settings)
+            .load(parse_turn_note(self.note, self.root))
+            .render_dynamic(),
+        )
+        self.assertEqual(
+            (session_dir / "public.md").read_text(encoding="utf-8"),
+            public_before,
+        )
+        self.assertEqual(
+            (session_dir / "state" / "Adrian.json").read_text(encoding="utf-8"),
+            state_before,
+        )
+        self.assertEqual(
+            [path.name for path in (session_dir / "turns").iterdir()],
+            ["001"],
+        )
+
+        gateway = FakeGateway()
+        answer_scene_question(
+            self.settings,
+            gateway,
+            session_id="test-session",
+            question="Qu'y a-t-il derriere la causeuse?",
+        )
+        self.assertIn("Deux tableaux blancs", gateway.user_prompts[-1])
+
     def test_session_usage_is_reported_only_when_requested(self) -> None:
         HolodeckEngine(self.settings, FakeGateway()).run(self.note)
         output = StringIO()
@@ -450,6 +611,42 @@ Bonjour.
                 response_span="minimal",
             )
 
+    def test_minimal_response_can_remain_silent_when_speech_is_optional(self) -> None:
+        silent = TurnResult(
+            events=[
+                TimelineEvent("private", "thought", "Pas besoin de remplir l'attente."),
+                TimelineEvent("public", "action", "Camille relit le tableau efface."),
+            ],
+            state_after=ResidentState(),
+        )
+        validate_turn_result(
+            silent,
+            "reflective",
+            speech_required=False,
+            response_span="minimal",
+        )
+
+    def test_context_bundle_separates_stable_and_turn_specific_content(self) -> None:
+        context = ContextBundle(
+            resident_profile="profil stable",
+            calibration="calibration stable",
+            program_context="programme stable",
+            prior_state=ResidentState(emotional_state="etat variable"),
+            public_history="historique variable",
+        )
+
+        static = context.render_static()
+        dynamic = context.render_dynamic()
+
+        self.assertIn("profil stable", static)
+        self.assertIn("calibration stable", static)
+        self.assertIn("programme stable", static)
+        self.assertNotIn("etat variable", static)
+        self.assertNotIn("historique variable", static)
+        self.assertIn("etat variable", dynamic)
+        self.assertIn("historique variable", dynamic)
+        self.assertNotIn("profil stable", dynamic)
+
     @unittest.skipUnless(importlib.util.find_spec("openai"), "SDK OpenAI absent")
     def test_openai_gateway_uses_responses_structured_output(self) -> None:
         settings = Settings(
@@ -489,17 +686,52 @@ Bonjour.
             },
             developer_prompt="instructions",
             user_prompt="input",
+            cache_prefix="stable context",
+            prompt_cache_key="holodeck:test",
         )
 
         self.assertEqual(result, {"ok": True})
         self.assertEqual(captured["model"], "gpt-5.6-sol")
         self.assertEqual(captured["reasoning"], {"effort": "medium"})
         self.assertEqual(captured["text"]["format"]["type"], "json_schema")
+        self.assertEqual(
+            captured["input"][0]["content"][0]["text"],
+            "stable context",
+        )
+        self.assertEqual(
+            captured["input"][0]["content"][0]["prompt_cache_breakpoint"],
+            {"mode": "explicit"},
+        )
+        self.assertEqual(captured["input"][0]["content"][1]["text"], "input")
+        self.assertEqual(captured["prompt_cache_key"], "holodeck:test")
+        self.assertEqual(
+            captured["prompt_cache_options"],
+            {"mode": "explicit", "ttl": "30m"},
+        )
         self.assertFalse(captured["store"])
         self.assertEqual(len(gateway.usage_records), 1)
         self.assertEqual(gateway.usage_records[0].cached_tokens, 120)
         self.assertEqual(gateway.usage_records[0].cache_write_tokens, 40)
         self.assertEqual(gateway.usage_records[0].reasoning_tokens, 30)
+
+        captured.clear()
+        gateway.generate(
+            schema_name="test_schema",
+            schema={
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {"ok": {"type": "boolean"}},
+                "required": ["ok"],
+            },
+            developer_prompt="instructions",
+            user_prompt="dynamic only",
+        )
+        self.assertEqual(captured["input"], "dynamic only")
+        self.assertEqual(
+            captured["prompt_cache_options"],
+            {"mode": "explicit", "ttl": "30m"},
+        )
+        self.assertNotIn("prompt_cache_key", captured)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,14 @@
+{
+  "reasoning_effort": "medium",
+  "director_style": "docs/holodeck/meta/engine/director_profiles/Stephane.md",
+  "followup_turns": [
+    "009",
+    "010"
+  ],
+  "followup_max_depth": 2,
+  "followup_max_total": 4,
+  "inputs": [
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_009.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_010.md"
+  ]
+}

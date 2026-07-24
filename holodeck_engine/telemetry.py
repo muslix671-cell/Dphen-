@@ -154,6 +154,11 @@ def load_session_usage(session_dir: Path) -> tuple[UsageRecord, ...]:
     turns_dir = session_dir / "turns"
     report_paths = sorted(turns_dir.glob("*/usage.json"))
     report_paths.extend(sorted(turns_dir.glob("*/followup_usage.json")))
+    replaced_dir = session_dir / "replaced"
+    report_paths.extend(sorted(replaced_dir.glob("*/usage.json")))
+    report_paths.extend(sorted(replaced_dir.glob("*/followup_usage.json")))
+    queries_dir = session_dir / "queries"
+    report_paths.extend(sorted(queries_dir.glob("*/usage.json")))
     records: list[UsageRecord] = []
     for report_path in report_paths:
         report = json.loads(report_path.read_text(encoding="utf-8"))

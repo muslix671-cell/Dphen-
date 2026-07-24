@@ -128,18 +128,32 @@ class ContextBundle:
     program_context: str
     prior_state: ResidentState
     public_history: str
+    scene_adjustments: str = ""
 
-    def render(self) -> str:
+    def render_static(self) -> str:
         return "\n\n".join(
             [
                 "# DOSSIER PUBLIC DU RESIDENT\n" + self.resident_profile,
                 "# CALIBRATION PRIVEE DU RESIDENT\n" + self.calibration,
                 "# CONTEXTE PUBLIC DU PROGRAMME\n" + self.program_context,
+            ]
+        )
+
+    def render_dynamic(self) -> str:
+        return "\n\n".join(
+            [
                 "# ETAT PRIVE COMPACT AVANT CE TOUR\n"
                 + json.dumps(self.prior_state.to_dict(), ensure_ascii=False, indent=2),
                 "# HISTORIQUE PUBLIC RECENT\n" + (self.public_history or "Aucun."),
+                "# AJUSTEMENTS OPERATEUR DE LA SCENE\n"
+                "Ces elements sont observables, mais leur presence ne signifie pas "
+                "que le resident les a deja remarques.\n"
+                + (self.scene_adjustments or "Aucun."),
             ]
         )
+
+    def render(self) -> str:
+        return self.render_static() + "\n\n" + self.render_dynamic()
 
 
 class ContextLoader:
@@ -191,6 +205,7 @@ class ContextLoader:
         session_dir = self.settings.runtime_root / request.session_id
         state_path = session_dir / "state" / f"{request.resident}.json"
         public_path = session_dir / "public.md"
+        scene_path = session_dir / "scene.md"
 
         if state_path.is_file():
             prior_state = ResidentState.from_dict(
@@ -207,6 +222,9 @@ class ContextLoader:
                 public_history[marker_index:] if marker_index >= 0 else ""
             )
         public_history = public_history[-self.settings.max_public_history_chars :]
+        scene_adjustments = (
+            scene_path.read_text(encoding="utf-8") if scene_path.is_file() else ""
+        )
 
         return ContextBundle(
             resident_profile=resident_path.read_text(encoding="utf-8"),
@@ -214,4 +232,5 @@ class ContextLoader:
             program_context=program_path.read_text(encoding="utf-8"),
             prior_state=prior_state,
             public_history=public_history,
+            scene_adjustments=scene_adjustments,
         )

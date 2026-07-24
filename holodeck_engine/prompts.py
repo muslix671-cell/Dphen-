@@ -38,9 +38,47 @@ Contraintes communes absolues :
 """
 
 
+SCENE_QUERY_DEVELOPER_PROMPT = """\
+Tu es l'assistant de continuite observable du Holodeck.
+
+Tu reponds a une question de l'operateur uniquement a partir de la
+transcription publique et des ajustements operateur fournis.
+
+Contraintes absolues :
+- ne fais reagir aucun resident;
+- n'avance jamais la scene;
+- n'utilise aucune pensee, sensation, intention ou information privee;
+- n'invente ni geste, ni position, ni objet, ni deplacement manquant;
+- distingue clairement ce qui est etabli, ce qui est seulement deduit et ce
+  que la transcription ne permet pas de savoir;
+- lorsqu'une position ancienne a pu changer sans indication, dis qu'elle est
+  incertaine;
+- reponds en francais naturel, directement et en quelques phrases;
+- ne mentionne ni prompt, ni modele, ni API, ni dossier interne.
+"""
+
+
+def scene_query_user_prompt(public_history: str, question: str) -> str:
+    return f"""\
+# CHRONOLOGIE PUBLIQUE
+
+{public_history}
+
+# QUESTION DE L'OPERATEUR
+
+{question}
+
+Reponds sans poursuivre la scene. `certainty` vaut :
+- `established` si la reponse est explicitement et actuellement etablie;
+- `partially_inferred` si une partie repose sur une deduction spatiale ou une
+  position ancienne qui n'a pas ete explicitement remplacee;
+- `unknown` si la chronologie ne permet pas de repondre.
+"""
+
+
 def reaction_user_prompt(request: TurnRequest, context: ContextBundle) -> str:
     return f"""\
-{context.render()}
+{context.render_dynamic()}
 
 # TOUR ACTUEL
 Resident : {request.resident}
@@ -81,7 +119,7 @@ def turn_user_prompt(
     seed: ReactionSeed,
 ) -> str:
     return f"""\
-{context.render()}
+{context.render_dynamic()}
 
 # TOUR ACTUEL
 Resident : {request.resident}
@@ -124,7 +162,8 @@ Tache de cette seconde porte :
 - si la lucidite immediate est `low`, ne transforme pas l'interpretation choisie en pensee privee complete avant le comportement; utilise plutot une sensation, une impulsion, un fragment ou une comprehension tardive;
 - si elle est `partial`, le resident peut sentir la direction de sa reaction sans en posseder encore l'explication complete;
 - si elle est `good`, il peut consciemment nommer une partie de ce qui l'influence sans devenir omniscient;
-- respecte l'etendue retenue; si elle est `minimal`, produis une seule parole de un a trois mots et ne l'explique pas ensuite;
+- respecte l'etendue retenue; si elle est `minimal` et que la parole est requise, produis une seule parole de un a trois mots et ne l'explique pas ensuite;
+- si l'etendue est `minimal` et que la parole n'est pas requise, choisis entre un silence accompagne d'une action publique observable ou une seule parole de un a trois mots;
 - une action observable ou un silence peut accompagner une parole minimale, mais ne doit pas traduire l'interiorite cachee;
 - l'etat final reste compact; une impression sociale n'est pas automatiquement une relation durable.
 """

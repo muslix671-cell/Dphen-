@@ -177,20 +177,72 @@ TURN_RESULT_SCHEMA: dict[str, Any] = {
             "type": "array",
             "minItems": 2,
             "items": {
-                "type": "object",
-                "additionalProperties": False,
-                "properties": {
-                    "visibility": {
-                        "type": "string",
-                        "enum": ["private", "public"],
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "properties": {
+                            "visibility": {
+                                "type": "string",
+                                "enum": ["private"],
+                            },
+                            "kind": {
+                                "type": "string",
+                                "enum": ["thought"],
+                            },
+                            "text": {"type": "string"},
+                        },
+                        "required": ["visibility", "kind", "text"],
                     },
-                    "kind": {
-                        "type": "string",
-                        "enum": ["thought", "sensation", "action", "speech"],
+                    {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "properties": {
+                            "visibility": {
+                                "type": "string",
+                                "enum": ["private"],
+                            },
+                            "kind": {
+                                "type": "string",
+                                "enum": ["sensation"],
+                            },
+                            "text": {"type": "string"},
+                        },
+                        "required": ["visibility", "kind", "text"],
                     },
-                    "text": {"type": "string"},
-                },
-                "required": ["visibility", "kind", "text"],
+                    {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "properties": {
+                            "visibility": {
+                                "type": "string",
+                                "enum": ["public"],
+                            },
+                            "kind": {
+                                "type": "string",
+                                "enum": ["action"],
+                            },
+                            "text": {"type": "string"},
+                        },
+                        "required": ["visibility", "kind", "text"],
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "properties": {
+                            "visibility": {
+                                "type": "string",
+                                "enum": ["public"],
+                            },
+                            "kind": {
+                                "type": "string",
+                                "enum": ["speech"],
+                            },
+                            "text": {"type": "string"},
+                        },
+                        "required": ["visibility", "kind", "text"],
+                    },
+                ],
             },
         },
         "state_after": {
@@ -254,6 +306,20 @@ FOLLOWUP_SCHEMA: dict[str, Any] = {
 }
 
 
+SCENE_QUERY_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "answer": {"type": "string"},
+        "certainty": {
+            "type": "string",
+            "enum": ["established", "partially_inferred", "unknown"],
+        },
+    },
+    "required": ["answer", "certainty"],
+}
+
+
 def validate_turn_result(
     result: TurnResult,
     mode: str,
@@ -282,11 +348,17 @@ def validate_turn_result(
         raise ValueError("Le tour doit contenir au moins une parole publique.")
 
     if response_span == "minimal":
-        if len(speech_indices) != 1:
-            raise ValueError("Une reponse minimale exige une seule prise de parole.")
-        words = re.findall(r"[\wÀ-ÿ'-]+", result.events[speech_indices[0]].text)
-        if not 1 <= len(words) <= 3:
-            raise ValueError("Une reponse minimale doit contenir de un a trois mots.")
+        expected_speeches = {1} if speech_required else {0, 1}
+        if len(speech_indices) not in expected_speeches:
+            if speech_required:
+                raise ValueError("Une reponse minimale exige une seule prise de parole.")
+            raise ValueError(
+                "Une reponse minimale silencieuse accepte au plus une prise de parole."
+            )
+        if speech_indices:
+            words = re.findall(r"[\wÀ-ÿ'-]+", result.events[speech_indices[0]].text)
+            if not 1 <= len(words) <= 3:
+                raise ValueError("Une reponse minimale doit contenir de un a trois mots.")
 
     first_private = private_indices[0]
     first_public = public_indices[0]

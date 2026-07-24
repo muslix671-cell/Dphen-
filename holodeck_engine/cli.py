@@ -14,7 +14,14 @@ from .context import (
     parse_turn_note,
     require_safe_component,
 )
-from .engine import HolodeckEngine, create_followup_note, create_input_note
+from .engine import (
+    HolodeckEngine,
+    add_scene_adjustment,
+    answer_scene_question,
+    create_followup_note,
+    create_input_note,
+    rewind_last_turn,
+)
 from .models import FOLLOWUP_SCHEMA
 from .openai_client import MockJSONGateway, OpenAIJSONGateway
 from .prompts import COMMON_DEVELOPER_PROMPT, followup_user_prompt
@@ -80,6 +87,31 @@ def _parser() -> argparse.ArgumentParser:
         help="Produire le rapport d'une sequence terminee.",
     )
     usage.add_argument("--session", required=True)
+
+    rewind = subparsers.add_parser(
+        "rewind",
+        help="Archiver le dernier tour et restaurer la session juste avant celui-ci.",
+    )
+    rewind.add_argument("--session", required=True)
+
+    scene_query = subparsers.add_parser(
+        "scene-query",
+        help="Repondre a une question operateur sans avancer la scene.",
+    )
+    scene_query.add_argument("--session", required=True)
+    scene_query.add_argument("--question", required=True)
+    scene_query.add_argument(
+        "--mock",
+        action="store_true",
+        help="Valider la requete sans appel API ni cout.",
+    )
+
+    scene_adjust = subparsers.add_parser(
+        "scene-adjust",
+        help="Ajouter un fait observable a la scene sans creer de tour.",
+    )
+    scene_adjust.add_argument("--session", required=True)
+    scene_adjust.add_argument("--text", required=True)
 
     subparsers.add_parser("doctor", help="Verifier la configuration locale.")
     return parser
@@ -148,6 +180,51 @@ def main(argv: list[str] | None = None) -> int:
             )
             print(render_usage_summary(summary))
             print(f"Rapport                : {usage_path}")
+            return 0
+
+        if args.command == "rewind":
+            artifacts = rewind_last_turn(settings, args.session)
+            print(f"Tour restaure          : {artifacts.turn_id}")
+            print(f"Archive                : {artifacts.archive_dir}")
+            print(f"Entree a rejouer       : {artifacts.input_path}")
+            return 0
+
+        if args.command == "scene-query":
+            settings = replace(
+                settings,
+                reasoning_effort="low",
+                max_output_tokens=min(settings.max_output_tokens, 1200),
+            )
+            gateway = (
+                MockJSONGateway("Le resident")
+                if args.mock
+                else OpenAIJSONGateway(settings)
+            )
+            artifacts = answer_scene_question(
+                settings,
+                gateway,
+                session_id=args.session,
+                question=args.question,
+            )
+            print(
+                json.dumps(
+                    {
+                        "answer": artifacts.answer,
+                        "certainty": artifacts.certainty,
+                    },
+                    ensure_ascii=False,
+                )
+            )
+            return 0
+
+        if args.command == "scene-adjust":
+            artifacts = add_scene_adjustment(
+                settings,
+                session_id=args.session,
+                text=args.text,
+            )
+            print(f"Scene                  : {artifacts.scene_file}")
+            print(f"Audit                  : {artifacts.audit_file}")
             return 0
 
         if args.command == "run":

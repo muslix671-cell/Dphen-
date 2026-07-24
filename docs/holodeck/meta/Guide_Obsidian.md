@@ -18,6 +18,75 @@ Le coffre à ouvrir dans Obsidian est le dossier `Dphen-` lui-même. Il contient
 5. Consulter l’[[docs/holodeck/sessions/INDEX|index des séances]].
 6. Charger uniquement les sources et les séances pertinentes.
 
+## Panneau de contrôle Holodeck
+
+Le plugin local `Holodeck Control` fournit l'interface d'entrevue. Après une
+première installation ou une mise à jour du plugin, recharger Obsidian.
+
+Ouvrir le panneau de l'une des façons suivantes :
+
+- cliquer l'icône de théâtre dans le ruban gauche;
+- ouvrir la palette de commandes et choisir
+  `Holodeck Control: Ouvrir le panneau de contrôle`.
+
+### Nouvelle entrevue
+
+1. Choisir un résident calibré et un programme.
+2. Choisir le point de départ :
+   - `Continuité actuelle` charge le dossier cumulatif actuel dans une nouvelle
+     session locale;
+   - `Hors timeline` crée une expérience isolée à partir du dossier actuel;
+   - `Contexte verrouillé` remplace le dossier cumulatif par un pack temporel
+     explicitement choisi.
+3. Accepter ou modifier l'identifiant proposé.
+4. Cliquer `Créer l'entrevue`.
+5. Écrire la scène observable et l'intervention publique dans le panneau.
+6. Choisir si une parole est attendue et le niveau de raisonnement.
+7. Cliquer `Lancer le tour`.
+
+Le panneau écrit la note d'entrée, lance le moteur Python, affiche la réponse
+publique et prépare automatiquement le numéro suivant. Aucun terminal n'est
+nécessaire.
+
+Le menu repliable `Outils de scène`, sous la dernière réponse publique,
+contient deux fonctions :
+
+- `Question sur la scène` permet de demander où se trouvent les personnes,
+  leur posture ou quel objet est visible. Cette requête lit uniquement la
+  transcription et les ajustements publics. Elle utilise un seul appel API
+  avec un raisonnement léger;
+- `Ajuster la scène` ajoute un fait observable qui était déjà vrai sans faire
+  réagir personne ni avancer le tour. L'ajustement entre dans le contexte des
+  prochains tours et demeure séparé de la transcription des actions.
+
+Ces fonctions ne modifient aucun état privé résident.
+
+### Reprendre et terminer
+
+La section `Reprendre` charge une session locale existante et détermine le
+prochain numéro à partir de ses tours déjà produits.
+
+Les boutons à droite du lancement ouvrent la transcription publique et la
+perspective privée du résident. `Terminer la séquence` produit le rapport
+d'utilisation API sans fermer ni canoniser la session.
+
+`Remplacer le dernier tour` archive le résultat courant, reconstruit la
+transcription et l'état privé à partir des tours précédents, puis remet la
+scène et l'intervention du tour annulé dans les champs. Le tour archivé demeure
+disponible pour audit et sa consommation API reste incluse dans le rapport.
+
+Une erreur API conserve la scène et l'intervention dans le panneau. Relancer le
+même tour met à jour sa note d'entrée tant qu'aucune sortie complète n'existe.
+
+### Statut des sorties
+
+Le choix du point de départ n'accorde jamais un statut canonique à une sortie.
+Tous les résultats du moteur restent locaux sous `runtime/` et exigent une
+révision opérateur avant toute mise à jour de continuité.
+
+Le plugin ne lit pas la clé API. Il lance le moteur local, qui charge lui-même
+le fichier `.env`.
+
 ## Utiliser les tableaux de bord
 
 - [[docs/holodeck/meta/dashboards/Continuite|Continuité]] rassemble les couches de mémoire, les membres et les archives exclues du chargement actif.
@@ -89,6 +158,9 @@ Obsidian ne remplace pas la validation Git :
 3. vérifier les sources protégées;
 4. commiter seulement après une demande explicite.
 
-## Extensions reportées
+## Extensions
 
-Dataview n’est pas installé : Canvas et Bases couvrent actuellement les besoins sans plugin communautaire. Les automatisations supplémentaires restent reportées jusqu’à l’apparition d’un besoin que les fonctions natives ne peuvent pas satisfaire.
+Dataview n'est pas installé : Canvas et Bases couvrent actuellement les besoins
+documentaires. `Holodeck Control` est un plugin local, propre à ce coffre, parce
+que les fonctions natives ne peuvent pas lancer le moteur Python ni gérer un
+tour complet depuis une seule vue.

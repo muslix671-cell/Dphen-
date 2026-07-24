@@ -2,6 +2,7 @@
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/cache/
+.obsidian/plugins/holodeck-control/data.json
 
 # Corbeille locale eventuelle du coffre
 .trash/

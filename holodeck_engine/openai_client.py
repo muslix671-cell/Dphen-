@@ -16,6 +16,8 @@ class JSONGateway(Protocol):
         schema: dict[str, Any],
         developer_prompt: str,
         user_prompt: str,
+        cache_prefix: str | None = None,
+        prompt_cache_key: str | None = None,
     ) -> dict[str, Any]: ...
 
 
@@ -39,12 +41,41 @@ class OpenAIJSONGateway:
         schema: dict[str, Any],
         developer_prompt: str,
         user_prompt: str,
+        cache_prefix: str | None = None,
+        prompt_cache_key: str | None = None,
     ) -> dict[str, Any]:
+        request_input: str | list[dict[str, Any]] = user_prompt
+        cache_arguments: dict[str, Any] = {
+            "prompt_cache_options": {
+                "mode": "explicit",
+                "ttl": "30m",
+            }
+        }
+        if cache_prefix:
+            request_input = [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "input_text",
+                            "text": cache_prefix,
+                            "prompt_cache_breakpoint": {"mode": "explicit"},
+                        },
+                        {
+                            "type": "input_text",
+                            "text": user_prompt,
+                        },
+                    ],
+                }
+            ]
+            if prompt_cache_key:
+                cache_arguments["prompt_cache_key"] = prompt_cache_key
+
         started_at = perf_counter()
         response = self.client.responses.create(
             model=self.settings.model,
             instructions=developer_prompt,
-            input=user_prompt,
+            input=request_input,
             reasoning={"effort": self.settings.reasoning_effort},
             text={
                 "format": {
@@ -56,6 +87,7 @@ class OpenAIJSONGateway:
             },
             max_output_tokens=self.settings.max_output_tokens,
             store=False,
+            **cache_arguments,
         )
         self.usage_records.append(
             UsageRecord.from_response(
@@ -95,8 +127,10 @@ class MockJSONGateway:
         schema: dict[str, Any],
         developer_prompt: str,
         user_prompt: str,
+        cache_prefix: str | None = None,
+        prompt_cache_key: str | None = None,
     ) -> dict[str, Any]:
-        del schema, developer_prompt, user_prompt
+        del schema, developer_prompt, user_prompt, cache_prefix, prompt_cache_key
         if schema_name == "reaction_seed":
             return {
                 "mode": "reflective",
@@ -144,5 +178,13 @@ class MockJSONGateway:
                     "current_goals": ["Repondre sans surinterpreter."],
                     "carry_forward": "Aucune evolution durable etablie.",
                 },
+            }
+        if schema_name == "scene_query":
+            return {
+                "answer": (
+                    f"La position actuelle de {self.resident} n'est pas "
+                    "entierement etablie par la chronologie publique."
+                ),
+                "certainty": "partially_inferred",
             }
         raise ValueError(f"Schema mock inconnu: {schema_name}")

@@ -1,0 +1,26 @@
+{
+  "reasoning_effort": "medium",
+  "director_style": "docs/holodeck/meta/engine/director_profiles/Stephane.md",
+  "followup_turns": [
+    "002",
+    "003",
+    "005",
+    "006",
+    "009",
+    "010"
+  ],
+  "followup_max_depth": 2,
+  "followup_max_total": 4,
+  "inputs": [
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_001.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_002.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_003.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_004.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_005.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_006.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_007.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_008.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_009.md",
+    "docs/holodeck/meta/engine/experiments/camille-original-replay/inputs/tour_010.md"
+  ]
+}

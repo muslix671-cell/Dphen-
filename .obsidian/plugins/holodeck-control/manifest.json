@@ -1,0 +1,9 @@
+{
+  "id": "holodeck-control",
+  "name": "Holodeck Control",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Panneau local pour creer, reprendre et lancer les entrevues du Holodeck.",
+  "author": "Holodeck",
+  "isDesktopOnly": true
+}
